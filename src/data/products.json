@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Red Velvet Delight",
+    "category": "Cakes",
+    "price": "350.000đ",
+    "image": "/images/products/red-velvet-cake.jpg",
+    "description": "A classic red velvet cake with a rich cream cheese frosting, perfect for any celebration.",
+    "ingredients": ["Flour", "Cocoa Powder", "Buttermilk", "Cream Cheese", "Vanilla Extract"]
+  },
+  {
+    "id": 2,
+    "name": "Chocolate Lava Cake",
+    "category": "Cakes",
+    "price": "85.000đ",
+    "image": "/images/products/chocolate-lava-cake.jpg",
+    "description": "A decadent, warm chocolate cake with a gooey, molten center. Served best with a scoop of vanilla ice cream.",
+    "ingredients": ["Dark Chocolate", "Butter", "Eggs", "Sugar", "Flour"]
+  },
+  {
+    "id": 3,
+    "name": "Classic Croissant",
+    "category": "Pastries",
+    "price": "35.000đ",
+    "image": "/images/products/croissant.jpg",
+    "description": "A buttery, flaky, and viennoiserie pastry, golden-brown and perfect for breakfast.",
+    "ingredients": ["Flour", "Butter", "Yeast", "Milk", "Sugar"]
+  },
+  {
+    "id": 4,
+    "name": "Blueberry Muffin",
+    "category": "Pastries",
+    "price": "45.000đ",
+    "image": "/images/products/blueberry-muffin.jpg",
+    "description": "A soft and moist muffin bursting with fresh blueberries and a hint of lemon zest.",
+    "ingredients": ["Flour", "Blueberries", "Sugar", "Yogurt", "Lemon"]
+  },
+  {
+    "id": 5,
+    "name": "Apple Pie",
+    "category": "Pies",
+    "price": "250.000đ",
+    "image": "/images/products/apple-pie.jpg",
+    "description": "A traditional apple pie with a flaky crust and a sweet, spiced apple filling.",
+    "ingredients": ["Apples", "Cinnamon", "Flour", "Butter", "Sugar"]
+  },
+  {
+    "id": 6,
+    "name": "Choco Chip Cookies",
+    "category": "Cookies",
+    "price": "25.000đ / cái",
+    "image": "/images/products/choco-chip-cookies.jpg",
+    "description": "Classic homemade chocolate chip cookies, crispy on the edges and chewy in the middle.",
+    "ingredients": ["Flour", "Butter", "Chocolate Chips", "Brown Sugar", "Vanilla Extract"]
+  }
+]

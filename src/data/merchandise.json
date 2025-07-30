@@ -1,0 +1,26 @@
+[
+  {
+    "id": 101,
+    "name": "Bakerz Bite Signature Mug",
+    "category": "Mugs",
+    "price": "180.000đ",
+    "image": "/images/merchandise/signature-mug.jpg",
+    "description": "Start your day with our classic ceramic mug. Perfect for your coffee or tea. Dishwasher and microwave safe."
+  },
+  {
+    "id": 102,
+    "name": "Bakerz Bite Tote Bag",
+    "category": "Bags",
+    "price": "250.000đ",
+    "image": "/images/merchandise/tote-bag.jpg",
+    "description": "A stylish and durable canvas tote bag, perfect for your daily errands or grocery shopping."
+  },
+  {
+    "id": 103,
+    "name": "Bakerz Bite Glass Tumbler",
+    "category": "Glasses",
+    "price": "220.000đ",
+    "image": "/images/merchandise/glass-tumbler.jpg",
+    "description": "Enjoy your iced coffee or smoothies in this elegant glass tumbler with a bamboo lid and straw."
+  }
+]

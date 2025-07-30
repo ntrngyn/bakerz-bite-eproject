@@ -1,0 +1,127 @@
+/* === GOOGLE FONTS === */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+/* === CSS VARIABLES === */
+:root {
+  /* Colors */
+  --primary-color: #c8a97e; /* Màu vàng đồng sang trọng */
+  --primary-color-alt: #b99a6b; /* Màu vàng đồng đậm hơn khi hover */
+  --title-color: #2c2c2c; /* Màu chữ cho tiêu đề (đen nhạt) */
+  --text-color: #5a5a5a; /* Màu chữ cho văn bản thường (xám đậm) */
+  --text-color-light: #8f8f8f; /* Màu chữ nhạt hơn (xám nhạt) */
+  --body-color: #fdfaf6; /* Màu nền chính của trang (trắng ngà) */
+  --container-color: #ffffff; /* Màu nền cho các thẻ, card (trắng) */
+  --border-color: #e0e0e0; /* Màu viền */
+
+  /* Font and typography */
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Playfair Display", serif;
+
+  /* Font sizes */
+  --big-font-size: 2.5rem; /* 40px */
+  --h1-font-size: 2.25rem; /* 36px */
+  --h2-font-size: 1.5rem; /* 24px */
+  --h3-font-size: 1.25rem; /* 20px */
+  --normal-font-size: 1rem; /* 16px */
+  --small-font-size: 0.875rem; /* 14px */
+  --smaller-font-size: 0.813rem; /* 13px */
+
+  /* Font weight */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Margins */
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* === BASE STYLES === */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === REUSABLE CSS CLASSES === */
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--mb-2);
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-color-alt);
+}

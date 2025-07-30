@@ -1,0 +1,132 @@
+/* /src/components/ProductModal.css */
+
+/* Lớp phủ mờ toàn màn hình */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Màu đen mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-modal); /* Đảm bảo nằm trên cùng */
+  opacity: 0; /* Mặc định ẩn */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Class được thêm khi modal mở */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Box chứa nội dung chính của modal */
+.modal-content {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px; /* Chiều rộng tối đa của modal */
+  width: 90%; /* Chiều rộng trên các màn hình nhỏ hơn */
+  max-height: 90vh; /* Chiều cao tối đa, tránh tràn màn hình */
+  overflow-y: auto; /* Thêm thanh cuộn nếu nội dung quá dài */
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9); /* Thu nhỏ một chút để tạo hiệu ứng */
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1); /* Phóng to ra kích thước thật khi mở */
+}
+
+/* Nút đóng modal (dấu 'x') */
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--text-color-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-close-button:hover {
+  color: var(--title-color);
+  transform: rotate(90deg);
+}
+
+/* Phần thân của modal, chứa ảnh và thông tin */
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Chia làm 2 cột: ảnh và thông tin */
+  gap: 2rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.modal-price {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-1-5);
+}
+
+.modal-description {
+  font-size: var(--normal-font-size);
+  line-height: 1.6;
+  margin-bottom: var(--mb-1-5);
+}
+
+.modal-ingredients h4 {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.modal-ingredients ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.modal-ingredients li {
+  margin-bottom: var(--mb-0-5);
+}
+
+/* Responsive cho modal trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột duy nhất */
+  }
+
+  .modal-title {
+    font-size: var(--h2-font-size);
+  }
+
+  .modal-price {
+    font-size: var(--h3-font-size);
+  }
+}

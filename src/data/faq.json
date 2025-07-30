@@ -1,0 +1,22 @@
+[
+  {
+    "id": 401,
+    "question": "Do you offer gluten-free options?",
+    "answer": "Yes, we have a selection of gluten-free cakes and cookies. Please look for the GF symbol on our menu or ask our staff for recommendations."
+  },
+  {
+    "id": 402,
+    "question": "Can I place a custom order for a birthday cake?",
+    "answer": "Absolutely! We specialize in custom cakes for all occasions. Please contact us at least 3 days in advance to discuss your design and requirements."
+  },
+  {
+    "id": 403,
+    "question": "Do you have vegan products?",
+    "answer": "We are happy to offer a few vegan options, including our Vegan Chocolate Avocado Mousse. Our menu is constantly evolving, so please check for the latest additions."
+  },
+  {
+    "id": 404,
+    "question": "What are your opening hours?",
+    "answer": "We are open from 7:00 AM to 9:00 PM, seven days a week."
+  }
+]

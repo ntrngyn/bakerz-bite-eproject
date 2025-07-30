@@ -1,0 +1,124 @@
+/* /src/components/Header.css */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--container-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-size: 1.5rem; /* Giảm kích thước logo một chút */
+  font-weight: var(--font-bold);
+  text-decoration: none;
+}
+
+.nav__logo:hover {
+  color: var(--primary-color);
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 2.5rem;
+  list-style: none;
+}
+
+.nav__link {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link.active-link {
+  color: var(--primary-color);
+}
+
+.nav__right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav__visitor-count {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+}
+
+/* Ẩn nút đóng và nút mở menu trên màn hình lớn */
+.nav__toggle,
+.nav__close {
+  display: none;
+}
+
+/* === RESPONSIVE CHO THIẾT BỊ DI ĐỘNG === */
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ẩn menu ra khỏi màn hình */
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    padding: 6rem 2rem 3.5rem;
+    transition: right 0.4s ease; /* Hiệu ứng trượt */
+  }
+
+  /* Class 'show-menu' sẽ được thêm bằng JS để hiện menu */
+  .show-menu {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column; /* Xếp các mục menu theo chiều dọc */
+    row-gap: 2.5rem; /* Khoảng cách giữa các mục */
+    text-align: center;
+  }
+
+  .nav__link {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+  }
+
+  .nav__close {
+    display: block; /* Hiện nút đóng */
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+
+  .nav__close:hover {
+    color: var(--primary-color);
+  }
+
+  .nav__toggle {
+    display: block; /* Hiện nút hamburger */
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+}
+
+/* Ẩn bộ đếm lượt truy cập trên màn hình rất nhỏ */
+@media screen and (max-width: 375px) {
+  .nav__visitor-count {
+    display: none;
+  }
+}

@@ -1,0 +1,83 @@
+/* /src/sections/ProductsSection.css */
+
+/* 
+  Chúng ta có thể tái sử dụng class .section và .container từ global.css,
+  vì vậy không cần định nghĩa lại ở đây.
+*/
+
+/* Container chính cho toàn bộ khu vực sản phẩm */
+.products-container {
+  display: flex;
+  flex-direction: column; /* Sắp xếp FilterButtons và ProductsGrid theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+/* 
+  Lưới chứa các thẻ sản phẩm (ProductCard).
+  Sử dụng CSS Grid để tạo layout linh hoạt.
+*/
+.products-grid {
+  width: 100%;
+  display: grid;
+  /* 
+    Sử dụng auto-fit và minmax để tạo lưới responsive:
+    - Nó sẽ cố gắng tạo ra càng nhiều cột càng tốt.
+    - Mỗi cột có chiều rộng tối thiểu là 280px.
+    - Các cột sẽ tự động chia đều không gian còn lại.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem; /* Khoảng cách giữa các thẻ sản phẩm */
+}
+
+/* === HIỆU ỨNG KHI LOAD SẢN PHẨM (TÙY CHỌN, NÂNG CAO) === */
+/*
+  Thêm hiệu ứng animation cho từng ProductCard khi chúng xuất hiện.
+  Chúng ta sẽ dùng animation-delay để chúng hiện ra lần lượt.
+*/
+
+/* Đặt trạng thái ban đầu cho các thẻ sản phẩm là ẩn đi */
+.products-grid .product-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.5s ease-out forwards;
+}
+
+/* 
+  Tạo delay khác nhau cho 8 thẻ đầu tiên.
+  Bạn có thể thêm nhiều hơn nếu cần.
+*/
+.products-grid .product-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.products-grid .product-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.products-grid .product-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.products-grid .product-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.products-grid .product-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.products-grid .product-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.products-grid .product-card:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.products-grid .product-card:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

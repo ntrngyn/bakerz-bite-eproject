@@ -1,0 +1,20 @@
+[
+  {
+    "id": 301,
+    "title": "Happy Hour Combo",
+    "description": "Get a free coffee with any cake slice purchased between 2 PM and 5 PM on weekdays.",
+    "image": "/images/offers/happy-hour.jpg"
+  },
+  {
+    "id": 302,
+    "title": "Weekend Special: 20% Off",
+    "description": "Enjoy a 20% discount on all whole pies every Saturday and Sunday.",
+    "image": "/images/offers/weekend-special.jpg"
+  },
+  {
+    "id": 303,
+    "title": "Muffin Madness",
+    "description": "Buy 3 muffins and get 1 free! Available all day, every day.",
+    "image": "/images/offers/muffin-madness.jpg"
+  }
+]

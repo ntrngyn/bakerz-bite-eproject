@@ -1,0 +1,69 @@
+/* /src/components/Ticker.css */
+
+/* Lớp bọc bên ngoài để tạo hiệu ứng "ẩn" nội dung khi nó chạy ra ngoài */
+.ticker-wrap {
+  /* 
+    Sửa lại: Thay vì `position: fixed` để nó không che mất footer, 
+    ta sẽ để nó là một phần bình thường của footer. 
+    Footer sẽ có nền đen.
+  */
+  width: 100%;
+  overflow: hidden; /* Đây là chìa khóa để hiệu ứng hoạt động */
+  background-color: #222; /* Màu nền tối cho ticker */
+  padding: 0.5rem 0; /* Một chút đệm trên dưới */
+  box-sizing: border-box;
+}
+
+/* 
+  Lớp chứa nội dung thực sự sẽ chạy. 
+  Nó sẽ rộng hơn nhiều so với màn hình để chứa các bản sao.
+*/
+.ticker {
+  display: inline-block; /* Cho phép nó di chuyển theo chiều ngang */
+  white-space: nowrap; /* Ngăn các item xuống dòng */
+  /*
+    Sử dụng animation 'ticker' đã định nghĩa.
+    - 30s: Tốc độ chạy (càng lớn càng chậm)
+    - linear: Tốc độ không đổi
+    - infinite: Lặp lại vô hạn
+  */
+  animation: ticker 30s linear infinite;
+}
+
+/* Style cho từng mục bên trong ticker (ngày, giờ, vị trí) */
+.ticker__item {
+  display: inline-block; /* Xếp các item trên cùng một hàng */
+  padding: 0 2.5rem; /* Khoảng cách giữa các item */
+  font-size: var(--small-font-size);
+  color: #e0e0e0; /* Màu chữ sáng trên nền tối */
+  position: relative; /* Dùng để tạo dấu ngăn cách */
+}
+
+/* Tạo dấu ngăn cách bằng pseudo-element ::after */
+.ticker__item::after {
+  content: "•"; /* Ký tự dấu chấm tròn */
+  position: absolute;
+  right: -0.5rem; /* Đặt ở bên phải của item */
+  color: var(--primary-color); /* Màu vàng đồng nổi bật */
+}
+
+/* Bỏ dấu ngăn cách cho item cuối cùng */
+.ticker__item:last-child::after {
+  content: "";
+}
+
+/* Định nghĩa animation cho ticker */
+@keyframes ticker {
+  0% {
+    /* Bắt đầu từ vị trí 0 */
+    transform: translateX(0);
+  }
+  100% {
+    /* 
+      Di chuyển sang trái một khoảng bằng 50% chiều rộng của nó.
+      Tại sao lại là 50%? Vì chúng ta sẽ nhân đôi nội dung.
+      Khi bản sao đầu tiên chạy hết, bản sao thứ hai sẽ nối liền mạch.
+    */
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,53 @@
+/* /src/components/SectionTitle.css */
+
+/* Container chứa cả tiêu đề chính và phụ */
+.section-title-container {
+  text-align: center; /* Căn giữa toàn bộ nội dung */
+  margin-bottom: var(--mb-2-5); /* Tạo khoảng cách với nội dung bên dưới */
+}
+
+/* Tiêu đề phụ (subtitle) - ví dụ: "Freshly Baked Every Day" */
+.section-subtitle {
+  display: block;
+  font-family: var(--body-font); /* Dùng font chữ thường */
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color); /* Màu vàng đồng nổi bật */
+  margin-bottom: var(--mb-0-5);
+  letter-spacing: 1px; /* Tăng khoảng cách giữa các chữ một chút */
+  text-transform: uppercase; /* Viết hoa */
+}
+
+/* Tiêu đề chính (title) - ví dụ: "Our Products" */
+.section-title {
+  font-size: var(--h1-font-size);
+  font-family: var(--title-font); /* Dùng font chữ nghệ thuật */
+  color: var(--title-color);
+  margin: 0;
+  position: relative;
+  padding-bottom: 1rem; /* Tạo không gian cho đường gạch chân trang trí */
+}
+
+/* Đường gạch chân trang trí bên dưới tiêu đề chính */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Bắt đầu từ giữa */
+  transform: translateX(-50%); /* Căn giữa đường gạch chân */
+  width: 80px; /* Độ dài của đường gạch chân */
+  height: 4px; /* Độ dày của đường gạch chân */
+  background-color: var(--primary-color);
+  border-radius: 2px; /* Bo tròn nhẹ */
+}
+
+/* Điều chỉnh kích thước font trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: var(--h2-font-size);
+  }
+
+  .section-subtitle {
+    font-size: var(--small-font-size);
+  }
+}

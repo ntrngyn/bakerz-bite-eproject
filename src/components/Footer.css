@@ -1,0 +1,73 @@
+/* /src/components/Footer.css */
+
+.footer {
+  background-color: var(--title-color); /* Sử dụng biến màu từ global.css */
+  color: #fff;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.footer__container {
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.footer__link {
+  color: var(--text-color-light);
+  margin-left: 1.5rem;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--primary-color);
+}
+
+/* === Ticker CSS === */
+/* Bạn nên tạo file Ticker.css riêng, nhưng để tạm ở đây cũng được */
+
+.ticker-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+
+.ticker {
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  animation: ticker 20s linear infinite;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: var(--small-font-size);
+  color: #fff;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

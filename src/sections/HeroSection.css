@@ -1,0 +1,113 @@
+/* /src/sections/HeroSection.css */
+
+.hero-section {
+  /* 
+    Sử dụng ảnh nền. Bạn cần có một ảnh nền đẹp trong thư mục /src/assets/images/.
+    Ví dụ: /src/assets/images/hero-banner.jpg
+  */
+  background-image: url("../assets/images/hero-banner.jpg");
+  background-size: cover; /* Đảm bảo ảnh nền luôn che phủ toàn bộ khu vực */
+  background-position: center center; /* Căn giữa ảnh nền */
+  background-repeat: no-repeat;
+  height: 100vh; /* Chiều cao bằng 100% chiều cao của màn hình */
+  display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Cần thiết để lớp phủ hoạt động */
+  text-align: center;
+  color: #fff; /* Màu chữ trắng để nổi bật trên nền tối */
+}
+
+/* Lớp phủ mờ (overlay) để làm tối ảnh nền, giúp chữ dễ đọc hơn */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ 50% */
+  z-index: 1; /* Nằm giữa ảnh nền và nội dung */
+}
+
+/* Container chứa nội dung text, phải có z-index cao hơn lớp phủ */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+/* Tiêu đề chính của hero section */
+.hero-title {
+  font-family: var(--title-font);
+  font-size: 4rem; /* Kích thước chữ rất lớn */
+  font-weight: var(--font-bold);
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: var(--mb-1);
+  /* Thêm hiệu ứng animation */
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Tiêu đề phụ */
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--mb-2-5);
+  /* Thêm hiệu ứng animation */
+  animation: fadeInUp 1s ease-out 0.5s;
+  animation-fill-mode: both; /* Giữ trạng thái cuối của animation */
+}
+
+/* Nút bấm */
+.hero-section .button {
+  font-size: 1.1rem;
+  padding: 1.25rem 2.5rem;
+  /* Thêm hiệu ứng animation */
+  animation: fadeInUp 1s ease-out 1s;
+  animation-fill-mode: both;
+}
+
+/* Định nghĩa các keyframes cho animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive cho màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-section .button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}

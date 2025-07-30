@@ -1,0 +1,72 @@
+/* /src/sections/ContactSection.css */
+
+/*
+  Container chính cho khu vực liên hệ, sử dụng grid để chia cột.
+  Class 'section' và 'container' đã có trong global.css
+*/
+.contact-container {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  align-items: flex-start; /* Căn các cột theo đỉnh */
+  gap: 3rem; /* Khoảng cách giữa các cột */
+}
+
+/* Khối chứa thông tin địa chỉ, email, điện thoại */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Khoảng cách giữa các mục thông tin (address, email, call) */
+}
+
+.contact-info h3 {
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* Thêm một đường gạch chân nhỏ cho các tiêu đề trong phần contact-info */
+.contact-info h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.contact-info p {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Khối bọc form phản hồi */
+/* .contact-form-wrapper { */
+/* Không cần style đặc biệt nhiều vì FeedbackForm.css đã lo phần chính */
+/* } */
+
+.contact-form-wrapper h3 {
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1-5);
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    gap: 2.5rem;
+  }
+
+  .contact-form-wrapper {
+    /* Đảm bảo form không bị thụt vào quá nhiều trên mobile */
+    padding-top: 1rem;
+  }
+}

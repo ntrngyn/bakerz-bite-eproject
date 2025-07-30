@@ -1,0 +1,80 @@
+/* /src/components/ProductCard.css */
+
+.product-card {
+  background-color: var(--container-color); /* Nền trắng */
+  border-radius: 1rem; /* Bo tròn các góc */
+  overflow: hidden; /* Ẩn các phần thừa của ảnh nếu ảnh không vừa khít */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ nhàng */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+}
+
+/* Hiệu ứng khi di chuột qua thẻ sản phẩm */
+.product-card:hover {
+  transform: translateY(-8px); /* Nhấc thẻ lên một chút */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Đổ bóng đậm hơn */
+}
+
+/* Container chứa ảnh để dễ dàng tạo hiệu ứng */
+.product-card__image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 220px; /* Đặt chiều cao cố định cho ảnh */
+  object-fit: cover; /* Đảm bảo ảnh luôn vừa vặn mà không bị méo */
+  display: block;
+  transition: transform 0.4s ease; /* Hiệu ứng phóng to ảnh */
+}
+
+.product-card:hover .product-card__image {
+  transform: scale(1.05); /* Phóng to ảnh khi di chuột qua thẻ */
+}
+
+/* Phần thông tin sản phẩm */
+.product-card__info {
+  padding: 1.25rem;
+  text-align: center;
+  flex-grow: 1; /* Giúp phần info chiếm hết không gian còn lại */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Đẩy tên và giá/nút ra hai phía */
+}
+
+.product-card__name {
+  font-size: var(--h3-font-size);
+  font-family: var(--title-font);
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.product-card__price {
+  font-size: var(--normal-font-size);
+  color: var(--primary-color); /* Màu giá nổi bật */
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1);
+}
+
+/* Nút "View Details" */
+.product-card__button {
+  padding: 0.75rem 1.5rem;
+  width: fit-content; /* Độ rộng của nút vừa bằng nội dung */
+  align-self: center; /* Tự căn giữa nút */
+  font-size: var(--small-font-size);
+}
+
+/* Ẩn nút mặc định và chỉ hiện khi hover (tùy chọn, tạo hiệu ứng đẹp hơn) */
+.product-card__button {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .product-card__button {
+  opacity: 1;
+  transform: translateY(0);
+}

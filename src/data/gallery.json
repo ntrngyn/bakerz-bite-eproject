@@ -1,0 +1,38 @@
+[
+  {
+    "id": 201,
+    "imageUrl": "/images/gallery/collection-1.jpg",
+    "altText": "A collection of our finest cakes",
+    "category": "Collection"
+  },
+  {
+    "id": 202,
+    "imageUrl": "/images/gallery/behind-the-cakes-1.jpg",
+    "altText": "Our baker decorating a wedding cake",
+    "category": "Behind The Cakes"
+  },
+  {
+    "id": 203,
+    "imageUrl": "/images/gallery/event-1.jpg",
+    "altText": "A birthday party event at Bakerz Bite",
+    "category": "Event"
+  },
+  {
+    "id": 204,
+    "imageUrl": "/images/gallery/collection-2.jpg",
+    "altText": "Assortment of fresh pastries",
+    "category": "Collection"
+  },
+  {
+    "id": 205,
+    "imageUrl": "/images/gallery/behind-the-cakes-2.jpg",
+    "altText": "Fresh dough being prepared",
+    "category": "Behind The Cakes"
+  },
+  {
+    "id": 206,
+    "imageUrl": "/images/gallery/event-2.jpg",
+    "altText": "A happy customer enjoying coffee and cake",
+    "category": "Event"
+  }
+]
