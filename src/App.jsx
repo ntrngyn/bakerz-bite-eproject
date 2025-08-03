@@ -1,42 +1,46 @@
-// src/App.jsx
+// /src/App.jsx
 
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-// Import các file CSS cần thiết
-import './App.css'; 
-
-// Import các component lớn từ các thư mục tương ứng
-// Hãy kiểm tra lại đường dẫn cho chính xác với cấu trúc của bạn
+// Import các component dùng chung
 import Header from './components/Header';
-import HeroSection from './sections/HeroSection';
-import ProductsSection from './sections/ProductsSection';
-import MerchandiseSection from './sections/MerchandiseSection';
-import OffersSection from './sections/OffersSection';
-import GallerySection from './sections/GallerySection';
-import AboutSection from './sections/AboutSection';
-import ContactSection from './sections/ContactSection';
-import FaqSection from './sections/FaqSection';
 import Footer from './components/Footer';
+
+// Import các trang (pages)
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import MerchandisePage from './pages/MerchandisePage'; 
+import GalleryPage from './pages/GalleryPage';       
+import OffersPage from './pages/OffersPage';        
+import AboutPage from './pages/AboutPage';           
+import ContactPage from './pages/ContactPage';       
+
+import './App.css';
 
 function App() {
   return (
-    // Sử dụng Fragment <>...</> để bọc các component
     <>
-      {/* Lắp ráp các component theo đúng thứ tự bạn muốn chúng xuất hiện trên trang */}
-      
-      <Header />
+      <Header /> {/* Header và Footer sẽ xuất hiện trên mọi trang */}
       
       <main>
-        {/* Mỗi section sẽ là một phần của trang chính */}
-        {/* Thẻ <section> đã được đặt bên trong từng component section rồi */}
-        <HeroSection />
-        <ProductsSection />
-        <MerchandiseSection />
-        <OffersSection />
-        <GallerySection />
-        <AboutSection />
-        <ContactSection />
-        <FaqSection />
+        {/* Routes sẽ quản lý việc render các trang */}
+        <Routes>
+          {/* Định nghĩa các Route cho từng trang */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/merchandise" element={<MerchandisePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/offers" element={<OffersPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          
+          {/* Route động này sẽ khớp với "/products/cakes", "/products/cookies", v.v. */}
+          <Route path="/products/:category" element={<ProductsPage />} />
+
+          {/* (Tùy chọn) Route cho trang 404 Not Found */}
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
       </main>
 
       <Footer />

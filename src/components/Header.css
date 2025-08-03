@@ -122,3 +122,126 @@
     display: none;
   }
 }
+
+/* === DROPDOWN STYLES === */
+
+/* Style cho mục menu cha chứa dropdown */
+.nav__item--dropdown {
+  position: relative;
+}
+
+/* Style cho mũi tên bên cạnh chữ "Products" */
+.nav__link .nav__arrow {
+  font-size: 1.2rem;
+  margin-left: var(--mb-0-5);
+  transition: transform 0.3s ease;
+}
+
+/* Xoay mũi tên khi hover */
+.nav__item--dropdown:hover .nav__arrow {
+  transform: rotate(180deg);
+}
+
+/* Menu dropdown */
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: -20px; /* Căn chỉnh vị trí dropdown */
+  background-color: var(--container-color);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  min-width: 200px;
+
+  /* Mặc định ẩn dropdown */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: var(--z-fixed);
+}
+
+/* Class để hiển thị dropdown */
+.dropdown__menu.show-dropdown,
+.nav__item--dropdown:hover .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown__item {
+  /* không cần style đặc biệt */
+}
+
+/* Style cho từng link trong dropdown */
+.dropdown__link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown__link:hover,
+.dropdown__link.active {
+  background-color: var(--primary-color-alt);
+  color: #fff;
+}
+
+/* === Xử lý Dropdown trên MOBILE === */
+@media screen and (max-width: 768px) {
+  /* Ẩn dropdown mặc định trên mobile */
+  .dropdown__menu {
+    display: none;
+    position: static; /* Bỏ position absolute */
+    box-shadow: none;
+    padding: 0.75rem 0 0.75rem 1.5rem; /* Thụt vào một chút */
+    min-width: unset;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background-color: transparent;
+  }
+
+  /* Khi hover trên mobile, ta muốn nó hiện ra như một submenu */
+  .nav__item--dropdown:hover .dropdown__menu {
+    display: block; /* Hiện submenu */
+  }
+
+  .dropdown__link {
+    color: var(--text-color);
+    padding: 0.75rem 0;
+  }
+  .dropdown__link.active,
+  .dropdown__link:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+  }
+
+  .nav__item--dropdown .nav__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__item--dropdown:hover .nav__arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/* === LOGO IMAGE STYLES === */
+
+.nav__logo {
+  /* Loại bỏ các style dành cho text cũ nếu có */
+  font-size: initial;
+  font-weight: initial;
+  font-family: initial;
+  display: flex; /* Giúp căn chỉnh ảnh dễ dàng */
+  align-items: center;
+}
+
+.nav__logo-img {
+  height: 5rem; /* Điều chỉnh chiều cao của logo theo ý muốn */
+  width: auto; /* Chiều rộng sẽ tự động điều chỉnh theo tỷ lệ */
+}

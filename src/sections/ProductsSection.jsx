@@ -5,28 +5,31 @@ import ProductModal from '../components/ProductModal';
 import FilterButtons from '../components/FilterButtons';
 import './ProductsSection.css';
 
-const ProductsSection = () => {
+// Import trực tiếp file JSON
+import productsData from '../data/products.json';
+
+const ProductsSection = ({ initialCategory }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState(initialCategory || 'All');
   
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Fetch data từ file JSON khi component được mount
   useEffect(() => {
-    fetch('/data/products.json')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data);
-        setFilteredProducts(data);
-        // Lấy ra các category độc nhất để tạo nút lọc
-        const uniqueCategories = [...new Set(data.map(p => p.category))];
-        setCategories(uniqueCategories);
-      })
-      .catch(error => console.error('Error fetching products:', error));
-  }, []);
+    // Không cần fetch nữa, dữ liệu đã có sẵn
+    setProducts(productsData);
+    const uniqueCategories = [...new Set(productsData.map(p => p.category))];
+    setCategories(uniqueCategories);
+
+    if (initialCategory) {
+      const filtered = productsData.filter(p => p.category.toLowerCase() === initialCategory.toLowerCase());
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(productsData);
+    }
+  }, [initialCategory]);
 
   // Hàm xử lý khi thay đổi bộ lọc
   const handleFilterChange = (category) => {

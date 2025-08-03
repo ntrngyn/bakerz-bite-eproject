@@ -1,76 +1,100 @@
-import React, { useState } from 'react';
-import { Link, scroller } from 'react-scroll';
-import './Header.css'; // File CSS sẽ được cập nhật ở bước 2
+// /src/components/Header.jsx
 
-// Import hook nếu bạn đã tạo
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 import useVisitorCount from '../hooks/useVisitorCount';
+import logoImage from '../../public/images/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // State mới để quản lý dropdown nào đang mở (dành cho desktop)
+  const [openDropdown, setOpenDropdown] = useState(null); 
   const visitorCount = useVisitorCount();
 
+  // Cấu trúc lại menuItems để hỗ trợ submenu
   const menuItems = [
-    { to: 'products', name: 'Products' },
-    { to: 'merchandise', name: 'Merchandise' },
-    { to: 'offers', name: 'Offers' },
-    { to: 'gallery', name: 'Gallery' },
-    { to: 'about', name: 'About Us' },
-    { to: 'contact', name: 'Contact' },
+    { 
+      to: '/products', 
+      name: 'Products',
+      // Thêm một mảng submenu
+      submenu: [
+        { to: '/products/cakes', name: 'Cakes' },
+        { to: '/products/cookies', name: 'Cookies' },
+        { to: '/products/pastries', name: 'Pastries' },
+        { to: '/products/pies', name: 'Pies' },
+        { to: '/products/coffee', name: 'Coffee' },
+      ]
+    },
+    { to: '/merchandise', name: 'Merchandise' },
+    { to: '/gallery', name: 'Gallery' },
+    { to: '/offers', name: 'Offers' },
+    { to: '/about', name: 'About Us' },
+    { to: '/contact', name: 'Contact' },
   ];
-
-  // Hàm để đóng menu sau khi click vào một link (trên mobile)
-  const closeMenuAndScroll = (target) => {
-    setIsMenuOpen(false);
-    scroller.scrollTo(target, {
-      spy: true,
-      smooth: true,
-      offset: -70,
-      duration: 500,
-    });
-  };
-
+  
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="/" className="nav__logo">
-          Bakerz Bite
-        </a>
+        <NavLink to="/" className="nav__logo" onClick={() => setIsMenuOpen(false)}>
+          {/* Sửa lại ở đây */}
+          <img src={logoImage} alt="Bakerz Bite Logo" className="nav__logo-img" />
+        </NavLink>
 
-        {/* Thêm class 'show-menu' khi isMenuOpen là true */}
         <div className={`nav__menu ${isMenuOpen ? 'show-menu' : ''}`}>
           <ul className="nav__list">
-            {menuItems.map((item) => (
-              <li className="nav__item" key={item.to}>
-                {/* Sử dụng hàm mới cho onClick trên mobile */}
-                <Link
+            {menuItems.map((item, index) => (
+              // Thêm class 'nav__item--dropdown' nếu có submenu
+              <li 
+                className={`nav__item ${item.submenu ? 'nav__item--dropdown' : ''}`} 
+                key={item.to}
+                // Xử lý hover cho dropdown trên desktop
+                onMouseEnter={() => item.submenu && setOpenDropdown(item.name)}
+                onMouseLeave={() => item.submenu && setOpenDropdown(null)}
+              >
+                <NavLink
                   to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
                   className="nav__link"
-                  activeClass="active-link"
-                  onClick={() => closeMenuAndScroll(item.to)}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </Link>
+                  {/* Thêm icon mũi tên nếu có submenu */}
+                  {item.submenu && <i className="uil uil-angle-down nav__arrow"></i>}
+                </NavLink>
+
+                {/* Render dropdown nếu có submenu */}
+                {item.submenu && (
+                  <ul className={`dropdown__menu ${openDropdown === item.name ? 'show-dropdown' : ''}`}>
+                    {item.submenu.map((subItem) => (
+                      <li className="dropdown__item" key={subItem.to}>
+                        <NavLink
+                          to={subItem.to}
+                          className="dropdown__link"
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setOpenDropdown(null);
+                          }}
+                        >
+                          {subItem.name}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
-
-          {/* Nút đóng menu trên mobile */}
           <div className="nav__close" onClick={() => setIsMenuOpen(false)}>
-            <i className="uil uil-times"></i> {/* Icon 'x' */}
+            <i className="uil uil-times"></i>
           </div>
         </div>
         
         <div className="nav__right-group">
           <div className="nav__visitor-count">
-            Lượt truy cập: {visitorCount.toLocaleString()}
+            Visitors: {visitorCount.toLocaleString()}
           </div>
-          {/* Nút bật/tắt menu trên mobile */}
           <div className="nav__toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <i className="uil uil-apps"></i> {/* Icon hamburger */}
+            <i className="uil uil-apps"></i>
           </div>
         </div>
       </nav>
