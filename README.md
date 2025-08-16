@@ -18,4 +18,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Deployment Link:
 
-Link : https://ntrngyn.github.io/ntrngyn-bakerz-bite-eproject/
+Link : https://ntrngyn.github.io/bakerz-bite-eproject/
