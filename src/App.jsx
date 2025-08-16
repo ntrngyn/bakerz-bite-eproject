@@ -27,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:category" element={<ProductsPage />} />
           <Route path="/merchandise" element={<MerchandisePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/offers" element={<OffersPage />} />
@@ -34,9 +35,6 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq-sitemap" element={<FaqSitemapPage />} />
           <Route path="*" element={<UnderConstruction />} />
-          
-          <Route path="/products/:category" element={<ProductsPage />} />
-
         </Routes>
       </main>
 

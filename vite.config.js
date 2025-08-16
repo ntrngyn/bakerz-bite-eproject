@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react-swc";
 import basicSsl from "@vitejs/plugin-basic-ssl"; // <-- 1. Import plugin
 
 export default defineConfig({
-  base: "/ntrngyn-bakerz-bite-eproject/",
+  base: "/bakerz-bite-eproject/",
   plugins: [
     react(),
     basicSsl(), // <-- 2. Thêm plugin vào mảng plugins
