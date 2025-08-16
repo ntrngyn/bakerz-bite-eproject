@@ -1,21 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './OfferSection.css';
 import offersData from '../data/offers.json';
-import { useEffect, useCallback } from 'react';
+import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
 
 const OfferSection = () => {
+  // BƯỚC 2: TẠO STATE MỚI ĐỂ LƯU DỮ LIỆU ĐÃ XỬ LÝ
+  const [processedOffers, setProcessedOffers] = useState([]);
+  
   const [currentOfferIndex, setCurrentOfferIndex] = useState(0);
   const [isModalMounted, setIsModalMounted] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
+  // BƯỚC 3: DÙNG useEffect ĐỂ XỬ LÝ DỮ LIỆU MỘT LẦN KHI COMPONENT MOUNT
+  useEffect(() => {
+    const updatedOffers = offersData.map(offer => ({
+      ...offer,
+      image: fixImagePath(offer.image),
+      details: {
+        ...offer.details,
+        features: offer.details.features.map(feature => ({
+          ...feature,
+          image: fixImagePath(feature.image)
+        }))
+      }
+    }));
+    setProcessedOffers(updatedOffers);
+  }, []); // Mảng rỗng đảm bảo useEffect chỉ chạy 1 lần
+
+  // BƯỚC 4: SỬA LẠI COMPONENT ĐỂ DÙNG `processedOffers` THAY VÌ `offersData`
+
   const goToPrevious = () => {
+    // Dùng processedOffers.length
     const isFirstSlide = currentOfferIndex === 0;
-    const newIndex = isFirstSlide ? offersData.length - 1 : currentOfferIndex - 1;
+    const newIndex = isFirstSlide ? processedOffers.length - 1 : currentOfferIndex - 1;
     setCurrentOfferIndex(newIndex);
   };
 
   const goToNext = () => {
-    const isLastSlide = currentOfferIndex === offersData.length - 1;
+    // Dùng processedOffers.length
+    const isLastSlide = currentOfferIndex === processedOffers.length - 1;
     const newIndex = isLastSlide ? 0 : currentOfferIndex + 1;
     setCurrentOfferIndex(newIndex);
   };
@@ -26,19 +49,16 @@ const OfferSection = () => {
   
   const openModal = useCallback(() => {
     setIsModalMounted(true);
-    setTimeout(() => {
-      setIsModalVisible(true);
-    }, 10);
+    setTimeout(() => setIsModalVisible(true), 10);
   }, []);
 
   const closeModal = useCallback(() => {
     setIsModalVisible(false);
-    setTimeout(() => {
-      setIsModalMounted(false);
-    }, 400);
+    setTimeout(() => setIsModalMounted(false), 400);
   }, []);
 
-  const currentOfferDetails = offersData[currentOfferIndex].details;
+  // Thêm Optional Chaining (?.) để tránh lỗi khi processedOffers đang rỗng lúc render lần đầu
+  const currentOfferDetails = processedOffers[currentOfferIndex]?.details;
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -51,6 +71,11 @@ const OfferSection = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isModalMounted, closeModal]);
+
+  // Nếu chưa có dữ liệu, có thể hiện loading hoặc không hiện gì cả
+  if (processedOffers.length === 0) {
+    return null; // hoặc <p>Loading...</p>
+  }
 
   return (
     <>
@@ -65,14 +90,14 @@ const OfferSection = () => {
           <div className="offer-card" key={currentOfferIndex}>
             <div className="offer-image-container">
               <img 
-                src={offersData[currentOfferIndex].image} 
-                alt={offersData[currentOfferIndex].title}
+                src={processedOffers[currentOfferIndex].image} 
+                alt={processedOffers[currentOfferIndex].title}
                 className="offer-image"
               />
             </div>
             <div className="offer-content">
-              <h3 className="offer-title">{offersData[currentOfferIndex].title}</h3>
-              <p className="offer-description">{offersData[currentOfferIndex].description}</p>
+              <h3 className="offer-title">{processedOffers[currentOfferIndex].title}</h3>
+              <p className="offer-description">{processedOffers[currentOfferIndex].description}</p>
               <button className="button" onClick={openModal}>See More</button>
             </div>
           </div>
@@ -83,7 +108,7 @@ const OfferSection = () => {
         </div>
 
         <div className="slider-dots">
-          {offersData.map((_, slideIndex) => (
+          {processedOffers.map((_, slideIndex) => (
             <div
               key={slideIndex}
               className={`dot ${currentOfferIndex === slideIndex ? 'active' : ''}`}
@@ -93,7 +118,7 @@ const OfferSection = () => {
         </div>
       </div>
 
-      {isModalMounted && (
+      {isModalMounted && currentOfferDetails && (
         <div 
           className={`offer-modal-overlay ${isModalVisible ? 'show' : ''}`} 
           onClick={closeModal}
@@ -123,7 +148,5 @@ const OfferSection = () => {
     </>
   );
 };
-
-
 
 export default OfferSection;

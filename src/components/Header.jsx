@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import useVisitorCount from '../hooks/useVisitorCount';
-import logoImage from '../assets/images/Baker_BiteLOGO.png';
+import logoImage from '/images/Baker_BiteLOGO.png';
 
 const Header = () => {
   // State cho menu chính trên mobile (hamburger menu)

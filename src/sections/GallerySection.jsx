@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import './GallerySection.css';
 import galleryData from '../data/gallery.json';
+import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
 
 const GallerySection = () => {
-  const images = [];
-  for (let i = 0; i < galleryData.length; i++) {
-    const data = galleryData[i];
-    images.push({
+  // BƯỚC 2: XỬ LÝ DỮ LIỆU NGAY TỪ ĐẦU
+  const images = galleryData.map(data => {
+    // Tạo đường dẫn gốc giống như cách bạn đã làm
+    const originalPath = `/images/Galleries/img${data.id}.png`;
+    
+    return {
       id: data.id,
-      src: `./src/assets/images/Galleries/img${data.id}.png`,
+      // Sửa đường dẫn bằng hàm helper
+      src: fixImagePath(originalPath), // <-- SỬA Ở ĐÂY
       alt: `Gallery image ${data.id}`,
       title: data.title,
       description: data.description,
       category: data.category 
-    });
-  }
+    };
+  });
 
+  // PHẦN CÒN LẠI CỦA COMPONENT KHÔNG CẦN THAY ĐỔI GÌ CẢ
+  
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
@@ -25,22 +31,17 @@ const GallerySection = () => {
     ? images 
     : images.filter(image => image.category === activeFilter);
 
-      useEffect(() => {
+  useEffect(() => {
     setSelectedIndex(0);
   }, [activeFilter]);
   
-  // (các hàm và useEffect) 
   const openPopup = (index) => {
     setSelectedIndex(index);
-    // Kích hoạt animation hiện ra ngay sau khi state index được set
     setTimeout(() => setIsPopupVisible(true), 10); 
   };
- const closePopup = () => {
-    // Tắt cờ 'visible' để kích hoạt animation ẩn đi
+  
+  const closePopup = () => {
     setIsPopupVisible(false);
-    
-    // Đợi animation kết thúc (400ms như trong CSS) rồi mới set index = null
-    // để xóa popup khỏi DOM
     setTimeout(() => {
       setSelectedIndex(null);
     }, 400); 
@@ -59,10 +60,6 @@ const GallerySection = () => {
   };
   
   useEffect(() => {
-    closePopup();
-  }, [activeFilter]);
-
-  useEffect(() => {
     const handleKeyDown = (e) => {
       if (selectedIndex === null) return;
       if (e.key === 'ArrowRight') goToNext(e);
@@ -75,6 +72,10 @@ const GallerySection = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [selectedIndex, filteredImages, closePopup]);
+
+  // useEffect(() => {
+  //   closePopup();
+  // }, [activeFilter]);
 
   return (
     <div className="gallery-section-wrapper">
@@ -95,23 +96,20 @@ const GallerySection = () => {
           ))}
         </div>
 
-         <div className="Pastries-gallery-grid">
+        <div className="Pastries-gallery-grid">
           {filteredImages.map((image, index) => (
             <div key={image.id} className="Pastries-gallery-item" onClick={() => openPopup(index)}>
-              {/* Phần hình ảnh */}
               <div className="pastries-gallery-image-wrapper">
                 <img src={image.src} alt={image.alt} />
               </div>
-              {/* Phần thông tin bên dưới ảnh */}
               <div className="pastries-gallery-item-info">
                 <h3 className="pastries-gallery-item-title">{image.title}</h3>
-                {/* Thay thế span "See More" bằng một nút "View Details" */}
                 <button className="view-details-btn">See More</button>
               </div>
             </div>
           ))}
-          </div>
-        {/* ... (phần popup) ... */}
+        </div>
+
         {selectedIndex !== null && filteredImages[selectedIndex] && (
           <div 
             className={`popup-overlay ${isPopupVisible ? 'show' : ''}`} 
@@ -119,7 +117,6 @@ const GallerySection = () => {
           >
             <button className="popup-nav-button prev" onClick={goToPrevious}>&#10094;</button>
             <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-              {/* Thêm 'key' để React re-render và kích hoạt lại animation khi đổi slide */}
               <div className="popup-text-content" key={`text-${selectedIndex}`}>
                 <h3>{filteredImages[selectedIndex].title}</h3>
                 <p>{filteredImages[selectedIndex].description}</p>

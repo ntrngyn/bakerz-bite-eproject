@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import './FeaturedMerch.css';
+
+// BƯỚC 1: IMPORT ẢNH VÀO MỘT BIẾN
+import merchImage from '/images/categories/merchandise-featured.jpg';
 
 const FeaturedMerch = () => {
   return (
@@ -13,8 +15,9 @@ const FeaturedMerch = () => {
       />
       <div className="featured-merch-container container">
         <Link to="/merchandise" className="featured-merch-card">
+          {/* BƯỚC 2: SỬ DỤNG BIẾN ĐÃ IMPORT */}
           <img 
-            src="/src/assets/images/categories/merchandise-featured.jpg" 
+            src={merchImage} 
             alt="Bakerz Bite Merchandise" 
             className="featured-merch-card__image" 
           />

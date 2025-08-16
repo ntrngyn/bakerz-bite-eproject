@@ -1,13 +1,15 @@
-// src/sections/HomeAboutSection.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
+import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
 
 // Import file CSS đã được thiết kế lại
 import './HomeAboutUs.css'; 
 
 const HomeAboutUs = () => {
+    // BƯỚC 2: TẠO ĐƯỜNG DẪN ĐÚNG
+    const storeFrontImagePath = fixImagePath('/images/store-front.png');
+
     return (
         <section id="about" className="section">
             <SectionTitle title="About Us" subtitle="Our Story" />
@@ -15,7 +17,8 @@ const HomeAboutUs = () => {
             <div className="about-container container grid">
                 {/* Khối 1: Hình ảnh có thể nhấn vào */}
                 <Link to="/about" className="about-image-link">
-                    <img src="/src/assets/images/store-front.png" alt="Bakerz Bite Store Front" className="about-image" />
+                    {/* BƯỚC 3: SỬ DỤNG ĐƯỜNG DẪN ĐÃ ĐÚNG */}
+                    <img src={storeFrontImagePath} alt="Bakerz Bite Store Front" className="about-image" />
                 </Link>
                 
                 {/* Khối 2: Văn bản mô tả */}

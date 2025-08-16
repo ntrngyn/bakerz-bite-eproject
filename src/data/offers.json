@@ -3,7 +3,7 @@
     "id": 1,
     "title": "The Ultimate Brunch Box",
     "description": "Perfect for a lazy weekend morning. Get a box of 4 assorted croissants and 2 large coffees for only $25",
-    "image": "src/assets/images/Special_Offer/Banner1.png",
+    "image": "/images/Special_Offer/Banner1.png",
     "details": {
       "title": "A Perfect Weekend Treat",
       "main_text": "Our Weekend Special is designed to make your Saturdays and Sundays even sweeter. Enjoy a generous 20% discount on our freshly baked, whole pies. Perfect for family gatherings, special occasions, or simply treating yourself.",
@@ -11,12 +11,12 @@
         {
           "title": "Cup Of Coffee",
           "text": "Enjoy a freshst cup of coffee with your brunch box. Our coffee is brewed from the finest beans, ensuring a rich and a satisfying flavor that pairs perfectly with our pastries",
-          "image": "src/assets/images/Special_Offer/details/DT01.png"
+          "image": "/images/Special_Offer/details/DT01.png"
         },
         {
           "title": "Variety of Flavors",
           "text": "Choose from our classic selection, including Apple Crumble, Cherry Delight, and Southern Pecan. New seasonal flavors are introduced every month.",
-          "image": "src/assets/images/Special_Offer/details/DT01s.png"
+          "image": "/images/Special_Offer/details/DT01s.png"
         }
       ]
     }
@@ -25,7 +25,7 @@
     "id": 2,
     "title": "Meet The Ruby Chocolate Tart",
     "description": "New special offer for this month - Ruby chôclate tart with berries and cream for only $15 each or 2 for $25. ",
-    "image": "src/assets/images/Special_Offer/Banner2.png",
+    "image": "/images/Special_Offer/Banner2.png",
     "details": {
       "title": "New special offer for this month",
       "main_text": "Indulge in our new Ruby Chocolate Tart, a delightful blend of rich chocolate and tart berries, this dessert is a feast for the senses. Perfect for sharing or enjoying solo, this tart is a must-try for chocolate lovers.",
@@ -33,12 +33,12 @@
         {
           "title": "Small chocolate tarts",
           "text": "Our Ruby chocolate tarts are made with the finest ingredients, including prmium ruby chocolate and fresh berries. Each tart is crafted with core and attention to detail, ensuring a perfect balance of flavors and textures.",
-          "image": "src/assets/images/Special_Offer/details/DT02.png"
+          "image": "/images/Special_Offer/details/DT02.png"
         },
         {
           "title": "Presentation and Sharing",
           "text": "These tarts are not only delicious but also visually stunning. The vibrant ruby color and elegant presentation make them a perfect centerpiece for any dessert table. Share with frends and family or enjoy a moment on your own.",
-          "image": "src/assets/images/Special_Offer/details/DT02s.png"
+          "image": "/images/Special_Offer/details/DT02s.png"
         }
       ]
     }
@@ -47,7 +47,7 @@
     "id": 3,
     "title": "Coffee and Cake combo",
     "description": "Combo for one every day, ẹnoy a freshly brewed cup of coffee paired with a slice of our deliciuous cake, this combo is the perfect treat for any time of day",
-    "image": "src/assets/images/Special_Offer/Banner3.png",
+    "image": "/images/Special_Offer/Banner3.png",
     "details": {
       "title": "A combo for one every day",
       "main_text": "Our coffee and cake combo is the perfect treat for any time of day. Enjoy a freshly brewed cup of coffee paired with a slice of our delicious cake, all for just $10.",
@@ -55,12 +55,12 @@
         {
           "title": " A cup of coffee ",
           "text": "Our coffee is sourced from the best beans, ensuring a rich and romantic flavor that suits any crossaint. Whether you prefer a classic espresso, a creamy latte. We have all your favorite options. ",
-          "image": "src/assets/images/Special_Offer/details/DT03.png"
+          "image": "/images/Special_Offer/details/DT03.png"
         },
         {
           "title": "Cake of Flavor",
           "text": "Choose from variety of cakes, including classic chocolate, rich red velvet, and seasonal fruit flavors. Each slide is made with the finest ingredients, ensuring a moist and flavorful experience.",
-          "image": "src/assets/images/Special_Offer/details/DT03s.png"
+          "image": "/images/Special_Offer/details/DT03s.png"
         }
       ]
     }
@@ -69,7 +69,7 @@
     "id": 4,
     "title": "FOR OUR LOYAL FRIENDS",
     "description": "It could either be a system where you sign up to become a member, or one where you're given a card that gets stamped every time you buy something.",
-    "image": " src/assets/images/Special_Offer/Banner4.png",
+    "image": "/images/Special_Offer/Banner4.png",
     "details": {
       "title": "A Perfect Weekend Treat",
       "main_text": "Our Weekend Special is designed to make your Saturdays and Sundays even sweeter. Enjoy a generous 20% discount on our freshly baked, whole pies. Perfect for family gatherings, special occasions, or simply treating yourself.",
@@ -77,12 +77,12 @@
         {
           "title": "Loyalty for coffee lovers",
           "text": "Join our loyalty program and enjoy exclusive benefits. For every 10 coffees you buy, get one free! Plus, receive special discounts on your birthday and access to members-only events.",
-          "image": "src/assets/images/Special_Offer/details/DT04.png"
+          "image": "/images/Special_Offer/details/DT04.png"
         },
         {
           "title": "Loyalty for cake lovers",
           "text": "Indulge in our loyalty program designed for cake enthusiasts. Buy 5 cakes and get the 6th one free! Enjoy exclusive access to new flavors and special promotions throughout the year.",
-          "image": "src/assets/images/Special_Offer/details/DT04s.png"
+          "image": "/images/Special_Offer/details/DT04s.png"
         }
       ]
     }
@@ -91,7 +91,7 @@
     "id": 5,
     "title": "Today Special: Two for One",
     "description": "Now u can get an extra one for free when you buy one of our special cupcakes. This offer is avaliable for a limited time only, don't miss out!",
-    "image": "src/assets/images/Special_Offer/Banner5.png",
+    "image": "/images/Special_Offer/Banner5.png",
     "details": {
       "title": "A Perfect Special Month Treat",
       "main_text": "Our Weekend Special is designed to make your Saturdays and Sundays even sweeter. Enjoy a generous 20% discount on our freshly baked, whole pies. Perfect for family gatherings, special occasions, or simply treating yourself.",
@@ -99,12 +99,12 @@
         {
           "title": "Handmade with Love",
           "text": "Each cupcake is handcrafted with the finest ingredients, ensuring a moist and flavourful treat. Our bakers pour their heart into every batch, creating a delightful exprience for you.",
-          "image": "src/assets/images/Special_Offer/details/DT05.png"
+          "image": "/images/Special_Offer/details/DT05.png"
         },
         {
           "title": "Extra Cupcake for free",
           "text": "Buy one of our special cupcakes and get an extra one for free! Share with your friends or keep it all to yourself. This offer is avaliable for a limited time only, so don't miss out!",
-          "image": "src/assets/images/Special_Offer/details/DT05s.png"
+          "image": "/images/Special_Offer/details/DT05s.png"
         }
       ]
     }

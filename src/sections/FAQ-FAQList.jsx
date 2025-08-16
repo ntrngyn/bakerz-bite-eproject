@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './FAQ-FAQList.css';
+import faqData from '../data/faq.json'; // <-- BƯỚC 1: IMPORT TRỰC TIẾP
 
 const FaqList = () => {
     const [faqs, setFaqs] = useState([]);
     const [openFaqId, setOpenFaqId] = useState(null);
 
     useEffect(() => {
-        fetch('/src/data/faq.json') 
-            .then(res => res.json())
-            .then(data => setFaqs(data))
-            .catch(err => console.error("Could not fetch FAQ data:", err));
-    }, []);
+        // BƯỚC 2: XÓA FETCH VÀ GÁN DỮ LIỆU TRỰC TIẾP
+        try {
+            setFaqs(faqData);
+        } catch (err) {
+            console.error("Could not process FAQ data:", err);
+        }
+    }, []); // Mảng rỗng đảm bảo useEffect chỉ chạy 1 lần
 
     const toggleFaq = (id) => {
         setOpenFaqId(openFaqId === id ? null : id);
@@ -24,6 +27,9 @@ const FaqList = () => {
                         <span>{faq.question}</span>
                         <i className={`uil uil-angle-down faq-arrow ${openFaqId === faq.id ? 'open' : ''}`}></i>
                     </button>
+                    {/* Đoạn này có thể được tối ưu bằng CSS thay vì render có điều kiện,
+                        nhưng để sửa lỗi thì cứ giữ nguyên.
+                    */}
                     {openFaqId === faq.id && (
                         <div className="faq-answer">
                             <p>{faq.answer}</p>

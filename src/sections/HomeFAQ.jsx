@@ -2,26 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'; // Import NavLink để tạo link
 import SectionTitle from '../components/SectionTitle';
 import './HomeFAQ.css'; // **Đổi tên file CSS** để không trùng lặp
+import faqData from '../data/faq.json';
 
 const HomeFAQ = () => {
-    // Đổi tên các state để không trùng với component khác nếu cần
     const [homeFaqs, setHomeFaqs] = useState([]);
     const [openHomeFaqId, setOpenHomeFaqId] = useState(null);
 
     useEffect(() => {
-        fetch('/src/data/faq.json')
-            .then(res => res.json())
-            .then(data => {
-                // **FIX:** Chỉ lấy 3 câu hỏi đầu tiên
-                const homepageFaqs = data.slice(0, 3);
-                setHomeFaqs(homepageFaqs);
-                // Mặc định mở câu hỏi đầu tiên
-                if (homepageFaqs.length > 0) {
-                    setOpenHomeFaqId(homepageFaqs[0].id);
-                }
-            })
-            .catch(err => console.error("Could not fetch FAQ data:", err));
-    }, []);
+        try {
+            const homepageFaqs = faqData.slice(0, 3);
+            setHomeFaqs(homepageFaqs);
+            if (homepageFaqs.length > 0) {
+                setOpenHomeFaqId(homepageFaqs[0].id);
+            }
+        } catch (err) {
+            console.error("Could not process FAQ data:", err);
+        }
+    }, []); 
 
     const toggleHomeFaq = (id) => {
         setOpenHomeFaqId(openHomeFaqId === id ? null : id);

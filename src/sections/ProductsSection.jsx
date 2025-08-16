@@ -8,12 +8,17 @@ import FilterButtons from '../components/FilterButtons';
 import Pagination from '../components/Pagination';
 import './ProductsSection.css';
 import productsData from '../data/products.json';
+import { fixImagePath } from '../utils/pathUtils';
+
+const processedProductsData = productsData.map(product => ({
+  ...product,
+  image: fixImagePath(product.image)
+}));
 
 const ProductsSection = ({ initialCategory }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(processedProductsData); 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  // activeCategory sẽ được cập nhật trực tiếp từ initialCategory trong useEffect
   const [activeCategory, setActiveCategory] = useState('All');
   
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -23,29 +28,22 @@ const ProductsSection = ({ initialCategory }) => {
   const [productsPerPage] = useState(12); 
 
   useEffect(() => {
-    setProducts(productsData);
-    
-    const uniqueCategories = [...new Set(productsData.map(p => p.category))];
+    const uniqueCategories = [...new Set(processedProductsData.map(p => p.category))];
     setCategories(uniqueCategories);
     
-    // 1. Logic lọc và cập nhật activeCategory được gom hết vào đây
     if (initialCategory) {
-      // Tìm category gốc (với chữ hoa) để so sánh và đặt active class
       const originalCategory = uniqueCategories.find(c => c.toLowerCase() === initialCategory.toLowerCase());
       setActiveCategory(originalCategory || 'All');
 
-      const filtered = productsData.filter(p => p.category.toLowerCase() === initialCategory.toLowerCase());
+      const filtered = processedProductsData.filter(p => p.category.toLowerCase() === initialCategory.toLowerCase());
       setFilteredProducts(filtered);
     } else {
-      // Nếu không có initialCategory (trang /products), hiển thị tất cả
       setActiveCategory('All');
-      setFilteredProducts(productsData);
+      setFilteredProducts(processedProductsData);
     }
     
     setCurrentPage(1); 
-  }, [initialCategory]); // Chỉ cần phụ thuộc vào initialCategory
-
-  // 2. XÓA BỎ HÀM handleFilterChange, nó không còn cần thiết
+  }, [initialCategory]);
 
   // --- Logic Modal (giữ nguyên) ---
   const handleCardClick = (product) => {

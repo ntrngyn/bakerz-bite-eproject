@@ -1,19 +1,17 @@
 import React from 'react';
-
-// Import CSS
+// import { Link } from 'react-router-dom'; // Dùng thẻ <a> thay thế, hoặc Link nếu bạn muốn
+import SectionTitle from '../components/SectionTitle'; 
+import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
 import './HomeSpecialOffer.css';
 
-// Import component SectionTitle
-import SectionTitle from '../components/SectionTitle';
-
-// Dữ liệu (giữ nguyên)
+// Dữ liệu gốc vẫn giữ nguyên
 const specialOffersData = [
   {
     id: 'loyalty-01',
     subtitle: "FOR OUR LOYAL FRIENDS",
     title: "Your Next Coffee Is On Us",
     description: "As a thank you for your continued support, enjoy a free handcrafted coffee with any purchase over $15.",
-    image: "/src/assets/images/home-offers/offer-loyalty.jpg",
+    image: "/images/home-offers/offer-loyalty.jpg",
     link: "/offers",
     buttonText: "Discover More"
   },
@@ -21,33 +19,39 @@ const specialOffersData = [
     id: 'weekend-01',
     subtitle: "WEEKEND SPECIAL",
     title: "The Ultimate Brunch Box",
-    image: "/src/assets/images/home-offers/offer-weekend.jpg",
+    image: "/images/home-offers/offer-weekend.jpg",
     link: "/offers"
   },
   {
     id: 'combo-01',
     subtitle: "PERFECT PAIRING",
     title: "Coffee & Cake Combo",
-    image: "/src/assets/images/home-offers/offer-combo.jpg",
+    image: "/images/home-offers/offer-combo.jpg",
     link: "/offers"
   },
   {
     id: 'new-01',
     subtitle: "NEW ARRIVAL",
     title: "Meet The Ruby Chocolate Tart",
-    image: "/src/assets/images/home-offers/offer-new-product.jpg",
+    image: "/images/home-offers/offer-new-product.jpg",
     link: "/offers"
   },
 ];
 
 // --- COMPONENT ---
 const HomeSpecialOffer = () => {
-    const featuredOffer = specialOffersData[0];
-    const secondaryOffers = specialOffersData.slice(1, 4);
+    // BƯỚC 2: XỬ LÝ DỮ LIỆU GỐC TRƯỚC KHI SỬ DỤNG
+    const processedOffers = specialOffersData.map(offer => ({
+        ...offer,
+        image: fixImagePath(offer.image)
+    }));
+
+    // BƯỚC 3: SỬ DỤNG DỮ LIỆU ĐÃ XỬ LÝ
+    const featuredOffer = processedOffers[0];
+    const secondaryOffers = processedOffers.slice(1, 4);
 
     return (
         <section className="home-special-offer section" id="offers">
-            {/* THÊM LẠI SECTION TITLE Ở ĐÂY */}
             <SectionTitle subtitle="Curated For You" title="Today's Special Offers" />
 
             <div className="home-special-offer__grid container">

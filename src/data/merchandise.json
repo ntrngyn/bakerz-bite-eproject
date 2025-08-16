@@ -4,7 +4,7 @@
     "name": "Signature Ceramic Mug",
     "category": "Merchandise",
     "price": "250,000đ",
-    "image": "src/assets/images/merch/J1.png",
+    "image": "/images/merch/J1.png",
     "description": "Start your day with a sip of happiness from our classic ceramic mug. Features our signature logo and a comfortable handle. Microwave and dishwasher safe.",
     "ingredients": ["Ceramic"]
   },
@@ -13,7 +13,7 @@
     "name": "Classic Logo T-Shirt",
     "category": "Merchandise",
     "price": "450,000đ",
-    "image": "src/assets/images/merch/J2.png",
+    "image": "/images/merch/J2.png",
     "description": "Wear your love for baking with our premium quality t-shirt. Made from 100% soft, breathable cotton. Unisex fit, available in S, M, L, XL.",
     "ingredients": ["100% Cotton"]
   },
@@ -22,7 +22,7 @@
     "name": "Everyday Canvas Tote Bag",
     "category": "Merchandise",
     "price": "320,000đ",
-    "image": "src/assets/images/merch/J3.png",
+    "image": "/images/merch/J3.png",
     "description": "Carry your groceries, books, or fresh pastries in our sturdy and stylish tote bag. Made from heavy-duty canvas with reinforced handles for durability.",
     "ingredients": ["Heavy-duty Canvas"]
   },
@@ -31,7 +31,7 @@
     "name": "Insulated Travel Tumbler",
     "category": "Merchandise",
     "price": "420,000đ",
-    "image": "src/assets/images/merch/J4.png",
+    "image": "/images/merch/J4.png",
     "description": "Keep your coffee hot or your iced tea cold for hours. Our sleek, stainless steel travel tumbler features double-wall insulation and a spill-resistant lid.",
     "ingredients": ["Stainless Steel", "BPA-Free Plastic Lid"]
   },
@@ -40,7 +40,7 @@
     "name": "Signature Embroidered Cap",
     "category": "Merchandise",
     "price": "350,000đ",
-    "image": "src/assets/images/merch/J5.jpg",
+    "image": "/images/merch/J5.jpg",
     "description": "Top off your look with our classic baseball cap. Made from high-quality cotton twill, it features our logo beautifully embroidered on the front and an adjustable strap for a perfect fit.",
     "ingredients": ["Cotton Twill", "Metal Clasp"]
   }

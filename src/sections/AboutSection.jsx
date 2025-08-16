@@ -1,6 +1,11 @@
 import React from 'react';
 import './AboutSection.css';
 
+// BƯỚC 1: IMPORT CÁC FILE ẢNH VÀO CÁC BIẾN
+import aboutImage1 from '/images/abtUS/abtUSimg1.png';
+import aboutImage2 from '/images/abtUS/abtUSimg2.png';
+
+
 const AboutSection = () => {
   return (
     <div className="about-us-container">
@@ -20,16 +25,18 @@ const AboutSection = () => {
           </p>
         </div>
         <div className="image-content">
+          {/* BƯỚC 2: SỬ DỤNG BIẾN ĐÃ IMPORT */}
           <img 
-            src="./src/assets/images/abtUs/abtUsimg1.png" 
+            src={aboutImage1} 
             alt="A team of happy bakers working together with passion" 
           />
         </div>
       </section>
       <section className="about-section two-column-layout">
         <div className="image-content">
+          {/* BƯỚC 2: SỬ DỤNG BIẾN ĐÃ IMPORT */}
           <img 
-            src="./src/assets/images/abtUs/abtUsimg2.png" 
+            src={aboutImage2} 
             alt="High-quality ingredients like real butter, cream, and unbleached flour" 
           />
         </div>
