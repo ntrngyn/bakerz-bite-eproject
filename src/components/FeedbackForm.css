@@ -1,0 +1,84 @@
+/* /src/components/FeedbackForm.css */
+
+.feedback-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Khoảng cách giữa các group */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: var(--mb-0-5);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: #f5f5f5;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(200, 169, 126, 0.2);
+}
+
+.feedback-form .button {
+  align-self: flex-start; /* Nút chỉ chiếm độ rộng cần thiết */
+}
+
+/* === Star Rating Styles (PHIÊN BẢN CUỐI CÙNG) === */
+.star-rating {
+  display: flex; /* Chỉ cần dòng này, không cần reverse */
+}
+
+.star-rating input[type="radio"] {
+  display: none; /* Ẩn nút radio */
+}
+
+.star-rating .star {
+  font-size: 2.5rem;
+  color: #ccc; /* Màu mặc định khi tắt */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* 
+  Định nghĩa duy nhất cho trạng thái BẬT.
+  JavaScript sẽ lo việc thêm/bỏ class 'on' này.
+*/
+.star-rating .star.on {
+  color: var(--primary-color);
+}
+
+/* Thông báo thành công */
+.feedback-success {
+  text-align: center;
+  padding: 2rem;
+  border: 2px dashed var(--primary-color);
+  border-radius: 1rem;
+}
+
+.feedback-success h3 {
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+}
+
+.feedback-success p {
+  font-size: var(--normal-font-size);
+  margin-top: var(--mb-1);
+}

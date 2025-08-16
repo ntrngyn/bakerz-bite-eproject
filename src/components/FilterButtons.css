@@ -1,0 +1,45 @@
+/* /src/components/FilterButtons.css */
+
+/* Container chứa tất cả các nút lọc */
+.filter-buttons {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút */
+  align-items: center;
+  flex-wrap: wrap; /* Cho phép các nút xuống dòng nếu không đủ chỗ */
+  gap: 1rem; /* Khoảng cách giữa các nút */
+  margin-bottom: var(
+    --mb-2-5
+  ); /* Khoảng cách với danh sách sản phẩm bên dưới */
+}
+
+/* Style cho từng nút lọc */
+.filter-button {
+  background-color: var(--container-color); /* Nền trắng */
+  color: var(--text-color); /* Màu chữ xám đậm */
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color); /* Viền xám nhạt */
+  border-radius: 2rem; /* Bo tròn các góc để tạo thành hình viên thuốc */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--small-font-size);
+}
+
+/* Hiệu ứng khi di chuột qua nút */
+.filter-button:hover {
+  background-color: var(
+    --primary-color-alt
+  ); /* Đổi nền thành màu vàng đồng nhạt */
+  color: #fff; /* Chữ màu trắng */
+  border-color: var(--primary-color-alt); /* Viền cũng đổi màu */
+}
+
+/* Style cho nút đang được chọn (active) */
+.filter-button.active {
+  background-color: var(--primary-color); /* Nền màu vàng đồng chính */
+  color: #fff; /* Chữ màu trắng */
+  border-color: var(--primary-color); /* Viền cũng đổi màu */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ để nổi bật */
+  transform: translateY(-2px); /* Hơi nhích lên một chút */
+}

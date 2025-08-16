@@ -1,0 +1,116 @@
+/* /src/components/Pagination.css */
+
+/* ... các style đã có giữ nguyên ... */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.page-link {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem; 
+  color: var(--text-color);
+  background-color: var(--container-color);
+  font-family: var(--body-font);
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.page-link:hover {
+  border-color: var(--primary-color); 
+  color: var(--primary-color); 
+  transform: translateY(-3px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+}
+
+.page-link.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  font-weight: var(--font-semi-bold);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(200, 169, 126, 0.4); 
+}
+
+.page-link.active:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: default;
+}
+
+.page-link-arrow {
+  font-size: 1.25rem;
+}
+
+.page-link.disabled {
+  background-color: #f9f9f9;
+  color: #ccc;
+  border-color: var(--border-color);
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.page-item--ellipsis span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+}
+
+
+/* === CSS MỚI CHO Ô INPUT === */
+
+.page-link-input {
+  /* Kế thừa các thuộc tính chung nhưng ghi đè một vài thứ */
+  width: 65px; /* Rộng hơn một chút để chứa số */
+  text-align: center;
+  padding: 0 0.25rem; /* Điều chỉnh padding cho input */
+  cursor: text; /* Đổi con trỏ thành dạng văn bản */
+}
+
+/* Định dạng cho placeholder "..." */
+.page-link-input::placeholder {
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Hiệu ứng khi focus vào ô input, giống như hover vào nút khác */
+.page-link-input:focus {
+  outline: none;
+  border-color: var(--primary-color); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+}
+
+/* Loại bỏ các mũi tên tăng/giảm mặc định của trình duyệt cho input type="number" */
+.page-link-input::-webkit-outer-spin-button,
+.page-link-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page-link-input {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,190 @@
+/*=============== HOME SPECIAL OFFER (LAYOUT 2 CỘT BÊN TRONG) ===============*/
+
+/* --- Grid Layout Chính --- */
+.home-special-offer__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; 
+  /* Điều chỉnh lại tỷ lệ nếu cần */
+  gap: 2.5rem;
+  align-items: stretch; /* Căn cho các card có chiều cao bằng nhau */
+}
+
+.home-special-offer__card {
+  display: flex; /* Dùng flex cho tất cả card để dễ căn chỉnh */
+  text-decoration: none;
+  border-radius: .75rem;
+  overflow: hidden;
+  background-color: var(--container-color);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-special-offer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-special-offer__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px hsla(38, 25%, 50%, 0.2);
+}
+
+
+/* ======================================================== */
+/* ========= FEATURED CARD (Layout 2 cột bên trong) ======== */
+/* ======================================================== */
+
+.home-special-offer__card--featured {
+  flex-direction: row; /* Hướng flex là hàng ngang */
+  border: 1px solid var(--border-color);
+}
+
+.home-special-offer__card--featured .home-special-offer__img-wrapper {
+  flex: 1 1 55%; /* Ảnh chiếm 55% không gian, co giãn linh hoạt */
+  min-width: 55%;
+}
+
+.home-special-offer__card--featured:hover .home-special-offer__img {
+  transform: scale(1.05);
+}
+
+.home-special-offer__card--featured .home-special-offer__data {
+  flex: 1 1 45%; /* Nội dung chiếm 45% */
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column; /* Nội dung bên trong vẫn xếp dọc */
+}
+
+.home-special-offer__card--featured .home-special-offer__subtitle {
+  font-family: var(--body-font);
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: var(--smaller-font-size);
+  letter-spacing: 1.2px;
+}
+
+.home-special-offer__card--featured .home-special-offer__title {
+  font-size: 2rem; /* Điều chỉnh lại một chút cho cân đối */
+  color: var(--title-color);
+  line-height: 1.3;
+  margin: var(--mb-0-75) 0 var(--mb-1);
+}
+
+.home-special-offer__card--featured .home-special-offer__description {
+  color: var(--text-color-light);
+  line-height: 1.8;
+  margin-bottom: auto;
+  padding-bottom: var(--mb-2);
+}
+
+.home-special-offer__button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 2.25rem;
+  font-weight: var(--font-semi-bold);
+  border-radius: .5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  align-self: flex-start;
+}
+.home-special-offer__button:hover {
+  background-color: var(--primary-color-alt);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px hsla(38, 33%, 60%, 0.4);
+}
+
+
+/* ======================================================== */
+/* ========= SECONDARY CARDS (Chỉnh sửa để nhất quán) ====== */
+/* ======================================================== */
+
+.home-special-offer__secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.home-special-offer__card--secondary {
+  position: relative;
+  flex-direction: column; /* Luôn xếp dọc */
+  background-color: transparent; /* Bỏ nền vì đã có ảnh */
+  /* Edit */
+  aspect-ratio: 2 / 1;
+}
+
+.home-special-offer__card--secondary .home-special-offer__img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Lớp phủ gradient */
+.home-special-offer__card--secondary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, hsla(0, 0%, 0%, 0.7) 10%, hsla(0, 0%, 0%, 0.4) 40%, transparent 70%);
+  z-index: 1;
+  transition: opacity 0.4s ease;
+  border-radius: .75rem;
+}
+
+.home-special-offer__card--secondary:hover::after { opacity: 0.85; }
+.home-special-offer__card--secondary:hover .home-special-offer__img { transform: scale(1.1); }
+
+.home-special-offer__data--secondary {
+  position: relative;
+  z-index: 2;
+  margin-top: auto; /* Đẩy nội dung xuống dưới */
+  padding: 1.5rem;
+  color: #fff;
+  transition: transform 0.4s ease;
+}
+
+.home-special-offer__card--secondary:hover .home-special-offer__data--secondary { transform: translateY(-5px); }
+.home-special-offer__subtitle--secondary {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: .5px;
+}
+.home-special-offer__title--secondary {
+  font-size: var(--h3-font-size);
+  color: #fff;
+  margin-top: var(--mb-0-25);
+  line-height: 1.3;
+}
+
+
+/*=============== RESPONSIVE ADJUSTMENTS ===============*/
+@media screen and (max-width: 1024px) {
+  .home-special-offer__grid {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột sớm hơn */
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Chuyển card chính về layout xếp dọc */
+  .home-special-offer__card--featured {
+    flex-direction: column;
+  }
+  .home-special-offer__card--featured .home-special-offer__img-wrapper {
+    aspect-ratio: 4 / 3; /* Trả lại tỷ lệ ảnh khi xếp dọc */
+  }
+
+  .home-special-offer__secondary-grid {
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 card phụ trên 1 hàng */
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home-special-offer__secondary-grid {
+    grid-template-columns: 1fr; /* Trên mobile nhỏ nhất thì quay lại 1 cột */
+  }
+}

@@ -1,0 +1,62 @@
+/* /src/sections/ProductsSection.css */
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Tinh chỉnh: Sử dụng biến 'gap' từ global.css nếu muốn, 
+     hoặc giữ một khoảng cách lớn hơn một chút cho sản phẩm nổi bật. 2rem là một lựa chọn tốt. */
+  gap: 2rem; 
+  /* Tinh chỉnh: Sử dụng biến margin từ global.css để nhất quán. */
+  margin-bottom: var(--mb-2-5); 
+}
+
+/* --- MEDIA QUERIES ĐỂ RESPONSIVE (Giữ nguyên logic, đã rất tốt) --- */
+
+/* Cho máy tính bảng (Tablet) - 2 cột */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Giảm khoảng cách trên màn hình nhỏ hơn */
+  }
+}
+
+/* Cho điện thoại (Mobile) - 1 cột */
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* === HIỆU ỨNG KHI LOAD SẢN PHẨM (Giữ nguyên, đã rất tốt) === */
+.products-grid .product-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardFadeIn 0.5s ease-out forwards;
+}
+
+.products-grid .product-card:nth-child(1) { animation-delay: 0.1s; }
+.products-grid .product-card:nth-child(2) { animation-delay: 0.2s; }
+.products-grid .product-card:nth-child(3) { animation-delay: 0.3s; }
+.products-grid .product-card:nth-child(4) { animation-delay: 0.4s; }
+.products-grid .product-card:nth-child(5) { animation-delay: 0.5s; }
+.products-grid .product-card:nth-child(6) { animation-delay: 0.6s; }
+/* ... có thể thêm nếu muốn ... */
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

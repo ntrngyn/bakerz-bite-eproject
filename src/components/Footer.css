@@ -1,0 +1,140 @@
+.footer {
+  background-color: var(--text-color); /* Nền màu xám dịu hơn */
+  color: var(--body-color); /* Chữ màu trắng ngà để dễ đọc */
+  padding-top: 20px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 15px;
+}
+
+.footer-section-title {
+  font-size: var(--h3-font-size);
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  font-weight: var(--font-semi-bold);
+  font-family: var(--title-font);
+}
+
+.footer-section p {
+  line-height: 1.6;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  font-family: var(--body-font);
+  color: var(--body-color); /* Đảm bảo tất cả các đoạn văn bản đều có màu mới */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: var(--body-color); /* Thay đổi màu link cho phù hợp */
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.footer-section.contact p i {
+  margin-right: 10px;
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  /* Thay đổi màu viền và nền của phần bottom */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  background-color: rgba(0, 0, 0, 0.2); /* Nền tối hơn một chút để tạo sự phân tách */
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--text-color-light); /* Dùng màu xám nhạt cho phần bản quyền */
+}
+
+.footer-map {
+  margin-top: var(--mb-1-5);
+  border-radius: 0.5rem;
+  overflow: hidden; /* Đảm bảo iframe cũng được bo góc */
+}
+
+.footer-map iframe {
+  display: block; /* Loại bỏ khoảng trống thừa bên dưới iframe */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    width: 90%;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .footer-section-title {
+    text-align: center;
+    /* border-bottom: none; */
+    padding-bottom: 10px;
+  }
+
+  .footer-section.about {
+    text-align: center;
+  }
+
+  .social-links {
+    text-align: center;
+    margin-top: 15px;
+  }
+}

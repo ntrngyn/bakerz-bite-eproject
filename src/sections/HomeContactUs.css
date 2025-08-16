@@ -1,0 +1,94 @@
+/* === Contact Section CSS - Đã có Responsive === */
+
+/* --- Cài đặt chung cho Section --- */
+#contact {
+  background-color: var(--container-color);
+  /* Có thể bạn cần thêm padding cho cả section, nếu chưa có trong class .section */
+  /* padding: 4rem 0; */
+}
+
+/* --- Bố cục cho Desktop (Màn hình lớn > 768px) --- */
+.contact-container {
+  display: grid;
+  /* Chia thành 2 cột, cột form có thể rộng hơn một chút */
+  grid-template-columns: 1fr 1.2fr; 
+  align-items: flex-start; /* Căn các cột theo đỉnh */
+  gap: 3rem; /* Khoảng cách giữa các cột */
+}
+
+/* --- Kiểu dáng cho cột Thông tin liên hệ (Bên trái) --- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Khoảng cách giữa các khối thông tin (Address, Email, Call) */
+}
+
+.contact-info h3 {
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-bottom: 0.75rem; /* Tăng khoảng cách cho gạch chân */
+}
+
+/* Gạch chân trang trí dưới tiêu đề */
+.contact-info h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Trên desktop, căn lề trái */
+  width: 50px;
+  height: 2px;
+  background-color: var(--first-color); /* Đổi thành first-color cho nhất quán */
+  transition: all 0.3s ease;
+}
+
+.contact-info p {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Kiểu dáng cho cột Form (Bên phải) --- */
+.contact-form-wrapper h3 {
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+
+/* ======================================================= */
+/* === RESPONSIVE CHO MÀN HÌNH NHỎ (QUAN TRỌNG NHẤT) === */
+/* ======================================================= */
+
+@media screen and (max-width: 768px) {
+  /* 
+    Thay đổi cốt lõi: 
+    Chuyển grid từ 2 cột thành 1 cột duy nhất.
+    Các item sẽ tự động xếp chồng lên nhau.
+  */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem; /* Tăng khoảng cách dọc khi xếp chồng */
+  }
+
+  /* Căn giữa toàn bộ nội dung trong cột thông tin cho đẹp mắt */
+  .contact-info {
+    text-align: center;
+    align-items: center; /* Căn giữa các khối theo chiều ngang */
+  }
+  
+  /* Di chuyển gạch chân vào giữa để phù hợp với văn bản đã căn giữa */
+  .contact-info h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Căn giữa tiêu đề của form */
+  .contact-form-wrapper h3 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,1388 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Matilda Chocolate Cake",
+    "category": "Cakes",
+    "price": "150,000đ",
+    "image": "/src/assets/images/products/Cakes/A1.jpg",
+    "description": "A mini version of the legendary Matilda chocolate cake, featuring a moist, rich dark chocolate sponge covered in a glossy, luxurious chocolate ganache.",
+    "ingredients": ["Flour", "Cocoa Powder", "Dark Chocolate", "Heavy Cream", "Butter"]
+  },
+  {
+    "id": 121,
+    "name": "Brown Butter Rosemary Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F1.jpg",
+    "description": "A sophisticated twist on a classic, featuring nutty brown butter, aromatic rosemary, and rich chocolate chips for a perfect balance of sweet and savory.",
+    "ingredients": ["Brown Butter", "Fresh Rosemary", "Chocolate Chips", "Flour", "Sea Salt"]
+  },
+  {
+    "id": 61,
+    "name": "Easy Daily Recipes",
+    "category": "Pastries",
+    "price": "40,000đ",
+    "image": "/src/assets/images/products/Pastries/C1.jpg",
+    "description": "A simple and delicious daily muffin, perfect for a quick breakfast or snack. Flavors change daily based on the freshest ingredients.",
+    "ingredients": ["Flour", "Eggs", "Sugar", "Butter", "Daily Special Ingredient"]
+  },
+  {
+    "id": 31,
+    "name": "Irish Potato Pie",
+    "category": "Pies",
+    "price": "350,000đ",
+    "image": "/src/assets/images/products/Pies/B1.jpg",
+    "description": "A hearty and savory pie with a creamy mashed potato filling, often mixed with cheese, onions, and herbs, all baked in a flaky pastry crust.",
+    "ingredients": ["Potatoes", "Butter", "Cheddar Cheese", "Onions", "Pie Crust"]
+  },
+  {
+    "id": 91,
+    "name": "Pumpkin Spice Latte",
+    "category": "Coffees",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Coffees/D1.jpg",
+    "description": "The quintessential autumn beverage. A cozy blend of espresso, steamed milk, pumpkin puree, and warm spices like cinnamon, nutmeg, and clove, topped with whipped cream.",
+    "ingredients": ["Espresso", "Milk", "Pumpkin Puree", "Pumpkin Pie Spice", "Whipped Cream"]
+  },
+  {
+    "id": 2,
+    "name": "Mini Banana Bread Loaf Cakes",
+    "category": "Cakes",
+    "price": "120,000đ",
+    "image": "/src/assets/images/products/Cakes/A2.jpg",
+    "description": "A charming mini loaf version of banana bread, bursting with the natural aroma of ripe bananas. It's moist, soft, and gently sweet. Perfect for breakfast or afternoon tea.",
+    "ingredients": ["Ripe Bananas", "Flour", "Butter", "Eggs", "Brown Sugar"]
+  },
+  {
+    "id": 3,
+    "name": "Tuxedo Bar Cake",
+    "category": "Cakes",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Cakes/A3.jpg",
+    "description": "An elegant combination of dark and white chocolate cake layers, interspersed with smooth mousse cream, creating a sophisticated appearance reminiscent of a tuxedo.",
+    "ingredients": ["Chocolate Powder", "Flour", "White Chocolate", "Heavy Cream", "Mascarpone Cheese"]
+  },
+  {
+    "id": 4,
+    "name": "Carrot Cake",
+    "category": "Cakes",
+    "price": "380,000đ",
+    "image": "/src/assets/images/products/Cakes/A4.jpg",
+    "description": "A moist carrot cake spiced with cinnamon, nutmeg, and mixed nuts, topped with a light and sweet cream cheese frosting.",
+    "ingredients": ["Carrots", "Flour", "Cinnamon", "Walnuts", "Cream Cheese"]
+  },
+  {
+    "id": 5,
+    "name": "Lemon Cube Pound Cakes",
+    "category": "Cakes",
+    "price": "95,000đ",
+    "image": "/src/assets/images/products/Cakes/A5.jpg",
+    "description": "Compact lemon pound cake cubes with a dense, moist crumb, bursting with zesty lemon flavor and topped with a sweet and tangy lemon glaze.",
+    "ingredients": ["Flour", "Butter", "Lemon", "Eggs", "Sugar"]
+  },
+  {
+    "id": 6,
+    "name": "Meringue Clementine Cake",
+    "category": "Cakes",
+    "price": "420,000đ",
+    "image": "/src/assets/images/products/Cakes/A6.jpg",
+    "description": "A unique cake with a fragrant Clementine sponge, topped with a fluffy, lightly torched meringue for a delicate sweetness.",
+    "ingredients": ["Clementines", "Almond Flour", "Eggs", "Sugar", "Butter"]
+  },
+  {
+    "id": 7,
+    "name": "Strawberry Chocolates Cake",
+    "category": "Cakes",
+    "price": "480,000đ",
+    "image": "/src/assets/images/products/Cakes/A7.jpg",
+    "description": "The classic fusion of sweet chocolate and tangy fresh strawberries. Layers of chocolate cake are interspersed with fresh strawberry cream.",
+    "ingredients": ["Chocolate Powder", "Fresh Strawberries", "Heavy Cream", "Dark Chocolate", "Eggs"]
+  },
+  {
+    "id": 8,
+    "name": "Lemon Raspberry Cake",
+    "category": "Cakes",
+    "price": "460,000đ",
+    "image": "/src/assets/images/products/Cakes/A8.jpg",
+    "description": "The zesty freshness of lemon perfectly balances the sweet aroma of raspberries, creating a light and delicate cake.",
+    "ingredients": ["Lemon", "Raspberries", "Flour", "Butter", "Heavy Cream"]
+  },
+  {
+    "id": 9,
+    "name": "Nectar Bakery- Orange Monochrome",
+    "category": "Cakes",
+    "price": "430,000đ",
+    "image": "/src/assets/images/products/Cakes/A9.jpg",
+    "description": "An artistic monochrome orange cake. Features a fragrant, moist orange sponge with a smooth orange buttercream, decorated with minimalist elegance.",
+    "ingredients": ["Fresh Oranges", "Flour", "Butter", "Eggs", "Buttercream"]
+  },
+  {
+    "id": 10,
+    "name": "Lemon Meringue Cake",
+    "category": "Cakes",
+    "price": "420,000đ",
+    "image": "/src/assets/images/products/Cakes/A10.jpg",
+    "description": "Inspired by lemon meringue pie, this cake version features soft lemon layers, a tangy lemon curd filling, and a light, airy meringue topping.",
+    "ingredients": ["Lemon", "Flour", "Egg Whites", "Butter", "Sugar"]
+  },
+  {
+    "id": 11,
+    "name": "Gold and Green Christmas Trees Cake",
+    "category": "Cakes",
+    "price": "550,000đ",
+    "image": "/src/assets/images/products/Cakes/A11.jpg",
+    "description": "A splendid Christmas cake with a green and gold theme, decorated with exquisite Christmas trees. Features warm flavors of ginger, cinnamon, and dried fruits.",
+    "ingredients": ["Flour", "Ginger", "Cinnamon", "Dried Fruits", "Buttercream"]
+  },
+  {
+    "id": 12,
+    "name": "Strawberry Chocolate Cake",
+    "category": "Cakes",
+    "price": "490,000đ",
+    "image": "/src/assets/images/products/Cakes/A12.jpg",
+    "description": "A premium chocolate cake with a drip effect, lavishly decorated with fresh, juicy strawberries. Both beautiful and delicious.",
+    "ingredients": ["Dark Chocolate", "Fresh Strawberries", "Cocoa Powder", "Heavy Cream", "Butter"]
+  },
+  {
+    "id": 13,
+    "name": "Panda Coconut Cake",
+    "category": "Cakes",
+    "price": "520,000đ",
+    "image": "/src/assets/images/products/Cakes/A13.jpg",
+    "description": "An adorable panda-shaped cake, perfect for birthday parties. Features a rich coconut sponge, covered in shredded coconut and decorated with chocolate.",
+    "ingredients": ["Coconut Milk", "Shredded Coconut", "Flour", "Heavy Cream", "Chocolate"]
+  },
+  {
+    "id": 14,
+    "name": "Matcha Cake",
+    "category": "Cakes",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Cakes/A14.jpg",
+    "description": "A rich and pure Japanese green tea flavor. Layers of soft matcha sponge cake are interspersed with fresh cream or sweet adzuki red bean paste.",
+    "ingredients": ["Matcha Green Tea Powder", "Flour", "Heavy Cream", "Red Bean", "Eggs"]
+  },
+  {
+    "id": 15,
+    "name": "Tiramisu cake",
+    "category": "Cakes",
+    "price": "470,000đ",
+    "image": "/src/assets/images/products/Cakes/A15.jpg",
+    "description": "The famous Italian dessert with layers of espresso-soaked ladyfingers, creamy mascarpone cheese, and a dusting of bitter cocoa powder.",
+    "ingredients": ["Mascarpone Cheese", "Ladyfingers", "Espresso Coffee", "Egg Yolks", "Cocoa Powder"]
+  },
+  {
+    "id": 16,
+    "name": "Pistachio Lemon Cake Loaf",
+    "category": "Cakes",
+    "price": "180,000đ",
+    "image": "/src/assets/images/products/Cakes/A16.jpg",
+    "description": "A fragrant lemon butter loaf cake combined with the nutty flavor and beautiful green color of pistachios. An excellent choice to enjoy with tea.",
+    "ingredients": ["Pistachios", "Lemon", "Flour", "Butter", "Greek Yogurt"]
+  },
+  {
+    "id": 17,
+    "name": "Olive Oil Cake",
+    "category": "Cakes",
+    "price": "350,000đ",
+    "image": "/src/assets/images/products/Cakes/A17.jpg",
+    "description": "A cake with an incredibly moist texture and a delicate, herbal aroma from extra virgin olive oil, often paired with orange or rosemary.",
+    "ingredients": ["Extra Virgin Olive Oil", "Flour", "Eggs", "Sugar", "Orange Zest"]
+  },
+  {
+    "id": 18,
+    "name": "Strawberry Cheesecake",
+    "category": "Cakes",
+    "price": "480,000đ",
+    "image": "/src/assets/images/products/Cakes/A18.jpg",
+    "description": "A crisp butter cookie crust, a rich and smooth cream cheese layer, topped with a homemade sweet and tangy strawberry sauce and fresh strawberries.",
+    "ingredients": ["Cream Cheese", "Cookies", "Butter", "Fresh Strawberries", "Sour Cream"]
+  },
+  {
+    "id": 19,
+    "name": "Lemon Blueberry Cake",
+    "category": "Cakes",
+    "price": "460,000đ",
+    "image": "/src/assets/images/products/Cakes/A19.jpg",
+    "description": "A fresh combination of tangy lemon and sweet, juicy blueberries in every layer of this soft, moist cake.",
+    "ingredients": ["Lemon", "Blueberries", "Flour", "Butter", "Milk"]
+  },
+  {
+    "id": 20,
+    "name": "Christmas Cake",
+    "category": "Cakes",
+    "price": "580,000đ",
+    "image": "/src/assets/images/products/Cakes/A20.jpg",
+    "description": "A traditional Christmas fruitcake, rich with the flavors of rum-soaked dried fruits, nuts, and warm spices.",
+    "ingredients": ["Mixed Dried Fruits", "Rum", "Flour", "Butter", "Mixed Nuts"]
+  },
+  {
+    "id": 21,
+    "name": "Super Moist Chocolate Cake",
+    "category": "Cakes",
+    "price": "500,000đ",
+    "image": "/src/assets/images/products/Cakes/A21.jpg",
+    "description": "True to its name, this is a chocolate cake with a super moist, melt-in-your-mouth sponge, covered in a perfect, glossy, and rich chocolate ganache.",
+    "ingredients": ["Unsweetened Cocoa Powder", "Hot Coffee", "Buttermilk", "70% Dark Chocolate", "Heavy Cream"]
+  },
+  {
+    "id": 22,
+    "name": "Pistachio Raspberry Cake",
+    "category": "Cakes",
+    "price": "490,000đ",
+    "image": "/src/assets/images/products/Cakes/A22.jpg",
+    "description": "The natural green of pistachios combined with the vibrant red of raspberries creates a stunning cake. The nutty flavor of pistachio is balanced by the sweet tartness of the raspberries.",
+    "ingredients": ["Pistachios", "Raspberries", "Flour", "Rosewater", "Buttercream"]
+  },
+  {
+    "id": 23,
+    "name": "Flavorful Feasts Celebration Cake",
+    "category": "Cakes",
+    "price": "650,000đ",
+    "image": "/src/assets/images/products/Cakes/A23.jpg",
+    "description": "The 'Flavorful Feast' cake, a combination of multiple flavor layers like vanilla, chocolate, and fruit, lavishly decorated and perfect for large celebrations.",
+    "ingredients": ["Flour", "Chocolate", "Vanilla", "Fruit Jam", "Multi-flavored Cream"]
+  },
+  {
+    "id": 24,
+    "name": "Chocolate Cake With Strawberry Filling",
+    "category": "Cakes",
+    "price": "480,000đ",
+    "image": "/src/assets/images/products/Cakes/A24.jpg",
+    "description": "A moist chocolate cake sponge is layered and filled with homemade strawberry jam and fresh cream, creating an appealing flavor contrast.",
+    "ingredients": ["Cocoa Powder", "Flour", "Fresh Strawberries", "Sugar", "Heavy Cream"]
+  },
+  {
+    "id": 25,
+    "name": "Stracciatella Maqui Cheesecake",
+    "category": "Cakes",
+    "price": "520,000đ",
+    "image": "/src/assets/images/products/Cakes/A25.jpg",
+    "description": "A unique cheesecake combining Italian Stracciatella (chocolate shavings) with the superfood, maqui berry. The rich cream cheese layer is flecked with small chocolate shavings and infused with the purple hue and sweet-tart flavor of maqui.",
+    "ingredients": ["Cream Cheese", "Chocolate Shavings", "Maqui Berry Powder", "Chocolate Cookies", "Sour Cream"]
+  },
+  {
+    "id": 168,
+    "name": "Chocolate Ganache Cake",
+    "category": "Cakes",
+    "price": "500,000đ",
+    "image": "/src/assets/images/products/Cakes/A26.jpg",
+    "description": "The ultimate indulgence for chocolate lovers. A rich, moist chocolate sponge cake completely enveloped in a smooth, glossy, and decadent dark chocolate ganache.",
+    "ingredients": ["Dark Chocolate", "Heavy Cream", "Flour", "Cocoa Powder", "Butter"]
+  },
+  {
+    "id": 169,
+    "name": "Stracciatella Maqui Cheesecake",
+    "category": "Cakes",
+    "price": "520,000đ",
+    "image": "/src/assets/images/products/Cakes/A27.jpg",
+    "description": "A unique cheesecake combining Italian Stracciatella (chocolate shavings) with the superfood, maqui berry. The rich cream cheese layer is flecked with small chocolate shavings and infused with the purple hue and sweet-tart flavor of maqui.",
+    "ingredients": ["Cream Cheese", "Chocolate Shavings", "Maqui Berry Powder", "Chocolate Cookies", "Sour Cream"]
+  },
+  {
+    "id": 163,
+    "name": "Strawberry Chocolate Cake",
+    "category": "Cakes",
+    "price": "490,000đ",
+    "image": "/src/assets/images/products/Cakes/A28.jpg",
+    "description": "A classic and beloved combination. Rich, moist chocolate cake layers are filled with fresh strawberry cream and topped with chocolate-dipped strawberries.",
+    "ingredients": ["Chocolate", "Flour", "Fresh Strawberries", "Heavy Cream", "Cocoa Powder"]
+  },
+  {
+    "id": 164,
+    "name": "Biscoff Cheesecake",
+    "category": "Cakes",
+    "price": "520,000đ",
+    "image": "/src/assets/images/products/Cakes/A29.jpg",
+    "description": "An incredibly indulgent cheesecake featuring a crust made from Biscoff cookies, a creamy Biscoff-infused filling, and a topping of melted Biscoff spread.",
+    "ingredients": ["Cream Cheese", "Biscoff Cookies", "Biscoff Spread", "Heavy Cream", "Sugar"]
+  },
+  {
+    "id": 165,
+    "name": "Earl Grey Chiffon Cake",
+    "category": "Cakes",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Cakes/A30.jpg",
+    "description": "A light, airy, and elegant chiffon cake infused with the distinct, aromatic flavor of Earl Grey tea. Often paired with a light lemon or lavender frosting.",
+    "ingredients": ["Cake Flour", "Eggs", "Earl Grey Tea Leaves", "Sugar", "Vegetable Oil"]
+  },
+  {
+    "id": 166,
+    "name": "Basque Cheesecake",
+    "category": "Cakes",
+    "price": "500,000đ",
+    "image": "/src/assets/images/products/Cakes/A31.jpg",
+    "description": "A unique, crustless cheesecake from the Basque region of Spain. It is baked at a high temperature to achieve a beautiful, caramelized, 'burnt' exterior and a creamy, soft center.",
+    "ingredients": ["Cream Cheese", "Heavy Cream", "Eggs", "Sugar", "Flour"]
+  },
+  {
+    "id": 167,
+    "name": "Lemon Raspberry Cake",
+    "category": "Cakes",
+    "price": "460,000đ",
+    "image": "/src/assets/images/products/Cakes/A32.jpg",
+    "description": "A vibrant and refreshing cake. Tender lemon-flavored cake layers are filled with tart raspberry jam and frosted with a light lemon buttercream.",
+    "ingredients": ["Flour", "Lemon", "Raspberries", "Butter", "Sugar"]
+  },
+  {
+    "id": 32,
+    "name": "Beef Curry Puffs",
+    "category": "Pies",
+    "price": "55,000đ",
+    "image": "/src/assets/images/products/Pies/B2.jpg",
+    "description": "A popular snack in Southeast Asia. Flaky, buttery pastry filled with a savory and aromatic mixture of minced beef, potatoes, and curry spices.",
+    "ingredients": ["Minced Beef", "Puff Pastry", "Curry Powder", "Potatoes", "Onions"]
+  },
+  {
+    "id": 33,
+    "name": "Jamie Oliver’s Chicken Pie",
+    "category": "Pies",
+    "price": "420,000đ",
+    "image": "/src/assets/images/products/Pies/B3.jpg",
+    "description": "A comforting and rustic chicken pie, featuring tender chunks of chicken and vegetables in a creamy sauce, all topped with a golden puff pastry lid.",
+    "ingredients": ["Chicken", "Puff Pastry", "Leeks", "Mushrooms", "Cream"]
+  },
+  {
+    "id": 34,
+    "name": "Curried chicken pies",
+    "category": "Pies",
+    "price": "380,000đ",
+    "image": "/src/assets/images/products/Pies/B4.jpg",
+    "description": "Individual savory pies filled with tender chicken pieces cooked in a fragrant, mild curry sauce with vegetables like peas and carrots.",
+    "ingredients": ["Chicken", "Pie Crust", "Curry Powder", "Coconut Milk", "Peas"]
+  },
+  {
+    "id": 35,
+    "name": "Galatopita, Greek milk custard pie",
+    "category": "Pies",
+    "price": "320,000đ",
+    "image": "/src/assets/images/products/Pies/B5.jpg",
+    "description": "A simple, crustless Greek dessert pie. It's a creamy, delicate semolina-based custard baked until golden and often flavored with lemon or vanilla.",
+    "ingredients": ["Milk", "Semolina", "Sugar", "Eggs", "Lemon Zest"]
+  },
+  {
+    "id": 36,
+    "name": "Lancashire Butter Pie",
+    "category": "Pies",
+    "price": "340,000đ",
+    "image": "/src/assets/images/products/Pies/B6.jpg",
+    "description": "A traditional savory pie from Lancashire, England. It features a simple but delicious filling of thinly sliced potatoes and onions slow-cooked in butter.",
+    "ingredients": ["Potatoes", "Onions", "Butter", "Shortcrust Pastry", "Milk"]
+  },
+  {
+    "id": 37,
+    "name": "Homemade Lemon Meringue Pie",
+    "category": "Pies",
+    "price": "360,000đ",
+    "image": "/src/assets/images/products/Pies/B7.jpg",
+    "description": "The ultimate homemade classic. A buttery pastry base, a tangy and sweet lemon curd filling, and a fluffy, toasted meringue topping.",
+    "ingredients": ["Pie Crust", "Lemons", "Sugar", "Eggs", "Butter"]
+  },
+  {
+    "id": 38,
+    "name": "Pecan Pie Cake",
+    "category": "Pies",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Pies/B8.jpg",
+    "description": "A decadent hybrid dessert combining the best of both worlds: a moist, buttery cake base topped with a gooey, crunchy pecan pie filling.",
+    "ingredients": ["Pecans", "Brown Sugar", "Butter", "Flour", "Corn Syrup"]
+  },
+  {
+    "id": 39,
+    "name": "Potato Galette",
+    "category": "Pies",
+    "price": "280,000đ",
+    "image": "/src/assets/images/products/Pies/B9.jpg",
+    "description": "A rustic, free-form French pie. Features thinly sliced potatoes layered with herbs, cheese, and butter, baked until golden and crisp around the edges.",
+    "ingredients": ["Potatoes", "Butter", "Gruyère Cheese", "Thyme", "Garlic"]
+  },
+  {
+    "id": 40,
+    "name": "The Ultimate Savory Irish Potato Pie",
+    "category": "Pies",
+    "price": "360,000đ",
+    "image": "/src/assets/images/products/Pies/B10.jpg",
+    "description": "An elevated version of the classic, this pie features layers of potato, savory meats like bacon or ham, and a rich cheese sauce, fully encased in pastry.",
+    "ingredients": ["Potatoes", "Bacon", "Cheddar Cheese", "Pie Crust", "Cream"]
+  },
+  {
+    "id": 41,
+    "name": "Lemon Meringue Pie",
+    "category": "Pies",
+    "price": "360,000đ",
+    "image": "/src/assets/images/products/Pies/B11.jpg",
+    "description": "A bright and beautiful dessert with a crisp pastry shell, intensely zesty lemon filling, and a cloud of sweet, torched meringue.",
+    "ingredients": ["Lemons", "Eggs", "Sugar", "Pie Crust", "Cornstarch"]
+  },
+  {
+    "id": 42,
+    "name": "Steak and Ale Pie",
+    "category": "Pies",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Pies/B12.jpg",
+    "description": "A classic British pub favorite. Tender chunks of beef are slow-cooked in a rich ale gravy with mushrooms and onions, all under a flaky pastry top.",
+    "ingredients": ["Beef Steak", "Ale", "Mushrooms", "Onions", "Puff Pastry"]
+  },
+  {
+    "id": 43,
+    "name": "Creamy pistachio cake",
+    "category": "Pies",
+    "price": "480,000đ",
+    "image": "/src/assets/images/products/Pies/B13.jpg",
+    "description": "Though named a cake, this dessert has a pie-like richness. A dense, moist pistachio-flavored base with a creamy, almost cheesecake-like texture.",
+    "ingredients": ["Pistachios", "Almond Flour", "Butter", "Cream Cheese", "Sugar"]
+  },
+  {
+    "id": 44,
+    "name": "Apple pie bar",
+    "category": "Pies",
+    "price": "300,000đ",
+    "image": "/src/assets/images/products/Pies/B14.jpg",
+    "description": "All the flavor of a classic apple pie in an easy-to-eat bar form. Features a buttery shortbread crust, a spiced apple filling, and a crumble topping.",
+    "ingredients": ["Apples", "Flour", "Butter", "Cinnamon", "Oats"]
+  },
+  {
+    "id": 45,
+    "name": "elegant ricotta,lemon dessert",
+    "category": "Pies",
+    "price": "380,000đ",
+    "image": "/src/assets/images/products/Pies/B15.jpg",
+    "description": "A sophisticated, baked dessert similar to a crustless cheesecake, made with creamy ricotta cheese and bright lemon zest for a light and airy texture.",
+    "ingredients": ["Ricotta Cheese", "Lemon", "Eggs", "Sugar", "Vanilla Extract"]
+  },
+  {
+    "id": 46,
+    "name": "Greek apple cake",
+    "category": "Pies",
+    "price": "350,000đ",
+    "image": "/src/assets/images/products/Pies/B16.jpg",
+    "description": "Known as 'Milopita,' this is a moist and fragrant cake, often made with olive oil and yogurt, packed with apples and scented with cinnamon.",
+    "ingredients": ["Apples", "Flour", "Olive Oil", "Yogurt", "Cinnamon"]
+  },
+  {
+    "id": 47,
+    "name": "Crispy Cabbage Pie",
+    "category": "Pies",
+    "price": "320,000đ",
+    "image": "/src/assets/images/products/Pies/B17.jpg",
+    "description": "A savory Eastern European pie with a tender, sweet cabbage filling wrapped in a crispy pastry, served with a tangy dill-infused cream sauce.",
+    "ingredients": ["Cabbage", "Puff Pastry", "Onions", "Dill", "Sour Cream"]
+  },
+  {
+    "id": 48,
+    "name": "Tomato Pie Galette",
+    "category": "Pies",
+    "price": "330,000đ",
+    "image": "/src/assets/images/products/Pies/B18.jpg",
+    "description": "A rustic summer pie celebrating fresh tomatoes. Sliced ripe tomatoes are layered with cheese and herbs on a flaky pastry base, with the edges folded in.",
+    "ingredients": ["Tomatoes", "Pie Crust", "Goat Cheese", "Basil", "Garlic"]
+  },
+  {
+    "id": 49,
+    "name": "Lemon MeringuePie Cannoli",
+    "category": "Pies",
+    "price": "95,000đ",
+    "image": "/src/assets/images/products/Pies/B19.jpg",
+    "description": "A creative fusion dessert. Crispy cannoli shells are filled with a zesty lemon cream, then topped with a dollop of toasted meringue.",
+    "ingredients": ["Cannoli Shells", "Ricotta Cheese", "Lemon Curd", "Meringue", "Powdered Sugar"]
+  },
+  {
+    "id": 50,
+    "name": "Jamie Oliver's ChickenPie Recipe",
+    "category": "Pies",
+    "price": "420,000đ",
+    "image": "/src/assets/images/products/Pies/B20.jpg",
+    "description": "Based on a signature recipe, this pie is packed with chicken and mushrooms in a savory gravy, characterized by its wholesome, homemade quality.",
+    "ingredients": ["Chicken Thighs", "Mushrooms", "Shortcrust Pastry", "Thyme", "Carrots"]
+  },
+  {
+    "id": 51,
+    "name": "Qick Cherry Pie",
+    "category": "Pies",
+    "price": "340,000đ",
+    "image": "/src/assets/images/products/Pies/B21.jpg",
+    "description": "A delicious and convenient cherry pie made simple. Uses high-quality jarred cherries for a sweet and tangy filling, baked in a flaky, buttery crust.",
+    "ingredients": ["Jarred Cherries", "Pie Crust", "Sugar", "Cornstarch", "Almond Extract"]
+  },
+  {
+    "id": 52,
+    "name": "blueberry custard pie",
+    "category": "Pies",
+    "price": "370,000đ",
+    "image": "/src/assets/images/products/Pies/B22.jpg",
+    "description": "A delightful pie with a sweet and creamy custard filling, studded with juicy, bursting blueberries, all in a crisp pastry shell.",
+    "ingredients": ["Blueberries", "Eggs", "Heavy Cream", "Sugar", "Pie Crust"]
+  },
+  {
+    "id": 53,
+    "name": "easy canned cherry pie",
+    "category": "Pies",
+    "price": "320,000đ",
+    "image": "/src/assets/images/products/Pies/B23.jpg",
+    "description": "A quick and easy version of the classic American dessert, using canned cherry pie filling for a consistently sweet and fruity result every time.",
+    "ingredients": ["Canned Cherry Pie Filling", "Pre-made Pie Crust", "Butter", "Sugar", "Lemon Juice"]
+  },
+  {
+    "id": 177,
+    "name": "Mini Lemon Cheesecakes",
+    "category": "Pies",
+    "price": "90,000đ",
+    "image": "/src/assets/images/products/Pies/B24.jpg",
+    "description": "Individual-sized cheesecakes with a buttery graham cracker crust and a creamy, zesty lemon filling. The perfect personal dessert.",
+    "ingredients": ["Cream Cheese", "Graham Crackers", "Lemon", "Sugar", "Eggs"]
+  },
+  {
+    "id": 170,
+    "name": "Boston Cream Pie",
+    "category": "Pies",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Pies/B25.jpg",
+    "description": "A classic American dessert that is actually a cake. It features two layers of sponge cake filled with a rich vanilla custard and topped with a decadent chocolate glaze.",
+    "ingredients": ["Sponge Cake", "Vanilla Custard", "Chocolate Glaze", "Milk", "Eggs"]
+  },
+  {
+    "id": 171,
+    "name": "Easy No-Bake Mini Banana Cream Pies",
+    "category": "Pies",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Pies/B26.jpg",
+    "description": "Individual no-bake pies with a crunchy graham cracker crust, a creamy vanilla pudding filling, and fresh banana slices, all topped with whipped cream.",
+    "ingredients": ["Graham Cracker Crust", "Instant Vanilla Pudding", "Bananas", "Whipped Cream", "Milk"]
+  },
+  {
+    "id": 172,
+    "name": "Pecan Pie Brownie Bombs",
+    "category": "Pies",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Pies/B27.jpg",
+    "description": "The ultimate decadent dessert mashup. A rich, fudgy brownie base is topped with a gooey, crunchy pecan pie filling, served as a bite-sized bomb.",
+    "ingredients": ["Pecans", "Cocoa Powder", "Brown Sugar", "Corn Syrup", "Chocolate"]
+  },
+  {
+    "id": 173,
+    "name": "Vanilla Cream Pie",
+    "category": "Pies",
+    "price": "350,000đ",
+    "image": "/src/assets/images/products/Pies/B28.jpg",
+    "description": "A simple and elegant pie with a flaky pastry crust filled with a smooth, rich vanilla-flavored custard and topped with a generous layer of whipped cream.",
+    "ingredients": ["Pie Crust", "Milk", "Egg Yolks", "Vanilla Bean", "Whipped Cream"]
+  },
+  {
+    "id": 174,
+    "name": "Key Lime Pie",
+    "category": "Pies",
+    "price": "380,000đ",
+    "image": "/src/assets/images/products/Pies/B29.jpg",
+    "description": "A classic American dessert with a graham cracker crust, a tangy and sweet filling made from Key lime juice and egg yolks, and a topping of meringue or whipped cream.",
+    "ingredients": ["Key Lime Juice", "Graham Cracker Crust", "Condensed Milk", "Egg Yolks", "Whipped Cream"]
+  },
+  {
+    "id": 175,
+    "name": "Steak and Ale Pie",
+    "category": "Pies",
+    "price": "450,000đ",
+    "image": "/src/assets/images/products/Pies/B30.jpg",
+    "description": "A classic British pub favorite. Tender chunks of beef are slow-cooked in a rich ale gravy with mushrooms and onions, all under a flaky pastry top.",
+    "ingredients": ["Beef Steak", "Ale", "Mushrooms", "Onions", "Puff Pastry"]
+  },
+  {
+    "id": 176,
+    "name": "Lemon Meringue Pie",
+    "category": "Pies",
+    "price": "360,000đ",
+    "image": "/src/assets/images/products/Pies/B31.jpg",
+    "description": "A bright and beautiful dessert with a crisp pastry shell, intensely zesty lemon filling, and a cloud of sweet, torched meringue.",
+    "ingredients": ["Lemons", "Eggs", "Sugar", "Pie Crust", "Cornstarch"]
+  },
+  {
+    "id": 178,
+    "name": "Chocolate Chip Cookie Cake",
+    "category": "Pies",
+    "price": "400,000đ",
+    "image": "/src/assets/images/products/Pies/B32.jpg",
+    "description": "A giant, soft, and chewy chocolate chip cookie baked into a cake-sized round, often decorated with frosting for celebrations.",
+    "ingredients": ["Flour", "Butter", "Chocolate Chips", "Brown Sugar", "Vanilla Extract"]
+  },
+  {
+    "id": 62,
+    "name": "Mediterranean Baked Feta Appetizer",
+    "category": "Pastries",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Pastries/C2.jpg",
+    "description": "A savory pastry featuring creamy baked feta cheese, cherry tomatoes, olives, and herbs, all wrapped in a golden, flaky crust.",
+    "ingredients": ["Feta Cheese", "Puff Pastry", "Cherry Tomatoes", "Olives", "Herbs"]
+  },
+  {
+    "id": 63,
+    "name": "Mini Quiche",
+    "category": "Pastries",
+    "price": "45,000đ",
+    "image": "/src/assets/images/products/Pastries/C3.jpg",
+    "description": "Bite-sized, savory egg custard tarts with various fillings like Lorraine (bacon and cheese) or Florentine (spinach and cheese).",
+    "ingredients": ["Eggs", "Cream", "Pie Crust", "Cheese", "Bacon or Spinach"]
+  },
+  {
+    "id": 64,
+    "name": "Tomato Tartlets with Puff Pastry",
+    "category": "Pastries",
+    "price": "50,000đ",
+    "image": "/src/assets/images/products/Pastries/C4.jpg",
+    "description": "Light and crispy puff pastry tartlets topped with ripe tomato slices, herbs, and a touch of cheese. A perfect savory bite.",
+    "ingredients": ["Puff Pastry", "Tomatoes", "Parmesan Cheese", "Basil", "Olive Oil"]
+  },
+  {
+    "id": 65,
+    "name": "Tiramisu Balls",
+    "category": "Pastries",
+    "price": "35,000đ",
+    "image": "/src/assets/images/products/Pastries/C5.jpg",
+    "description": "A no-bake truffle-like treat with all the flavors of Tiramisu. A mix of ladyfinger crumbs, mascarpone, and coffee, rolled in cocoa powder.",
+    "ingredients": ["Ladyfingers", "Mascarpone Cheese", "Espresso", "Cocoa Powder", "Sugar"]
+  },
+  {
+    "id": 66,
+    "name": "Sweet Cannelloni (Tiramisu)",
+    "category": "Pastries",
+    "price": "90,000đ",
+    "image": "/src/assets/images/products/Pastries/C6.jpg",
+    "description": "A creative twist on two Italian classics. Sweet, crispy cannelloni shells filled with a creamy Tiramisu-flavored mascarpone filling.",
+    "ingredients": ["Cannelloni Shells", "Mascarpone Cheese", "Coffee Liqueur", "Ladyfinger Crumbs", "Chocolate"]
+  },
+  {
+    "id": 67,
+    "name": "Triple Berry Crumble Bars",
+    "category": "Pastries",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Pastries/C7.jpg",
+    "description": "A buttery shortbread crust topped with a vibrant filling of strawberries, blueberries, and raspberries, finished with a crunchy oat crumble.",
+    "ingredients": ["Mixed Berries", "Flour", "Oats", "Butter", "Brown Sugar"]
+  },
+  {
+    "id": 68,
+    "name": "Caramelized Apple Tarts",
+    "category": "Pastries",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Pastries/C8.jpg",
+    "description": "Individual tarts with a flaky puff pastry base, topped with beautifully arranged, thinly sliced apples caramelized to perfection.",
+    "ingredients": ["Puff Pastry", "Apples", "Butter", "Sugar", "Cinnamon"]
+  },
+  {
+    "id": 69,
+    "name": "Cherry Cream Cheese Mini Pies",
+    "category": "Pastries",
+    "price": "60,000đ",
+    "image": "/src/assets/images/products/Pastries/C9.jpg",
+    "description": "Adorable hand-held pies with a flaky crust, a sweet cream cheese layer, and a topping of tangy cherry pie filling.",
+    "ingredients": ["Pie Crust", "Cream Cheese", "Cherry Pie Filling", "Sugar", "Vanilla Extract"]
+  },
+  {
+    "id": 70,
+    "name": "Savory Cranberry and Brie Tartlets",
+    "category": "Pastries",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Pastries/C10.jpg",
+    "description": "An elegant appetizer tartlet. Warm, melted Brie cheese and sweet-tart cranberry sauce baked in a mini pastry cup.",
+    "ingredients": ["Puff Pastry", "Brie Cheese", "Cranberry Sauce", "Pecans", "Rosemary"]
+  },
+  {
+    "id": 71,
+    "name": "Heavenly banana walnut cream cake",
+    "category": "Pastries",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Pastries/C11.jpg",
+    "description": "A moist banana and walnut sponge cake, served as a pastry slice and layered with a light, heavenly cream cheese frosting.",
+    "ingredients": ["Banana", "Walnuts", "Cream Cheese", "Flour", "Butter"]
+  },
+  {
+    "id": 72,
+    "name": "Banana Walnut Cream Cake Recipe to Savor",
+    "category": "Pastries",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Pastries/C12.jpg",
+    "description": "A delightful pastry slice featuring rich banana cake studded with walnuts and finished with a smooth, sweet cream topping.",
+    "ingredients": ["Banana", "Walnuts", "Heavy Cream", "Flour", "Sugar"]
+  },
+  {
+    "id": 73,
+    "name": "Easy Banana Butter Cake",
+    "category": "Pastries",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Pastries/C13.jpg",
+    "description": "A simple, yet delicious pastry square. This butter cake is incredibly moist and flavorful due to the addition of ripe bananas.",
+    "ingredients": ["Banana", "Butter", "Flour", "Eggs", "Sugar"]
+  },
+  {
+    "id": 74,
+    "name": "Maple Glazed Donuts",
+    "category": "Pastries",
+    "price": "45,000đ",
+    "image": "/src/assets/images/products/Pastries/C14.jpg",
+    "description": "A soft, fluffy fried donut dipped in a sweet and glossy glaze made from real maple syrup. A classic North American treat.",
+    "ingredients": ["Flour", "Yeast", "Maple Syrup", "Powdered Sugar", "Milk"]
+  },
+  {
+    "id": 75,
+    "name": "Crèmeschnitte (Vanilla Slice)",
+    "category": "Pastries",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Pastries/C15.jpg",
+    "description": "A classic Central European pastry. A thick layer of delicate vanilla custard is sandwiched between two layers of flaky puff pastry, topped with powdered sugar.",
+    "ingredients": ["Puff Pastry", "Milk", "Egg Yolks", "Vanilla Bean", "Sugar"]
+  },
+  {
+    "id": 76,
+    "name": "Wild Blueberry Ricotta Sweet Buns",
+    "category": "Pastries",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Pastries/C16.jpg",
+    "description": "Soft, fluffy sweet buns with a tender crumb thanks to ricotta cheese in the dough, swirled with a juicy wild blueberry filling.",
+    "ingredients": ["Ricotta Cheese", "Wild Blueberries", "Flour", "Yeast", "Lemon"]
+  },
+  {
+    "id": 77,
+    "name": "Easy & Tasty",
+    "category": "Pastries",
+    "price": "40,000đ",
+    "image": "/src/assets/images/products/Pastries/C17.jpg",
+    "description": "Simple Sweet Puffs. Light, airy, and wonderfully simple puff pastry bites, twisted and baked with a sprinkle of cinnamon sugar.",
+    "ingredients": ["Puff Pastry", "Butter", "Cinnamon", "Sugar"]
+  },
+  {
+    "id": 78,
+    "name": "Fluffy Japanese Soufflé Pancakes Recipe",
+    "category": "Pastries",
+    "price": "120,000đ",
+    "image": "/src/assets/images/products/Pastries/C18.jpg",
+    "description": "Extra tall, cloud-like, and jiggly pancakes. Served as a dessert pastry, often with fresh cream, berries, and syrup.",
+    "ingredients": ["Flour", "Eggs", "Milk", "Sugar", "Baking Powder"]
+  },
+  {
+    "id": 79,
+    "name": "Strawberry Cream Croissant",
+    "category": "Pastries",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Pastries/C19.jpg",
+    "description": "A buttery, flaky croissant, split open and generously filled with a light strawberry-infused cream and decorated with fresh strawberry slices.",
+    "ingredients": ["Croissant", "Heavy Cream", "Fresh Strawberries", "Powdered Sugar", "Vanilla Extract"]
+  },
+  {
+    "id": 80,
+    "name": "flaky berry pastries",
+    "category": "Pastries",
+    "price": "60,000đ",
+    "image": "/src/assets/images/products/Pastries/C20.jpg",
+    "description": "Simple yet elegant pastries with a flaky, golden crust and a center filled with a sweet and tangy mix of seasonal berries.",
+    "ingredients": ["Puff Pastry", "Mixed Berries", "Sugar", "Egg Wash", "Lemon Juice"]
+  },
+  {
+    "id": 81,
+    "name": "Delicious Cruffins",
+    "category": "Pastries",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Pastries/C21.jpg",
+    "description": "The perfect hybrid of a croissant and a muffin. Laminated dough is baked in a muffin tin, creating a pastry that's flaky on the outside and soft inside, often with a filling.",
+    "ingredients": ["Flour", "Butter", "Yeast", "Sugar", "Choice of Filling"]
+  },
+  {
+    "id": 82,
+    "name": "raspberry cream napoleons",
+    "category": "Pastries",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Pastries/C22.jpg",
+    "description": "Layers of crisp, caramelized puff pastry are alternated with a light raspberry pastry cream, creating a beautiful and delicious classic French dessert.",
+    "ingredients": ["Puff Pastry", "Raspberries", "Pastry Cream", "Powdered Sugar", "Heavy Cream"]
+  },
+  {
+    "id": 83,
+    "name": "Caramel Cheesecake Bars",
+    "category": "Pastries",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Pastries/C23.jpg",
+    "description": "A rich and decadent bar pastry with a graham cracker crust, a classic creamy cheesecake layer, and a generous swirl of golden caramel on top.",
+    "ingredients": ["Cream Cheese", "Graham Crackers", "Caramel Sauce", "Sugar", "Eggs"]
+  },
+  {
+    "id": 84,
+    "name": "baklava cheesecake",
+    "category": "Pastries",
+    "price": "90,000đ",
+    "image": "/src/assets/images/products/Pastries/C24.jpg",
+    "description": "A stunning fusion dessert. A creamy cheesecake filling sits atop a nutty, syrupy baklava base, combining the best of Greek and American sweets.",
+    "ingredients": ["Phyllo Dough", "Walnuts", "Honey", "Cream Cheese", "Cinnamon"]
+  },
+  {
+    "id": 85,
+    "name": "Pistachio Sans Rival",
+    "category": "Pastries",
+    "price": "95,000đ",
+    "image": "/src/assets/images/products/Pastries/C25.jpg",
+    "description": "A Filipino dessert without rival. Layers of chewy pistachio meringue are sandwiched with a rich pistachio French buttercream.",
+    "ingredients": ["Pistachios", "Egg Whites", "Butter", "Sugar", "Cashews"]
+  },
+  {
+    "id": 86,
+    "name": "Vanilla Custard Cream Squares",
+    "category": "Pastries",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Pastries/C26.jpg",
+    "description": "Elegant and simple pastry squares featuring a thick, luscious vanilla bean custard set on a buttery shortbread base.",
+    "ingredients": ["Flour", "Butter", "Milk", "Egg Yolks", "Vanilla Bean"]
+  },
+  {
+    "id": 87,
+    "name": "Lemon Meringue Pie Cannoli",
+    "category": "Pastries",
+    "price": "95,000đ",
+    "image": "/src/assets/images/products/Pastries/C27.jpg",
+    "description": "A creative fusion dessert. Crispy cannoli shells are filled with a zesty lemon cream, then topped with a dollop of toasted meringue.",
+    "ingredients": ["Cannoli Shells", "Ricotta Cheese", "Lemon Curd", "Meringue", "Powdered Sugar"]
+  },
+  {
+    "id": 88,
+    "name": "Mom's Cream Horns",
+    "category": "Pastries",
+    "price": "60,000đ",
+    "image": "/src/assets/images/products/Pastries/C28.jpg",
+    "description": "A nostalgic treat. Flaky puff pastry is wrapped around a cone mold, baked until golden, and filled with a sweet, stable whipped cream.",
+    "ingredients": ["Puff Pastry", "Heavy Cream", "Powdered Sugar", "Vanilla Extract", "Egg Wash"]
+  },
+  {
+    "id": 89,
+    "name": "Crispy ham & cheese puff pastry stacks",
+    "category": "Pastries",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Pastries/C29.jpg",
+    "description": "Savory and addictive stacks of puff pastry layered with thinly sliced ham and grated cheese, baked until crispy and golden.",
+    "ingredients": ["Puff Pastry", "Ham", "Gruyère Cheese", "Dijon Mustard", "Egg"]
+  },
+  {
+    "id": 160,
+    "name": "Classic French Profiteroles",
+    "category": "Pastries",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Pastries/C30.jpg",
+    "description": "Light and airy choux pastry balls filled with a delicate vanilla pastry cream or whipped cream, often drizzled with warm chocolate sauce.",
+    "ingredients": ["Flour", "Butter", "Eggs", "Pastry Cream", "Chocolate Sauce"]
+  },
+  {
+    "id": 161,
+    "name": "Flaky Strawberry Danish Pastry",
+    "category": "Pastries",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Pastries/C31.jpg",
+    "description": "A buttery, multi-layered Danish pastry with a sweet cream cheese filling and a topping of fresh strawberry compote, finished with a simple glaze.",
+    "ingredients": ["Danish Pastry Dough", "Strawberries", "Cream Cheese", "Sugar", "Egg Wash"]
+  },
+  {
+    "id": 162,
+    "name": "Easy Portuguese Custard Tarts",
+    "category": "Pastries",
+    "price": "45,000đ",
+    "image": "/src/assets/images/products/Pastries/C32.jpg",
+    "description": "Known as 'Pastéis de Nata,' these tarts feature a flaky, crispy puff pastry crust filled with a rich, creamy egg custard that has a signature caramelized, blistered top.",
+    "ingredients": ["Puff Pastry", "Egg Yolks", "Milk", "Sugar", "Cinnamon"]
+  },
+  {
+    "id": 122,
+    "name": "French style chocolate raspberry hazelnut cookies",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F2.jpg",
+    "description": "Elegant and rich cookies inspired by French patisserie, combining intense dark chocolate, tangy raspberry, and crunchy toasted hazelnuts.",
+    "ingredients": ["Dark Chocolate", "Raspberry Jam", "Hazelnuts", "Butter", "Flour"]
+  },
+  {
+    "id": 123,
+    "name": "Mango Float Cookie",
+    "category": "Cookies",
+    "price": "60,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F3.jpg",
+    "description": "Inspired by the beloved Filipino dessert, this cookie has a buttery graham cracker base, creamy notes, and sweet dried mango pieces.",
+    "ingredients": ["Dried Mango", "Graham Cracker Crumbs", "Condensed Milk", "Butter", "Flour"]
+  },
+  {
+    "id": 124,
+    "name": "Salted Dark Chocolate Chunk Espresso Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F4.jpg",
+    "description": "A bold and intense cookie for true coffee and chocolate lovers. Deep dark chocolate chunks and a hint of espresso, finished with a sprinkle of flaky sea salt.",
+    "ingredients": ["Dark Chocolate Chunks", "Espresso Powder", "Flour", "Butter", "Flaky Sea Salt"]
+  },
+  {
+    "id": 125,
+    "name": "Ritz White Chocolate Cookie",
+    "category": "Cookies",
+    "price": "55,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F5.jpg",
+    "description": "The ultimate sweet and salty treat. Crushed salty Ritz crackers are mixed into a sweet cookie dough and combined with creamy white chocolate chips.",
+    "ingredients": ["Ritz Crackers", "White Chocolate Chips", "Butter", "Flour", "Sugar"]
+  },
+  {
+    "id": 126,
+    "name": "Brown Butter Banana White Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F6.jpg",
+    "description": "The comforting flavor of banana bread meets the richness of a brown butter cookie, studded with sweet white chocolate chips.",
+    "ingredients": ["Brown Butter", "Banana", "White Chocolate Chips", "Flour", "Cinnamon"]
+  },
+  {
+    "id": 127,
+    "name": "Honeycomb Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F7.jpg",
+    "description": "A classic chocolate chip cookie with an exciting crunch. Each bite is loaded with chocolate chips and sweet, crispy honeycomb toffee pieces.",
+    "ingredients": ["Flour", "Butter", "Chocolate Chips", "Honeycomb Toffee", "Brown Sugar"]
+  },
+  {
+    "id": 128,
+    "name": "SPARKLY CRUNCHY CORNFLAKE TOFFEE COOKIES",
+    "category": "Cookies",
+    "price": "60,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F8.jpg",
+    "description": "An irresistibly crunchy and chewy cookie packed with crispy cornflakes and sweet toffee bits, finished with a sprinkle of sparkling sugar.",
+    "ingredients": ["Cornflakes", "Toffee Bits", "Butter", "Flour", "Sparkling Sugar"]
+  },
+  {
+    "id": 129,
+    "name": "Miso Caramel Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F9.jpg",
+    "description": "A unique cookie that hits all the right notes: salty, sweet, and packed with umami. Chewy caramel cookies enhanced with the savory depth of white miso.",
+    "ingredients": ["White Miso Paste", "Caramel", "Butter", "Flour", "Brown Sugar"]
+  },
+  {
+    "id": 130,
+    "name": "Grandma's Favorite Oatmeal Cookies",
+    "category": "Cookies",
+    "price": "50,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F10.jpg",
+    "description": "A timeless classic that tastes just like home. Soft, chewy oatmeal cookies with a hint of cinnamon and sweet raisins.",
+    "ingredients": ["Rolled Oats", "Raisins", "Cinnamon", "Butter", "Flour"]
+  },
+  {
+    "id": 131,
+    "name": "Soft Ricotta Almond Pillows",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F11.jpg",
+    "description": "Incredibly soft, light, and cake-like cookies made with creamy ricotta cheese and flavored with sweet almond extract. A delicate treat.",
+    "ingredients": ["Ricotta Cheese", "Almond Extract", "Flour", "Sugar", "Eggs"]
+  },
+  {
+    "id": 132,
+    "name": "Mouthwatering Lemon Bar Cookie Cups",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F12.jpg",
+    "description": "All the flavor of a classic lemon bar in a convenient cookie cup. A buttery shortbread crust is filled with a zesty, sweet lemon curd.",
+    "ingredients": ["Flour", "Butter", "Lemon Curd", "Powdered Sugar", "Eggs"]
+  },
+  {
+    "id": 133,
+    "name": "Lemon Crinkle Cookies",
+    "category": "Cookies",
+    "price": "55,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F13.jpg",
+    "description": "Bright, chewy, and bursting with fresh lemon flavor. These cookies have a beautiful cracked surface from being rolled in powdered sugar before baking.",
+    "ingredients": ["Fresh Lemon Juice", "Lemon Zest", "Flour", "Powdered Sugar", "Butter"]
+  },
+  {
+    "id": 134,
+    "name": "Pecan Pie Brownie Bombs",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F14.jpg",
+    "description": "The ultimate decadent dessert mashup. A rich, fudgy brownie base is topped with a gooey, crunchy pecan pie filling.",
+    "ingredients": ["Pecans", "Cocoa Powder", "Brown Sugar", "Corn Syrup", "Chocolate"]
+  },
+  {
+    "id": 135,
+    "name": "Matcha Mochi Cookies",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F15.jpg",
+    "description": "A delightful fusion of textures. A crisp matcha cookie exterior surrounds a surprisingly soft and chewy mochi center.",
+    "ingredients": ["Matcha Powder", "Glutinous Rice Flour", "Butter", "Sugar", "Flour"]
+  },
+  {
+    "id": 136,
+    "name": "Raspberry Chocolate Chunk Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F16.jpg",
+    "description": "A perfect pairing of tart and sweet. These cookies are loaded with large chunks of rich chocolate and tangy pieces of freeze-dried raspberries.",
+    "ingredients": ["Chocolate Chunks", "Freeze-Dried Raspberries", "Flour", "Butter", "Brown Sugar"]
+  },
+  {
+    "id": 137,
+    "name": "Raspberry Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F17.jpg",
+    "description": "A slightly different take on the classic, where sweet raspberry notes are woven into a chewy cookie base along with classic chocolate chips.",
+    "ingredients": ["Raspberry Extract", "Chocolate Chips", "Flour", "Butter", "Sugar"]
+  },
+  {
+    "id": 138,
+    "name": "White Chocolate Caramel Drizzle Cookies",
+    "category": "Cookies",
+    "price": "60,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F18.jpg",
+    "description": "A sweet and decadent cookie featuring a white chocolate chip-studded base, finished with a generous drizzle of smooth, rich caramel.",
+    "ingredients": ["White Chocolate Chips", "Caramel Sauce", "Flour", "Butter", "Brown Sugar"]
+  },
+  {
+    "id": 139,
+    "name": "Piped Chocolate Butter Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F19.jpg",
+    "description": "Delicate, crisp, and buttery spritz cookies that are piped into beautiful shapes and dipped in rich dark chocolate for an elegant finish.",
+    "ingredients": ["Butter", "Flour", "Powdered Sugar", "Dark Chocolate", "Vanilla Extract"]
+  },
+  {
+    "id": 140,
+    "name": "Coffee Butter Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F20.jpg",
+    "description": "Crisp, aromatic, and melt-in-your-mouth butter cookies with a rich coffee flavor. The perfect companion for your morning coffee or afternoon break.",
+    "ingredients": ["Instant Coffee Powder", "Butter", "Flour", "Sugar", "Eggs"]
+  },
+  {
+    "id": 141,
+    "name": "Nutella-Filled Brownie Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F21.jpg",
+    "description": "A fudgy brownie cookie with a crinkly top and a hidden surprise inside: a molten, gooey center of creamy Nutella.",
+    "ingredients": ["Nutella", "Cocoa Powder", "Chocolate Chips", "Flour", "Butter"]
+  },
+  {
+    "id": 142,
+    "name": "Chocolate Orange Sandwich Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F22.jpg",
+    "description": "A classic flavor combination in cookie form. Two rich chocolate cookies are sandwiched together with a zesty, sweet orange cream filling.",
+    "ingredients": ["Cocoa Powder", "Orange Zest", "Butter", "Powdered Sugar", "Flour"]
+  },
+  {
+    "id": 143,
+    "name": "Lemon Crinkle Cookies",
+    "category": "Cookies",
+    "price": "55,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F23.jpg",
+    "description": "Bright, chewy, and bursting with fresh lemon flavor. These cookies have a beautiful cracked surface from being rolled in powdered sugar before baking.",
+    "ingredients": ["Fresh Lemon Juice", "Lemon Zest", "Flour", "Powdered Sugar", "Butter"]
+  },
+  {
+    "id": 144,
+    "name": "Salted Caramel Cheesecake Cookies",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F24.jpg",
+    "description": "A decadent cookie with a graham cracker-infused base, a surprise cream cheese filling, and a generous drizzle of homemade salted caramel.",
+    "ingredients": ["Cream Cheese", "Graham Cracker Crumbs", "Salted Caramel", "Flour", "Brown Sugar"]
+  },
+  {
+    "id": 145,
+    "name": "S'mores Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F25.jpg",
+    "description": "All the campfire fun in a cookie. A brown sugar cookie base is packed with milk chocolate chunks and topped with a perfectly toasted marshmallow.",
+    "ingredients": ["Graham Crackers", "Milk Chocolate", "Marshmallows", "Flour", "Butter"]
+  },
+  {
+    "id": 146,
+    "name": "Byron Bay Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "80,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F26.jpg",
+    "description": "Inspired by the iconic Australian cookie, this is a large, chunky cookie with a satisfyingly crisp texture and generous amounts of milk chocolate chips.",
+    "ingredients": ["Flour", "Butter", "Milk Chocolate Chips", "Brown Sugar", "Eggs"]
+  },
+  {
+    "id": 147,
+    "name": "BIGG & THICC - New York Style Cookies & Brownies",
+    "category": "Cookies",
+    "price": "85,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F27.jpg",
+    "description": "The ultimate New York style cookie. Extra large and thick with crispy edges and a soft, gooey center, loaded with walnuts and chocolate chunks.",
+    "ingredients": ["Flour", "Walnuts", "Chocolate Chunks", "Butter", "Brown Sugar"]
+  },
+  {
+    "id": 148,
+    "name": "Lemon Blueberry Cheesecake Cookies",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F28.jpg",
+    "description": "A soft cookie base with a delightful surprise center of creamy lemon and blueberry cheesecake filling.",
+    "ingredients": ["Cream Cheese", "Blueberries", "Lemon", "Graham Cracker Crumbs", "Flour"]
+  },
+  {
+    "id": 149,
+    "name": "Crumbl's Famous Chocolate Chip Cookies Made Simple",
+    "category": "Cookies",
+    "price": "80,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F29.jpg",
+    "description": "Inspired by the famous Crumbl cookie, this is a giant, soft, and buttery cookie, served warm and packed with milk chocolate chips.",
+    "ingredients": ["Milk Chocolate Chips", "Butter", "Flour", "Brown Sugar", "Cake Flour"]
+  },
+  {
+    "id": 150,
+    "name": "Vegan Double Chocolate Chip Cookies",
+    "category": "Cookies",
+    "price": "70,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F30.jpg",
+    "description": "A rich and fudgy chocolate cookie that is completely plant-based. Made with a cocoa-infused dough and loaded with dairy-free chocolate chips.",
+    "ingredients": ["Flour", "Cocoa Powder", "Vegan Butter", "Dairy-Free Chocolate Chips", "Flax Egg"]
+  },
+  {
+    "id": 151,
+    "name": "London Fog Shortbread Cookies",
+    "category": "Cookies",
+    "price": "65,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F31.jpg",
+    "description": "A delicate, buttery shortbread cookie infused with the subtle, aromatic flavors of Earl Grey tea and a hint of vanilla, like the classic latte.",
+    "ingredients": ["Flour", "Butter", "Earl Grey Tea Leaves", "Vanilla Extract", "Powdered Sugar"]
+  },
+  {
+    "id": 152,
+    "name": "Brookies Cookies",
+    "category": "Cookies",
+    "price": "75,000đ/100g",
+    "image": "/src/assets/images/products/Cookies/F32.jpg",
+    "description": "The ultimate dessert hybrid. One half is a rich, fudgy brownie, and the other half is a classic, chewy chocolate chip cookie, baked together into one perfect treat.",
+    "ingredients": ["Flour", "Cocoa Powder", "Butter", "Chocolate Chips", "Brown Sugar", "Eggs"]
+  },
+  {
+    "id": 92,
+    "name": "Iced Macchiato Coffee",
+    "category": "Coffees",
+    "price": "60,000đ",
+    "image": "/src/assets/images/products/Coffees/D2.jpg",
+    "description": "A refreshing layered coffee drink. Cold milk is poured over ice, 'stained' with a shot of rich espresso, creating a beautiful visual and flavor gradient.",
+    "ingredients": ["Espresso", "Milk", "Ice", "Syrup (optional)"]
+  },
+  {
+    "id": 93,
+    "name": "Frothy Whipped Coffee White Russian",
+    "category": "Coffees",
+    "price": "95,000đ",
+    "image": "/src/assets/images/products/Coffees/D3.jpg",
+    "description": "A decadent coffee cocktail. A classic White Russian (vodka, Kahlúa, cream) is topped with a frothy, Dalgona-style whipped coffee.",
+    "ingredients": ["Instant Coffee", "Vodka", "Coffee Liqueur (Kahlúa)", "Cream", "Sugar"]
+  },
+  {
+    "id": 94,
+    "name": "Iced Blonde White Mocha Caramel Latte",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D4.jpg",
+    "description": "A sweet and complex iced latte featuring smooth, light-roast blonde espresso, creamy white chocolate mocha sauce, and a generous drizzle of buttery caramel.",
+    "ingredients": ["Blonde Espresso", "Milk", "White Chocolate Sauce", "Caramel Drizzle", "Ice"]
+  },
+  {
+    "id": 95,
+    "name": "Double Choc Cookie Mocha Costa Coffee",
+    "category": "Coffees",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Coffees/D5.jpg",
+    "description": "An indulgent mocha inspired by Costa Coffee. Combines rich espresso, chocolate, and cookie-flavored syrup, topped with cream and cookie crumbs.",
+    "ingredients": ["Espresso", "Milk", "Chocolate Sauce", "Cookie Syrup", "Whipped Cream"]
+  },
+  {
+    "id": 96,
+    "name": "Double Chocolate Chip Frappuccino",
+    "category": "Coffees",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Coffees/D6.jpg",
+    "description": "A coffee-free, decadent blended beverage. A rich mocha sauce, chocolate chips, and milk are blended with ice, then topped with whipped cream.",
+    "ingredients": ["Mocha Sauce", "Chocolate Chips", "Milk", "Ice", "Whipped Cream"]
+  },
+  {
+    "id": 97,
+    "name": "Keto Caramel Macchiato",
+    "category": "Coffees",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Coffees/D7.jpg",
+    "description": "A low-carb, sugar-free version of the popular drink. Steamed almond milk, espresso, and a sugar-free vanilla and caramel syrup.",
+    "ingredients": ["Espresso", "Almond Milk", "Sugar-Free Vanilla Syrup", "Sugar-Free Caramel Sauce"]
+  },
+  {
+    "id": 98,
+    "name": "Iced Brown Sugar Miso Latte",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D8.jpg",
+    "description": "A unique and trendy latte that combines the sweetness of brown sugar syrup with the salty, umami depth of white miso, served over ice with espresso and milk.",
+    "ingredients": ["Espresso", "Milk", "Brown Sugar Syrup", "White Miso Paste", "Ice"]
+  },
+  {
+    "id": 100,
+    "name": "Kawa i Czekolada",
+    "category": "Coffees",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Coffees/D10.jpg",
+    "description": "Polish for 'Coffee and Chocolate.' A simple yet elegant drink, essentially a rich mocha, often made with high-quality dark chocolate melted into freshly brewed coffee.",
+    "ingredients": ["Brewed Coffee", "Dark Chocolate", "Milk or Cream", "Sugar"]
+  },
+  {
+    "id": 101,
+    "name": "Yuanyang Tea",
+    "category": "Coffees",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Coffees/D11.jpg",
+    "description": "A popular Hong Kong drink that perfectly blends coffee and milk tea, creating a uniquely smooth and balanced beverage with a double kick of caffeine.",
+    "ingredients": ["Black Coffee", "Hong Kong Milk Tea", "Condensed Milk", "Ice"]
+  },
+  {
+    "id": 102,
+    "name": "Dalgona Coffee",
+    "category": "Coffees",
+    "price": "60,000đ",
+    "image": "/src/assets/images/products/Coffees/D12.jpg",
+    "description": "The viral whipped coffee trend. Instant coffee, sugar, and hot water are whipped into a fluffy, creamy foam and served over iced milk.",
+    "ingredients": ["Instant Coffee", "Sugar", "Hot Water", "Milk", "Ice"]
+  },
+  {
+    "id": 103,
+    "name": "French Hot Chocolate",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D13.jpg",
+    "description": "An incredibly rich, thick, and decadent hot chocolate, more like a drinking chocolate. Made from high-quality melted chocolate and whole milk, not cocoa powder.",
+    "ingredients": ["High-Quality Chocolate", "Whole Milk", "Heavy Cream", "Sugar"]
+  },
+  {
+    "id": 104,
+    "name": "Cozy gingerbread latte",
+    "category": "Coffees",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Coffees/D14.jpg",
+    "description": "A festive latte perfect for the holidays. Espresso and steamed milk are flavored with a syrup infused with ginger, cinnamon, and molasses.",
+    "ingredients": ["Espresso", "Milk", "Gingerbread Syrup", "Cinnamon", "Whipped Cream"]
+  },
+  {
+    "id": 105,
+    "name": "Coffee Mousse",
+    "category": "Coffees",
+    "price": "65,000đ",
+    "image": "/src/assets/images/products/Coffees/D15.jpg",
+    "description": "A light and airy dessert-style coffee served in a cup. A creamy, coffee-infused mousse, often topped with chocolate shavings.",
+    "ingredients": ["Heavy Cream", "Espresso Powder", "Sugar", "Gelatin", "Chocolate Shavings"]
+  },
+  {
+    "id": 106,
+    "name": "Tiramisu Espresso",
+    "category": "Coffees",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Coffees/D16.jpg",
+    "description": "All the flavors of the classic dessert in a cup. A shot of espresso is layered with a sweet mascarpone cream and dusted with cocoa powder.",
+    "ingredients": ["Espresso", "Mascarpone Cheese", "Cream", "Sugar", "Cocoa Powder"]
+  },
+  {
+    "id": 107,
+    "name": "Tiramisu Cold Brew",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D17.jpg",
+    "description": "Smooth, low-acid cold brew coffee is topped with a sweet and creamy mascarpone cold foam and a dusting of cocoa.",
+    "ingredients": ["Cold Brew Coffee", "Mascarpone Cheese", "Heavy Cream", "Cocoa Powder", "Ice"]
+  },
+  {
+    "id": 108,
+    "name": "Coconut Vanilla Cold Brew",
+    "category": "Coffees",
+    "price": "75,000đ",
+    "image": "/src/assets/images/products/Coffees/D18.jpg",
+    "description": "A refreshing and tropical take on cold brew. Smooth cold brew coffee is mixed with creamy coconut milk and a hint of sweet vanilla.",
+    "ingredients": ["Cold Brew Coffee", "Coconut Milk", "Vanilla Syrup", "Ice"]
+  },
+  {
+    "id": 109,
+    "name": "Creamy Chocolate Coffee Date Shake",
+    "category": "Coffees",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Coffees/D19.jpg",
+    "description": "A naturally sweetened and energizing shake. A blend of cold brew coffee, cocoa powder, sweet Medjool dates, and milk or a milk alternative.",
+    "ingredients": ["Cold Brew Coffee", "Medjool Dates", "Cocoa Powder", "Milk", "Ice"]
+  },
+  {
+    "id": 110,
+    "name": "Decadent Coffee Mousse",
+    "category": "Coffees",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Coffees/D20.jpg",
+    "description": "An extra-rich version of coffee mousse, this dessert features a deep coffee flavor and a velvety texture, served chilled in a glass.",
+    "ingredients": ["Espresso", "Heavy Cream", "Egg Yolks", "Dark Chocolate", "Sugar"]
+  },
+  {
+    "id": 111,
+    "name": "Dark Cherry Mocha Cold Brew with Cacao Nibs",
+    "category": "Coffees",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Coffees/D21.jpg",
+    "description": "A sophisticated flavor combination. Smooth cold brew is mixed with rich mocha sauce and dark cherry syrup, topped with crunchy cacao nibs.",
+    "ingredients": ["Cold Brew Coffee", "Mocha Sauce", "Dark Cherry Syrup", "Cacao Nibs", "Ice"]
+  },
+  {
+    "id": 112,
+    "name": "Maple Brown Butter Cold Brew",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D22.jpg",
+    "description": "A unique and comforting cold brew flavored with the nutty notes of brown butter and the gentle sweetness of real maple syrup.",
+    "ingredients": ["Cold Brew Coffee", "Brown Butter", "Maple Syrup", "Cream", "Ice"]
+  },
+  {
+    "id": 113,
+    "name": "Caramel Hazelnut Iced Coffee",
+    "category": "Coffees",
+    "price": "70,000đ",
+    "image": "/src/assets/images/products/Coffees/D23.jpg",
+    "description": "A classic and beloved flavor pairing. Freshly brewed iced coffee is blended with sweet caramel sauce and nutty hazelnut syrup.",
+    "ingredients": ["Iced Coffee", "Caramel Sauce", "Hazelnut Syrup", "Milk", "Ice"]
+  },
+  {
+    "id": 114,
+    "name": "Whipped Tiramisu Coffee",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D24.jpg",
+    "description": "A deconstructed Tiramisu drink. Iced milk is topped with a frothy, whipped mixture of coffee and mascarpone flavor, then dusted with cocoa.",
+    "ingredients": ["Instant Coffee", "Mascarpone Flavoring", "Sugar", "Milk", "Cocoa Powder"]
+  },
+  {
+    "id": 153,
+    "name": "Dalgona Latte (Honeycomb Toffee Latte)",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D25.jpg",
+    "description": "A playful twist on the whipped coffee trend. Smooth iced milk is topped with fluffy Dalgona coffee and crunchy, sweet honeycomb toffee pieces.",
+    "ingredients": ["Instant Coffee", "Sugar", "Honeycomb Toffee", "Milk", "Ice"]
+  },
+  {
+    "id": 154,
+    "name": "Biscoff Cloud Coffee",
+    "category": "Coffees",
+    "price": "85,000đ",
+    "image": "/src/assets/images/products/Coffees/D26.jpg",
+    "description": "An indulgent coffee featuring a 'cloud' of creamy, whipped foam infused with the caramelized spice flavor of Biscoff cookies, served over iced coffee.",
+    "ingredients": ["Iced Coffee", "Biscoff Spread", "Heavy Cream", "Milk", "Ice"]
+  },
+  {
+    "id": 155,
+    "name": "Tiramisu Cold Brew",
+    "category": "Coffees",
+    "price": "80,000đ",
+    "image": "/src/assets/images/products/Coffees/D27.jpg",
+    "description": "Smooth, low-acid cold brew coffee is topped with a sweet and creamy mascarpone cold foam and a dusting of rich cocoa powder.",
+    "ingredients": ["Cold Brew Coffee", "Mascarpone Cheese", "Heavy Cream", "Cocoa Powder", "Ice"]
+  }
+]

@@ -1,0 +1,102 @@
+.about-us-container {
+  max-width: 1120px; /* Giới hạn độ rộng nội dung */
+  margin: 0 auto; /* Căn giữa trang */
+  padding: 4.5rem 1.5rem;
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+.about-section {
+  margin-bottom: 6rem; /* Khoảng cách giữa các phần */
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Các kiểu chữ dùng chung --- */
+.about-pre-title {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: var(--mb-1);
+}
+
+.about-main-title {
+  font-family: var(--title-font);
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.2;
+}
+
+.about-paragraph {
+  font-size: var(--h3-font-size); /* Làm cho đoạn văn lớn và dễ đọc hơn */
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 750px; /* Giới hạn chiều rộng để dễ đọc */
+}
+
+/* --- Bố cục Phần 1: Văn bản ở giữa --- */
+.text-center-layout {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Bố cục Phần 2: Hai cột --- */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem; /* Khoảng cách lớn giữa văn bản và hình ảnh */
+  align-items: center;
+}
+
+.two-column-layout .text-content .about-paragraph {
+  font-size: var(--normal-font-size); /* Cỡ chữ nhỏ hơn cho phần này */
+  max-width: none; /* Bỏ giới hạn chiều rộng trong bố cục cột */
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem; /* Bo góc mềm mại */
+  object-fit: cover;
+}
+
+/* --- Thiết kế đáp ứng (Responsive) --- */
+@media (max-width: 992px) {
+  .about-main-title {
+    font-size: var(--h2-font-size);
+  }
+  .about-paragraph {
+    font-size: var(--normal-font-size);
+  }
+  .two-column-layout {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    padding: 3rem 1rem;
+  }
+  .about-section {
+    margin-bottom: 4rem;
+  }
+  /* Chuyển thành 1 cột trên màn hình nhỏ */
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .two-column-layout .text-content {
+    text-align: center;
+  }
+  /* Đưa hình ảnh lên trên văn bản trên di động */
+  .two-column-layout .image-content {
+    order: -1;
+  }
+}

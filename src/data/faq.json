@@ -1,0 +1,97 @@
+[
+  {
+    "id": 401,
+    "question": "Do you offer gluten-free options?",
+    "answer": "Yes, we have a selection of gluten-free cakes and cookies. Please look for the GF symbol on our menu or ask our staff for recommendations."
+  },
+  {
+    "id": 402,
+    "question": "Can I place a custom order for a birthday cake?",
+    "answer": "Absolutely! We specialize in custom cakes for all occasions. Please contact us at least 3 days in advance to discuss your design and requirements."
+  },
+  {
+    "id": 403,
+    "question": "Do you have vegan products?",
+    "answer": "We are happy to offer a few vegan options, including our Vegan Chocolate Avocado Mousse. Our menu is constantly evolving, so please check for the latest additions."
+  },
+  {
+    "id": 404,
+    "question": "What are your opening hours?",
+    "answer": "We are open from 7:00 AM to 9:00 PM, seven days a week."
+  },
+  {
+    "id": 405,
+    "question": "Do you offer delivery?",
+    "answer": "Yes, we do! You can find us on major delivery platforms like GrabFood and ShopeeFood. You can also place an order for delivery directly through our website for select areas."
+  },
+  {
+    "id": 406,
+    "question": "Can I make a reservation?",
+    "answer": "We operate on a first-come, first-served basis. For large parties of 8 or more, please call us ahead of time and we will do our best to accommodate your group."
+  },
+  {
+    "id": 407,
+    "question": "I have a nut allergy. Are your products safe for me?",
+    "answer": "Many of our products contain nuts or are made in a kitchen where nuts are present. While we take precautions to prevent cross-contamination, we cannot guarantee any item is 100% free of allergens. Please inform our staff of any allergies."
+  },
+  {
+    "id": 408,
+    "question": "Do you have free Wi-Fi?",
+    "answer": "Of course! We offer complimentary high-speed Wi-Fi for all our customers. The password can be found on your receipt or feel free to ask our staff."
+  },
+  {
+    "id": 409,
+    "question": "Is there parking available?",
+    "answer": "There is metered street parking available in front of our shop. There is also a public parking garage located one block away on ABC Street."
+  },
+  {
+    "id": 410,
+    "question": "Do you have a loyalty program?",
+    "answer": "Yes! Join our 'Bakerz Rewards' to earn points on every purchase, redeemable for free drinks, pastries, and exclusive discounts. Ask our barista how to sign up!"
+  },
+  {
+    "id": 411,
+    "question": "What kind of coffee beans do you use?",
+    "answer": "We proudly serve single-origin Arabica beans sourced from the highlands of Da Lat, roasted weekly for maximum freshness. You can also purchase bags of our beans to enjoy at home!"
+  },
+  {
+    "id": 412,
+    "question": "Do you sell gift cards?",
+    "answer": "Yes, a Bakerz Bite gift card is the perfect treat! You can purchase physical gift cards in-store or e-gift cards directly from our website in various denominations."
+  },
+  {
+    "id": 413,
+    "question": "Can I order online for pickup?",
+    "answer": "Certainly! To save time, you can place your order through our website and select your desired pickup time. Your order will be fresh and ready for you when you arrive."
+  },
+  {
+    "id": 414,
+    "question": "What payment methods do you accept?",
+    "answer": "We accept cash, all major credit and debit cards (Visa, MasterCard), and popular e-wallets such as MoMo and ZaloPay."
+  },
+  {
+    "id": 415,
+    "question": "Do you have seasonal specials?",
+    "answer": "Absolutely! We celebrate every season with unique flavors. From pumpkin spice lattes in the fall to mango cheesecakes in the summer, there's always something new and exciting to try."
+  },
+  {
+    "id": 416,
+    "question": "Are pets allowed in your café?",
+    "answer": "We love our furry friends! Well-behaved pets are welcome in our outdoor seating area. However, only service animals are permitted inside the café."
+  },
+  {
+    "id": 417,
+    "question": "Do you offer catering services for events?",
+    "answer": "We'd love to be part of your special event! We offer catering for meetings, parties, and more. Please visit the 'Catering' section of our website or contact us for our menu and pricing."
+  },
+  {
+    "id": 418,
+    "question": "Is your coffee fair trade or organic?",
+    "answer": "We are committed to ethical sourcing. The majority of our beans are sourced through direct trade relationships with farmers, ensuring fair compensation. We also offer a selection of certified organic single-origin beans."
+  },
+  {
+    "id": 419,
+    "question": "Where can I find nutritional information?",
+    "answer": "We are currently working on providing detailed nutritional information online. In the meantime, if you have a specific question about ingredients, please don't hesitate to ask our team."
+  }
+]

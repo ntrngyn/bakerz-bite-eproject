@@ -1,0 +1,128 @@
+[
+    { 
+      "id": 1,
+      "title": "From Customer Hoai An", 
+      "description": "Hi there, I've received the cake for my daughter Aurora's 1st birthday. It's absolutely gorgeous! The two little cats on top are unbelievably cute, and everyone in the family praised it. Thank you for making my daughter's special day even more perfect.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 2,
+      "title": "From Customer Tuan Phong", 
+      "description": "My son Jayden absolutely loved this Doraemon cake. It looked exactly like the picture, the colors were so vibrant, and the paper pinwheels could even spin! The cake was soft, and the cream was delicious without being overly sweet. We will definitely be regular customers!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 3,
+      "title": "From Customer Mai Linh", 
+      "description": "Thank you for delivering the cake on time for baby Mason's party. The Baby Shark theme is so adorable, and the light mint green color is lovely. All of our guests asked where we got the cake. Wishing your bakery great success!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 4,
+      "title": "From Customer Minh Thu", 
+      "description": "Hello! Just wanted to give some feedback on the Kuromi cake. My friend is a huge Kuromi fan, and she absolutely loved it. The cake looked even better in person, especially the cool purple drip effect. We took a hundred photos with it! Thanks so much!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 5,
+      "title": "From Customer Minh Hoang", 
+      "description": "The pink bow cake you made for my girlfriend was so elegant and sophisticated. She was incredibly surprised and happy. The fabric bow was a stunning touch. Thank you for your excellent service and consultation.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 6,
+      "title": "From Customer Thu Thao", 
+      "description": "My 'Little Watermelon' got a birthday cake that was as perfect as her nickname! The watermelon concept is so creative and unique. The vibrant colors instantly brought a joyful atmosphere to the party. Thank you!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 7,
+      "title": "From Customer Phong Vu", 
+      "description": "I am so pleased with the birthday cake set for baby Leo. The main cake was beautiful, and having the smaller cakes spell out his name was such a great idea. My son couldn't stop pointing at the cat on top and smiling. The cake was delicious and just the right amount of sweet for the kids.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 8,
+      "title": "From Customer Lan Huong", 
+      "description": "My daughter Sophie adored this cake. The little doll and cat figures are so charming, and the soft pastel pink color was exactly what I had in mind. Thank you for creating such a sweet and lovely cake.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 9,
+      "title": "From Our Lyalty Customer Hoang Phuc.", 
+      "description": "On behalf of the company, thank you for preparing such a spectacular and stylish cake for our boss Jason's birthday. The car and money theme looked so luxurious and impressive. Our boss was very pleased.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 10,
+      "title": "From Customer Duc Anh", 
+      "description": "The cake for my grandfather's 92nd birthday was so dignified and meaningful. The figure of the kind-looking grandfather with the red apricot blossoms added such a warm and touching atmosphere to the celebration. Our whole family was moved. Thank you.",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 11,
+      "title": "From Our Loyalty Customer Thu Ha", 
+      "description": "My son is obsessed with outer space, so when he saw this astronaut cake, he screamed with joy. Every detail, from the astronauts to the planets and the rocket, was so meticulously crafted. An amazing cake that went beyond our expectations!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 12,
+      "title": "From Our Loyalty Customer My Yen", 
+      "description": "Your shop is amazing, the cake is so beautiful! My son Ben loves cars and trains, so this cake was a dream come true for him. Thank you for combining so many of his favorite things onto one cake. His friends at the birthday party loved it too!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 13,
+      "title": "From The Bride, Quoc Cuong", 
+      "description": "The cake for my wedding was absolutely stunning. It was incredibly elegant and luxurious with fresh roses and gold leaf accents. It was truly the sweet centerpiece for our special day. Thank you so very much!",
+      "category": "Feed Back"
+    },
+    { 
+      "id": 14,
+      "title": "Summer Masterpiece", 
+      "description": "This summer 07/08/2025, we are honored to present 'SUMMER MASTERPIECE' – a special festival created to celebrate the creativity, skill, and love for cakes. This is not just a competition, but a journey that connects the community, where every cake is a true work of art, embodying the passion and story of its creator.",
+      "category": "Summer Event"
+    },
+    { 
+      "id": 15,
+      "title": "Matcha", 
+      "description": "The process for selecting matcha begins with observing the color; look for a vibrant, jade-green hue and avoid dull, yellowish tones. Next, smell for a fresh, sweet aroma and check for an ultra-fine, lump-free powder to ensure premium quality.",
+      "category": "Materials"
+    },
+    { 
+      "id": 16,
+      "title": "Wheat & Flour", 
+      "description": "To select flour, the most important process is to read the packaging carefully to identify the correct type (bread flour, cake flour) for your recipe. Afterwards, visually inspect to ensure the flour is dry, fine, and free of any musty or strange odors.",
+      "category": "Materials"
+    },
+    { 
+      "id": 17,
+      "title": "Baking Staples (Butter, Sugar, Eggs)", 
+      "description": "Follow the process of choosing fresh eggs with clean, uncracked shells. For butter, always prioritize unsalted butter to control the flavor, and check that the sugar is dry and free of clumps.",
+      "category": "Materials"
+    },
+    { 
+      "id": 18,
+      "title": "Yeast", 
+      "description": "The core process for choosing yeast is to ensure it is still active. For dry yeast, test a small amount by proofing it with warm water and sugar; if the mixture becomes foamy after a few minutes, it confirms the yeast is good and ready to use.",
+      "category": "Materials"
+    },
+    { 
+      "id": 19,
+      "title": "Strawberries", 
+      "description": "When selecting strawberries, start by visually inspecting the fruit for a bright red color, a plump shape, and green, fresh-looking stems. Then, check for any bruises or soft spots and smell for a sweet, natural fragrance to ensure you pick the highest quality berries.",
+      "category": "Materials"
+    },
+    { 
+      "id": 20,
+      "title": "Vanilla", 
+      "description": "With vanilla, the selection process depends on the product form. If using extract, always read the label and choose 'Pure Vanilla Extract' over imitation flavoring. For vanilla beans, physically check to ensure they are plump, moist, pliable, and have a strong aroma.",
+      "category": "Materials"
+    },
+    { 
+      "id": 21,
+      "title": "Cocoa Powder", 
+      "description": "The process for selecting cocoa powder begins with reading the label to prioritize one with a high fat content (over 20%) and to identify the correct type (natural or Dutch-processed). Afterwards, use your sense of smell to detect a rich, characteristic chocolate aroma, ensuring a deep and perfect flavor for your bake.",
+      "category": "Materials"
+    }
+]

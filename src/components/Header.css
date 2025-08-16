@@ -1,0 +1,306 @@
+
+/*=============== DESKTOP FIRST STYLES (Màn hình lớn) ===============*/
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--container-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  /* --- CẬP NHẬT Ở ĐÂY --- */
+  /* Thiết lập chiều rộng tối đa và căn giữa cho container của header */
+  max-width: 1200px !important; /* <<<< THAY ĐỔI GIÁ TRỊ NÀY cho bằng với max-width của footer */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Thêm padding để nội dung không dính vào cạnh màn hình nhỏ hơn */
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước tổng thể */
+}
+
+.nav__logo-img {
+  height: 4rem; /* Hơi nhỏ lại một chút cho cân đối */
+  width: auto; 
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 2.25rem;
+  list-style: none;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.nav__link {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  position: relative;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+}
+
+.nav__right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav__visitor-count {
+  font-size: var(--normal-font-size); /* Tăng kích thước font */
+  color: var(--primary-color); /* Sử dụng màu chính cho nổi bật */
+  font-weight: var(--font-semi-bold); /* Làm chữ đậm hơn */
+  background-color: var(--primary-color-alt-light); /* Một màu nền nhẹ (bạn cần định nghĩa biến này hoặc dùng mã màu trực tiếp, ví dụ: #fdecdb) */
+  padding: 0.4rem 0.8rem; /* Thêm đệm bên trong */
+  border-radius: 2rem; /* Bo tròn các góc để tạo thành hình viên thuốc */
+  transition: transform 0.3s ease;
+}
+
+.nav__visitor-count:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+
+
+/* Ẩn các nút điều khiển của mobile trên desktop */
+.nav__toggle,
+.nav__close,
+.nav__link-arrow {
+  display: none;
+}
+
+/*=============== DROPDOWN MENU (Desktop) ===============*/
+.nav__item--dropdown {
+  position: relative;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  background-color: var(--container-color);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+  z-index: var(--z-fixed);
+}
+
+.dropdown__menu.show-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.dropdown__link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown__link:hover {
+  background-color: var(--primary-color-alt);
+  color: #fff;
+}
+
+
+/*=============== TABLET & MOBILE RESPONSIVE (<= 768px) ===============*/
+@media screen and (max-width: 768px) {
+  /* --- Hiện các nút điều khiển mobile --- */
+  .nav {
+    /* Bỏ padding mặc định ở trên và dùng padding riêng cho mobile nếu cần */
+    padding: 0 1rem;
+  }
+  
+  /* Có thể bạn muốn điều chỉnh lại visitor count trên mobile */
+  .nav__visitor-count {
+      font-size: var(--small-font-size);
+      padding: 0.3rem 0.6rem;
+  }
+  
+  .nav__toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+  }
+
+  /* --- Cấu hình lại menu chính thành dạng overlay --- */
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Ẩn menu ra khỏi màn hình */
+    max-width: 500px;
+    max-height: 500px; 
+    background-color: var(--container-color);
+    padding: 6rem 2rem 3.5rem;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Hiệu ứng trượt */
+    overflow-y: auto; /* Cho phép cuộn nếu menu quá dài */
+  }
+
+  /* Class 'show-menu' sẽ được thêm bằng JS để hiện menu */
+  .show-menu {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column; /* Xếp các mục menu theo chiều dọc */
+    row-gap: 2rem; /* Khoảng cách giữa các mục */
+    text-align: center;
+  }
+
+  .nav__link {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    justify-content: center; /* Căn giữa link và mũi tên */
+  }
+  
+  .nav__link:hover {
+    color: var(--primary-color);
+  }
+
+  /* Nút đóng (X) bên trong menu overlay */
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+  
+  .nav__close:hover {
+    color: var(--primary-color);
+  }
+
+  /* --- Xử lý Dropdown trên mobile (Accordion) --- */
+  
+  /* Reset lại style của dropdown từ desktop */
+  .dropdown__menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: unset;
+    background-color: transparent;
+
+    /* Quan trọng: Tạo hiệu ứng trượt accordion */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  
+  /* Khi mục cha có class 'is-open', bung menu con ra */
+  .nav__item.is-open .dropdown__menu {
+    max-height: 500px; /* Một giá trị đủ lớn */
+    padding-top: 1rem; /* Tạo khoảng cách với mục cha */
+  }
+
+  .dropdown__item {
+    padding-bottom: 1rem;
+  }
+  
+  .dropdown__link {
+    color: var(--text-color);
+    font-size: 1rem; /* Font size nhỏ hơn mục cha */
+    padding: 0.5rem 0;
+    background-color: rgba(0,0,0, 0.03);
+    border-radius: 0.25rem;
+  }
+  
+  .dropdown__link:hover {
+    color: #fff;
+    background-color: var(--primary-color-alt);
+  }
+
+  /* --- Mũi tên chỉ báo có menu con --- */
+  .nav__link-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--title-color); /* Mũi tên trỏ xuống */
+    margin-left: 0.5rem;
+    transition: transform 0.4s ease;
+  }
+  
+  .nav__link:hover .nav__link-arrow {
+    border-top-color: var(--primary-color);
+  }
+
+  /* Xoay mũi tên khi menu con được mở */
+  .nav__item.is-open .nav__link-arrow {
+    transform: rotate(180deg);
+  }
+}
+
+/*=============== THÊM VÀO CUỐI FILE CSS HEADER CỦA BẠN ===============*/
+
+/* --- Tinh chỉnh cho màn hình điện thoại nhỏ (<= 480px) --- */
+@media screen and (max-width: 375px) {
+  
+  /* Cấu hình lại menu overlay để vừa vặn hơn */
+  .nav__menu {
+    /* Cho phép menu chiếm chiều rộng lớn hơn một chút để dễ đọc */
+    max-width: 500px;
+    max-height: 500px;    
+    padding: 5rem 1.5rem 3rem; /* Giảm padding trên dưới và trái phải */
+  }
+
+  /* Giảm khoảng cách giữa các mục menu chính */
+  .nav__list {
+    row-gap: 1.75rem;
+  }
+  
+  /* Giảm kích thước font cho các link chính */
+  .nav__link {
+    /* Sử dụng biến --h3-font-size hoặc một giá trị nhỏ hơn */
+    font-size: var(--h3-font-size); 
+  }
+
+  /* Giảm kích thước nút đóng */
+  .nav__close {
+    font-size: 1.75rem;
+  }
+
+  /* --- Tinh chỉnh cho menu con (Accordion) --- */
+  
+  /* Giảm khoảng cách giữa menu cha và menu con */
+  .nav__item.is-open .dropdown__menu {
+    margin-top: 0.75rem;
+  }
+
+  /* Giảm khoảng cách giữa các mục con */
+  .dropdown__item {
+    padding-bottom: 0.75rem;
+  }
+
+  /* Giảm kích thước font và padding cho các link con */
+  .dropdown__link {
+    font-size: var(--small-font-size); /* Dùng biến --small-font-size */
+    padding: 0.5rem 1rem;
+  }
+}

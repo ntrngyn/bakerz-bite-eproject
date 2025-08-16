@@ -1,0 +1,294 @@
+/* /src/components/FAQ-Sitemap.css - PHIÊN BẢN CUỐI CÙNG */
+
+/* ---- Container chính ---- */
+.tab-content {
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  border-radius: 8px;
+  background: var(--container-color);
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.sitemap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 950px;
+  padding: 2rem 1rem;
+}
+
+/* ---- Các Nút (Nodes) ---- */
+.sitemap-node {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: var(--font-semi-bold);
+  white-space: nowrap;
+  position: relative;
+  z-index: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sitemap-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(44, 44, 44, 0.1);
+}
+
+/* Style cho các cấp khác nhau */
+.sitemap-node--root {
+  background-color: var(--primary-color);
+  color: var(--container-color);
+  font-size: var(--h3-font-size);
+}
+.sitemap-node--level-1 {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color-alt);
+}
+
+.sitemap-node--level-1:hover {
+  color: var(--primary-color);
+}
+
+.sitemap-node--level-2 {
+  background-color: var(--container-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+/* ---- CÁC ĐƯỜNG NỐI - PHIÊN BẢN SỬA LỖI ---- */
+
+/* Gốc (Home) và đường kẻ dọc đi xuống */
+.sitemap-root {
+  position: relative;
+  padding-bottom: 20px;
+}
+.sitemap-root::after {
+  content: '';
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2px;
+  height: 43px;
+  background: var(--border-color);
+}
+
+/* Wrapper cho các nhánh chính (Level 1) */
+.sitemap-level-1-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem; /* Giữ khoảng cách tối thiểu */
+  position: relative;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+/* Thanh ngang chính nối các nhánh Level 1 */
+/* **FIX:** Dùng left/width % để thanh ngang bao phủ toàn bộ */
+.sitemap-level-1-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 56%; /* Bắt đầu từ 5% chiều rộng */
+  width: 100%; /* Kéo dài 90% chiều rộng */
+  height: 2px;
+  background: var(--border-color);
+  transform: translateX(-50%); /* Căn giữa thanh ngang */
+}
+
+/* Mỗi nhánh chính (Level 1) */
+.sitemap-level-1-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Đường kẻ dọc từ thanh ngang chính đến TẤT CẢ các nút Level 1 */
+/* **FIX:** Áp dụng cho cả first-child và last-child */
+.sitemap-level-1-node:first-child > .sitemap-node::before,
+.sitemap-level-1-node:last-child > .sitemap-node::before,
+.sitemap-level-1-node > .sitemap-node::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--border-color);
+}
+
+
+/* Đường kẻ nối từ Products xuống danh sách con */
+.sitemap-level-1-node > .sitemap-level-2-list::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0px;
+  background: var(--border-color);
+}
+
+
+/* Danh sách nhánh con (Level 2) */
+.sitemap-level-2-list {
+  list-style: none;
+  padding: 20px 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+/* Đường kẻ dọc chính của nhánh con */
+.sitemap-level-2-list::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 2px;
+  height: calc(100% - 1.5rem);
+  background: var(--border-color);
+}
+
+/* Mỗi mục con (Level 2) */
+.sitemap-level-2-item {
+  position: relative;
+  padding-left: 25px;
+}
+/* Đường kẻ ngang nối vào mỗi mục con */
+.sitemap-level-2-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 2px;
+  background: var(--border-color);
+}
+
+/* =================================================================== */
+/* ============ RESPONSIVE - THAY THẾ HOÀN TOÀN CÂY ================== */
+/* =================================================================== */
+
+/* Áp dụng cho Máy tính bảng và Thiết bị di động (từ 1024px trở xuống) */
+@media screen and (max-width: 1024px) {
+
+  /* ---- 1. Reset toàn bộ cấu trúc cây và các đường nối ---- */
+
+  /* Ẩn tất cả các đường kẻ được vẽ bằng pseudo-element */
+  .sitemap-container *::before,
+  .sitemap-container *::after {
+      display: none !important;
+  }
+
+  /* Reset lại layout chính */
+  .sitemap-container {
+      display: block; /* Chuyển về dạng khối bình thường */
+      min-width: 0;
+      padding: 0;
+  }
+  
+  .sitemap-root {
+      padding-bottom: 0;
+  }
+
+  /* ---- 2. Xây dựng layout danh sách phân loại mới ---- */
+  
+  /* Sử dụng Grid cho layout mới */
+  .sitemap-level-1-wrapper {
+      display: grid;
+      /* Tự động chia cột: tối thiểu 250px, tự co giãn */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem 2rem; /* khoảng cách dọc và ngang */
+      width: 100%;
+      padding: 0;
+  }
+  
+  /* Mỗi nhánh chính bây giờ là một cột danh sách */
+  .sitemap-level-1-node {
+      align-items: flex-start; /* Căn nội dung về bên trái */
+  }
+
+  /* Style lại các nút thành tiêu đề danh mục */
+  .sitemap-node {
+      border: none;
+      padding: 0;
+      font-weight: var(--font-bold);
+      background-color: transparent !important; /* Bỏ màu nền */
+      box-shadow: none !important;
+      transform: none !important;
+  }
+
+  /* Tiêu đề cấp 1 (Products, Merchandise...) */
+  .sitemap-node--level-1 {
+      color: var(--title-color);
+      font-size: var(--h3-font-size);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-color);
+      width: 100%;
+  }
+
+  /* Nút Home cũng trở thành một tiêu đề */
+  .sitemap-root {
+      width: 100%;
+      margin-bottom: 2.5rem; /* Khoảng cách với các mục bên dưới */
+  }
+  .sitemap-node--root {
+      font-size: var(--h3-font-size);
+      color: var(--title-color);
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--primary-color);
+  }
+  
+  /* Danh sách con */
+  .sitemap-level-2-list {
+      padding: 0;
+      gap: 0.75rem;
+      align-items: flex-start;
+      width: 100%;
+  }
+
+  .sitemap-level-2-item {
+      padding-left: 0;
+  }
+  
+  /* Link mục con */
+  .sitemap-node--level-2 {
+      color: var(--text-color);
+      font-weight: var(--font-medium);
+      font-size: var(--normal-font-size);
+      transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .sitemap-node--level-2:hover {
+      color: var(--primary-color);
+      padding-left: 8px;
+  }
+
+  /* ---- 3. Tinh chỉnh cho màn hình điện thoại nhỏ hơn ---- */
+  @media screen and (max-width: 768px) {
+      .tab-content {
+          padding: 1.5rem;
+      }
+
+      /* Grid sẽ tự động chuyển thành 1 cột, chỉ cần giảm khoảng cách */
+      .sitemap-level-1-wrapper {
+          gap: 2rem;
+      }
+  }
+}

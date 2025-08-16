@@ -1,0 +1,127 @@
+/* src/sections/HomeAboutSection.css */
+
+.about-container {
+    display: grid;
+    /* Layout 2 cột trên màn hình lớn */
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; /* Căn giữa nội dung 2 cột theo chiều dọc */
+    gap: 3rem; /* Khoảng cách rộng rãi, tạo cảm giác sang trọng */
+  }
+  
+  /* === Khối hình ảnh === */
+  
+  /* Style cho thẻ Link bao bọc ảnh */
+  .about-image-link {
+    display: block;
+    border-radius: 1rem; /* Bo góc mềm mại, nhất quán với thiết kế */
+    overflow: hidden; /* Bắt buộc để ảnh không tràn ra ngoài khi phóng to */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07); /* Đổ bóng nhẹ nhàng */
+    transition: all 0.4s ease-out; /* Hiệu ứng chuyển động mượt mà cho cả khối */
+  }
+  
+  /* Style cho chính thẻ ảnh */
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh luôn vừa vặn, không bị méo */
+    transition: transform 0.4s ease-out; /* Chỉ ảnh mới có hiệu ứng phóng to */
+  }
+  
+  /* Hiệu ứng khi di chuột qua */
+  .about-image-link:hover {
+    transform: translateY(-5px); /* Nhấc nhẹ cả khối lên */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1); /* Bóng đổ đậm hơn một chút */
+  }
+  
+  .about-image-link:hover .about-image {
+    transform: scale(1.03); /* Phóng to ảnh bên trong một chút */
+  }
+  
+  
+  /* === Khối văn bản === */
+  .about-text-content h3 {
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+    color: var(--title-color);
+    margin-bottom: var(--mb-1-5);
+  }
+  
+  .about-text-content p {
+    line-height: 1.75; /* Tăng chiều cao dòng để dễ đọc hơn nữa */
+    color: var(--text-color);
+    margin-bottom: var(--mb-1-5);
+  }
+  
+  .about-text-content p:last-child {
+    margin-bottom: 0; /* Bỏ margin cho đoạn văn cuối cùng */
+  }
+
+  .see-more-link {
+    display: inline-block; /* Bắt buộc để margin-top và transform hoạt động */
+    margin-top: var(--mb-1-5); /* Tạo khoảng cách với đoạn văn ở trên */
+    
+    color: var(--primary-color); /* Sử dụng màu chính của thương hiệu */
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold); /* Làm cho nó nổi bật hơn một chút */
+    
+    transition: all 0.3s ease-out; /* Hiệu ứng chuyển động mượt mà */
+  }
+  
+  /* Hiệu ứng khi di chuột qua */
+  .see-more-link:hover {
+    color: var(--primary-color-alt); /* Đổi sang màu phụ đậm hơn */
+    transform: translateX(5px); /* Di chuyển nhẹ sang phải để tạo hiệu ứng động */
+  }
+  
+/* ==============================================
+   === RESPONSIVE DESIGN BREAKPOINTS ===
+   ============================================== */
+
+/* 1. Màn hình rất lớn (VD: > 1200px) */
+@media (min-width: 1200px) {
+    .about-container {
+      gap: 4rem; /* Tăng khoảng cách cho thoáng hơn nữa */
+    }
+  }
+  
+  
+  /* 2. Máy tính bảng và laptop nhỏ (<= 992px) */
+  @media (max-width: 992px) {
+    .about-container {
+      gap: 2rem; /* Giảm khoảng cách cho vừa vặn */
+      align-items: flex-start; /* Căn lề trên để văn bản không bị lơ lửng */
+    }
+  
+    .about-text-content h3 {
+      font-size: var(--h2-font-size); /* Đảm bảo font chữ co lại theo global.css */
+    }
+  }
+  
+  
+  /* 3. Điện thoại di động (<= 768px) */
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr; /* Chuyển về layout 1 cột */
+    }
+  
+    /* Đảo vị trí: cho văn bản lên trên ảnh trên mobile */
+    .about-text-content {
+      order: -1; /* Đưa khối văn bản lên đầu */
+      text-align: center; /* Căn giữa văn bản và link "See More" */
+    }
+  }
+  
+  
+  /* 4. Điện thoại di động nhỏ (<= 480px) */
+  @media (max-width: 480px) {
+    /* Trên màn hình rất nhỏ, có thể giảm padding của section cha */
+    /* Lưu ý: nên đặt style này trong file global.css nếu muốn áp dụng chung */
+    #about.section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+  
+    .about-text-content h3 {
+      font-size: 1.5rem; /* Có thể đặt một giá trị font cụ thể cho dễ đọc */
+    }
+  }

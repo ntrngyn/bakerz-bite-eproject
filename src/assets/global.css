@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #c8a97e; 
+  --primary-color-alt: #b99a6b; 
+  --title-color: #2c2c2c; 
+  --text-color: #5a5a5a; 
+  --text-color-light: #8f8f8f; 
+  --body-color: #fdfaf6; 
+  --container-color: #ffffff; 
+  --border-color: #e0e0e0;
+
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Playfair Display", serif;
+
+  /* Font sizes: 1rem = 16px - Thay đổi % fontsizes (html) sẽ thay đổi toàn bộ rem của web */
+  --big-font-size: 2.5rem;
+  --h1-font-size: 2.25rem; 
+  --h2-font-size: 1.5rem; 
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem; 
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  --header-height: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: var(--mb-2);
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-color-alt);
+}
+
+ @media screen and (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  html {
+    font-size: 93.75%; /* 1rem = 15px */
+  }
+
+  .section {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  :root {
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.1rem;
+  }
+}
+
+
+/* 4. For small devices (large phones, < 576px)
+ * -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+  /* Các style component-specific thường thay đổi ở đây (ví dụ: grid chuyển thành 1 cột) */
+  /* Các thay đổi đó nên ở trong file CSS của component tương ứng */
+  html {
+    font-size: 87.5%; /* 1rem = 14px */
+  }
+
+  .section__title {
+     margin-bottom: var(--mb-1-5); /* Giảm một chút khoảng cách dưới tiêu đề */
+  }
+
+  .button {
+    padding: 0.9rem 1.5rem; /* Có thể làm nút nhỏ hơn một chút */
+  }
+}
+
+
+/* 5. For extra small devices (standard phones, < 375px)
+ * -------------------------------------------------------------------------- */
+@media screen and (max-width: 375px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.1rem;
+    --normal-font-size: 0.938rem; /* ~15px */
+  }
+
+  .container {
+    padding: 0 0.75rem; /* Giảm padding hơn nữa cho màn hình rất nhỏ */
+  }
+
+  .section {
+    padding: 3rem 0 1.5rem;
+  }
+}

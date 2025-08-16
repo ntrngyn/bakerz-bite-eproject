@@ -1,0 +1,106 @@
+/* --- Base Styles (Desktop) --- */
+
+#gallery-highlight {
+  background-color: #ffffff;
+}
+
+.gallery-highlight-grid {
+  display: grid;
+  /* Mặc định: 3 cột trên màn hình lớn */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+}
+
+.highlight-card {
+  position: relative; 
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* Giữ tỷ lệ 3:4, làm cho thẻ cao và thanh lịch */
+  aspect-ratio: 3 / 4; 
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.highlight-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover .highlight-card__image {
+  transform: scale(1.05); 
+}
+
+.highlight-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.highlight-card:hover .highlight-card__overlay {
+  opacity: 1; 
+}
+
+.highlight-card__title {
+  color: #fff;
+  font-family: var(--title-font);
+  font-size: var(--h2-font-size);
+  text-align: center;
+  transform: translateY(15px);
+  transition: transform 0.4s ease;
+}
+
+.highlight-card:hover .highlight-card__title {
+  transform: translateY(0);
+}
+
+
+/* ==============================================
+   === RESPONSIVE DESIGN BREAKPOINTS ===
+   ============================================== */
+
+/* 1. Máy tính bảng (Tablets) - Chuyển sang 2 cột
+   Breakpoint này (1024px) sẽ bao gồm cả iPad chiều dọc và ngang.
+*/
+@media (max-width: 1024px) {
+  .gallery-highlight-grid {
+    grid-template-columns: repeat(2, 1fr); /* <-- THAY ĐỔI QUAN TRỌNG */
+    gap: 1.5rem;
+  }
+}
+
+/* 2. Điện thoại di động (Mobiles) - Chuyển sang 1 cột
+   Breakpoint này (576px) dành cho hầu hết các điện thoại chiều dọc.
+*/
+@media (max-width: 576px) {
+  .gallery-highlight-grid {
+    grid-template-columns: 1fr; /* <-- THAY ĐỔI QUAN TRỌNG */
+    /* Bỏ max-width và margin auto để layout linh hoạt hơn */
+  }
+
+  /* Tùy chọn: Điều chỉnh tỷ lệ ảnh trên mobile để không quá cao, tránh cuộn nhiều */
+  .highlight-card {
+    aspect-ratio: 4 / 3; /* Tỷ lệ rộng hơn, giống ảnh chụp ngang */
+  }
+
+  .highlight-card__title {
+    /* Giảm cỡ chữ tiêu đề trên mobile cho cân đối */
+    font-size: var(--h3-font-size); 
+  }
+}

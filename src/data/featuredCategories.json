@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "Cakes",
+      "image": "src/assets/images/categories/cake-featured.jpg",
+      "path": "/products/cakes"
+    },
+    {
+      "id": 2,
+      "name": "Cookies",
+      "image": "src/assets/images/categories/cookies-featured.jpg",
+      "path": "/products/cookies"
+    },
+    {
+      "id": 3,
+      "name": "Pastries",
+      "image": "src/assets/images/categories/pastries-featured.jpg",
+      "path": "/products/pastries"
+    },
+    {
+      "id": 4,
+      "name": "Pies",
+      "image": "src/assets/images/categories/pies-featured.jpg",
+      "path": "/products/pies"
+    },
+    {
+      "id": 5,
+      "name": "Coffee",
+      "image": "src/assets/images/categories/coffee-featured.jpg",
+      "path": "/products/coffee"
+    }
+  ]
