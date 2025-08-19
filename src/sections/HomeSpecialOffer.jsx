@@ -12,7 +12,7 @@ const specialOffersData = [
     title: "Your Next Coffee Is On Us",
     description: "As a thank you for your continued support, enjoy a free handcrafted coffee with any purchase over $15.",
     image: "/images/home-offers/offer-loyalty.jpg",
-    link: "/offers",
+    link: "#/offers",
     buttonText: "Discover More"
   },
   {
@@ -20,21 +20,21 @@ const specialOffersData = [
     subtitle: "WEEKEND SPECIAL",
     title: "The Ultimate Brunch Box",
     image: "/images/home-offers/offer-weekend.jpg",
-    link: "/offers"
+    link: "#/offers"
   },
   {
     id: 'combo-01',
     subtitle: "PERFECT PAIRING",
     title: "Coffee & Cake Combo",
     image: "/images/home-offers/offer-combo.jpg",
-    link: "/offers"
+    link: "#/offers"
   },
   {
     id: 'new-01',
     subtitle: "NEW ARRIVAL",
     title: "Meet The Ruby Chocolate Tart",
     image: "/images/home-offers/offer-new-product.jpg",
-    link: "/offers"
+    link: "#/offers"
   },
 ];
 

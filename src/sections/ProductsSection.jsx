@@ -1,5 +1,3 @@
-// src/sections/ProductsSection.js
-
 import React, { useState, useEffect } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import ProductCard from '../components/ProductCard';
@@ -16,7 +14,8 @@ const processedProductsData = productsData.map(product => ({
 }));
 
 const ProductsSection = ({ initialCategory }) => {
-  const [products, setProducts] = useState(processedProductsData); 
+  // State `products` không còn cần thiết nữa vì ta đã có `processedProductsData`
+  // const [products, setProducts] = useState(processedProductsData); 
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState('All');
@@ -27,24 +26,38 @@ const ProductsSection = ({ initialCategory }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(12); 
 
+    // useEffect này chỉ chạy một lần để khởi tạo
   useEffect(() => {
-    const uniqueCategories = [...new Set(processedProductsData.map(p => p.category))];
+    const uniqueCategories = ['All', ...new Set(processedProductsData.map(p => p.category))];
     setCategories(uniqueCategories);
-    
-    if (initialCategory) {
-      const originalCategory = uniqueCategories.find(c => c.toLowerCase() === initialCategory.toLowerCase());
-      setActiveCategory(originalCategory || 'All');
 
-      const filtered = processedProductsData.filter(p => p.category.toLowerCase() === initialCategory.toLowerCase());
-      setFilteredProducts(filtered);
-    } else {
-      setActiveCategory('All');
+    let categoryToFilter = 'All';
+    if (initialCategory) {
+      const foundCategory = uniqueCategories.find(c => c.toLowerCase() === initialCategory.toLowerCase());
+      if (foundCategory) {
+        categoryToFilter = foundCategory;
+      }
+    }
+    handleFilterChange(categoryToFilter);
+  }, [initialCategory]); // Chỉ phụ thuộc vào initialCategory từ route
+
+  // =================================================================
+  // === BƯỚC 1: TẠO HÀM ĐỂ XỬ LÝ VIỆC LỌC KHI NHẤN NÚT ===
+  // =================================================================
+  const handleFilterChange = (category) => {
+    setActiveCategory(category);
+    
+    if (category === 'All') {
       setFilteredProducts(processedProductsData);
+    } else {
+      const filtered = processedProductsData.filter(p => p.category === category);
+      setFilteredProducts(filtered);
     }
     
+    // Quan trọng: Luôn reset về trang 1 mỗi khi đổi bộ lọc
     setCurrentPage(1); 
-  }, [initialCategory]);
-
+  };
+  
   // --- Logic Modal (giữ nguyên) ---
   const handleCardClick = (product) => {
     setSelectedProduct(product);
@@ -69,7 +82,10 @@ const ProductsSection = ({ initialCategory }) => {
         <FilterButtons
           categories={categories}
           activeCategory={activeCategory}
-          // 3. Xóa prop onFilterChange
+          // =========================================================
+          // === BƯỚC 2: TRUYỀN HÀM XUỐNG CHO COMPONENT CON ===
+          // =========================================================
+          onFilterChange={handleFilterChange}
         />
         <div className="products-grid grid">
           {currentProducts.map(product => (

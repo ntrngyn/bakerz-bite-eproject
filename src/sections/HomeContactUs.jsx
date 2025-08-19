@@ -12,7 +12,7 @@ const HomeContactUs = () => {
             <div className="contact-container container grid">
                 <div className="contact-info">
                     <h3>Our Address</h3>
-                    <p>123 Bakery Street, District 1, Ho Chi Minh City</p>
+                    <p>1 Đ. Lý Tự Trọng, Thới Bình, Ninh Kiều, Cần Thơ, Việt Nam</p>
                     <h3>Email Us</h3>
                     <p>hello@bakerzbite.com</p>
                     <h3>Call Us</h3>

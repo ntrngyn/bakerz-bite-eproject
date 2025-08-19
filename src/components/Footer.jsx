@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="footer-section contact">
           <h3 className="footer-section-title">Contact</h3>
           <p>
-            <i className="fas fa-map-marker-alt"></i> 123 Bakery Street, District 1, Ho Chi Minh City
+            <i className="fas fa-map-marker-alt"></i> 1 Đ. Lý Tự Trọng, Thới Bình, Ninh Kiều, Cần Thơ, Việt Nam
           </p>
           <p>
             <i className="fas fa-phone"></i> (+84) 987 654 321

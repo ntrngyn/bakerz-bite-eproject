@@ -1,33 +1,23 @@
 // src/components/FilterButtons.jsx
 
 import React from 'react';
-// 1. Import Link từ react-router-dom
-import { Link } from 'react-router-dom';
 import './FilterButtons.css';
 
-// 2. Bỏ prop onFilterChange không còn dùng tới
-const FilterButtons = ({ categories, activeCategory }) => {
+// Component này nhận vào categories, activeCategory, và hàm onFilterChange
+const FilterButtons = ({ categories, activeCategory, onFilterChange }) => {
   return (
     <div className="filter-buttons">
-      {/* 3. Thay thế button "All" bằng Link */}
-      <Link 
-        to="/products" // Link đến trang sản phẩm chung
-        className={`filter-button ${activeCategory === 'All' ? 'active' : ''}`}
-      >
-        All
-      </Link>
-
-      {/* 4. Thay thế các button category bằng Link */}
+      {/* Lặp qua tất cả categories được truyền vào */}
       {categories.map((category) => (
-        <Link
+        // SỬ DỤNG THẺ <button>
+        <button
           key={category}
-          // URL sẽ có dạng /products/cakes, /products/cookies (chuyển thành chữ thường)
-          to={`/products/${category.toLowerCase()}`} 
+          // Khi nhấn, gọi hàm onFilterChange từ component cha
+          onClick={() => onFilterChange(category)}
           className={`filter-button ${activeCategory === category ? 'active' : ''}`}
         >
-          {/* Tên hiển thị vẫn giữ nguyên chữ hoa ban đầu */}
           {category}
-        </Link>
+        </button>
       ))}
     </div>
   );

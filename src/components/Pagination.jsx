@@ -1,46 +1,31 @@
-// src/components/Pagination.jsx
+// src/components/Pagination.jsx - PHIÊN BẢN SỬA DÙNG <button>
 
-import React, { useState } from 'react'; // <-- 1. Import thêm useState
+import React, { useState } from 'react';
 import './Pagination.css';
 
 const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }) => {
   const totalPages = Math.ceil(totalProducts / productsPerPage);
-
-  // 2. Thêm state để lưu giá trị người dùng nhập vào ô input
   const [jumpToPageInput, setJumpToPageInput] = useState('');
 
-  // Nếu chỉ có 1 trang hoặc không có sản phẩm nào, không hiển thị
   if (totalPages <= 1) {
     return null;
   }
   
-  // --- 3. Thêm các hàm xử lý cho ô input ---
-
-  // Cập nhật state mỗi khi người dùng gõ phím
   const handleInputChange = (event) => {
     setJumpToPageInput(event.target.value);
   };
 
-  // Xử lý khi người dùng nhấn phím trong ô input
   const handleJumpToPage = (event) => {
-    // Chỉ thực hiện khi người dùng nhấn "Enter"
     if (event.key === 'Enter') {
-      event.preventDefault(); // Ngăn hành vi mặc định của form
+      event.preventDefault();
       const pageNumber = parseInt(jumpToPageInput, 10);
-
-      // --- Validation ---
-      // Kiểm tra xem có phải là số hợp lệ và nằm trong khoảng trang cho phép không
       if (pageNumber && pageNumber > 0 && pageNumber <= totalPages) {
-        paginate(pageNumber); // Chuyển đến trang mong muốn
+        paginate(pageNumber);
       }
-
-      // Xóa nội dung trong ô input sau khi đã xử lý
       setJumpToPageInput('');
     }
   };
 
-
-  // --- Logic để tạo các số trang (giữ nguyên từ trước) ---
   const getPageNumbers = () => {
     const pageNeighbours = 1;
     const totalNumbers = (pageNeighbours * 2) + 3;
@@ -77,29 +62,31 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }) =
   };
 
   const pageNumbers = getPageNumbers();
-  // Để đảm bảo chỉ có 1 ô input, ta dùng một biến cờ
   let ellipsisRendered = false;
 
   return (
     <nav>
       <ul className="pagination">
-        {/* Nút Previous (giữ nguyên) */}
+        {/* Nút Previous */}
         <li className="page-item">
-          <a onClick={() => paginate(currentPage - 1)} href="#!" className={`page-link page-link-arrow ${currentPage === 1 ? 'disabled' : ''}`}>&lt;</a>
+          <button 
+            onClick={() => paginate(currentPage - 1)} 
+            className="page-link page-link-arrow"
+            disabled={currentPage === 1} // Dùng disabled thay cho class
+          >
+            &lt;
+          </button>
         </li>
         
-        {/* --- 4. CẬP NHẬT LOGIC RENDER --- */}
         {pageNumbers.map((number, index) => {
-          // Nếu là dấu "..."
           if (number === "...") {
-            // Và chưa có ô input nào được render
             if (!ellipsisRendered) {
-              ellipsisRendered = true; // Đánh dấu là đã render
+              ellipsisRendered = true;
               return (
                 <li key={`ellipsis-input-${index}`} className="page-item">
                   <input
                     type="number"
-                    className="page-link page-link-input" // Dùng class mới
+                    className="page-link page-link-input"
                     placeholder="..."
                     value={jumpToPageInput}
                     onChange={handleInputChange}
@@ -110,23 +97,30 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }) =
                 </li>
               );
             }
-            // Nếu đã có ô input, chỉ hiển thị dấu "..." tĩnh
             return <li key={`ellipsis-static-${index}`} className="page-item page-item--ellipsis"><span>...</span></li>;
           }
           
-          // Render số trang như bình thường
           return (
             <li key={number} className="page-item">
-              <a onClick={() => paginate(number)} href="#!" className={`page-link ${currentPage === number ? 'active' : ''}`}>
+              <button 
+                onClick={() => paginate(number)} 
+                className={`page-link ${currentPage === number ? 'active' : ''}`}
+              >
                 {number}
-              </a>
+              </button>
             </li>
           );
         })}
         
-        {/* Nút Next (giữ nguyên) */}
+        {/* Nút Next */}
         <li className="page-item">
-          <a onClick={() => paginate(currentPage + 1)} href="#!" className={`page-link page-link-arrow ${currentPage === totalPages ? 'disabled' : ''}`}>&gt;</a>
+          <button 
+            onClick={() => paginate(currentPage + 1)} 
+            className="page-link page-link-arrow"
+            disabled={currentPage === totalPages} // Dùng disabled thay cho class
+          >
+            &gt;
+          </button>
         </li>
       </ul>
     </nav>

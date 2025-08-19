@@ -9,7 +9,7 @@ const HeroSection = () => {
         <p className="hero-subtitle">
         Quality in every product, care in every service
         </p>
-        <a href="/products" className="button">Explore Our Menu</a>
+        <a href="#/products" className="button">Explore Our Menu</a>
       </div>
     </section>
   );
