@@ -1,3 +1,5 @@
+/* /src/components/Ticker.css - PHIÊN BẢN CÓ ICON */
+
 .ticker-wrap {
   position: fixed;
   bottom: 0;
@@ -5,51 +7,83 @@
   width: 100%;
   overflow: hidden;
   height: 2.5rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding-left: 100%;
-  box-sizing: content-box;
-  z-index: 1000;
+  background-color: rgba(34, 34, 34, 0.95); /* Màu nền tối hơn một chút */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: var(--z-fixed);
+  display: flex;
+  align-items: center; /* Căn giữa các item theo chiều dọc */
 }
 
 .ticker {
-  display: inline-block;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  white-space: nowrap;
-  padding-right: 100%;
-  box-sizing: content-box;
-  animation: ticker 40s linear infinite;
+  display: flex; /* Để các khối content nằm kề nhau */
+  flex-shrink: 0;
+  animation: ticker-animation 50s linear infinite;
   will-change: transform;
-}
-
-.ticker__item {
-  display: inline-block;
-  position: relative;
-  padding: 0 2rem;
-  font-size: var(--small-font-size);
-  color: #fff;
-}
-
-.ticker__item::after {
-  content: "•";
-  position: absolute;
-  right: -0.5rem;
-  color: var(--primary-color);
-}
-
-.ticker__item:last-child::after {
-  content: "";
 }
 
 .ticker-wrap:hover .ticker {
   animation-play-state: paused;
 }
 
-@keyframes ticker {
+/* Container cho mỗi bản sao nội dung */
+.ticker-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* === PHẦN THAY ĐỔI CHÍNH === */
+
+/* Style cho từng item (icon + text) */
+.ticker__item {
+  display: inline-flex; /* Dùng flex để icon và text nằm cạnh nhau */
+  align-items: center; /* Căn giữa icon và text theo chiều dọc */
+  gap: 0.6rem; /* Khoảng cách giữa icon và text */
+
+  padding: 0 2.5rem; /* Tăng padding để tạo khoảng cách giữa các item */
+  font-size: var(--small-font-size);
+  color: #e0e0e0;
+
+  /* Giữ lại để chống giật số */
+  font-variant-numeric: tabular-nums;
+}
+
+/* Style cho icon */
+.ticker__item i {
+  font-size: 1.25rem; /* Kích thước icon */
+  color: var(--primary-color); /* Màu vàng đồng nổi bật */
+  line-height: 1; /* Đảm bảo icon không bị ảnh hưởng bởi line-height của text */
+}
+
+/* === XÓA BỎ PHẦN DẤU CHẤM CŨ === */
+/*
+.ticker__item::after {
+  content: "•";
+  position: absolute;
+  right: -0.5rem;
+  color: var(--primary-color);
+}
+.ticker__item:last-child::after {
+  content: "";
+}
+*/
+
+.ticker__time {
+  /* Áp dụng font chữ có các số rộng bằng nhau */
+  font-family: var(--mono-font);
+}
+
+/* Animation - Sửa tên cho nhất quán và giữ lại logic đúng */
+@keyframes ticker-animation {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    /* 
+      Sử dụng logic nhân đôi/nhân ba/nhân năm tùy theo file JSX của bạn.
+      Ví dụ, nếu JSX nhân 3 lần, thì giá trị này là -33.3333%
+    */
+    transform: translateX(-33.3333%);
   }
 }

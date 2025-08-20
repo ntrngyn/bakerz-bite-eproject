@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap");
 
 :root {
   --primary-color: #c8a97e;
@@ -38,6 +38,11 @@
   --z-modal: 1000;
 
   --header-height: 2.5rem;
+
+  /* Font and typography */
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Playfair+Display", serif;
+  --mono-font: "Roboto Mono", monospace; /* <-- BIẾN FONT MỚI */
 }
 
 * {
