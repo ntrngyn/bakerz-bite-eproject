@@ -4,13 +4,14 @@ import './AboutSection.css';
 // BƯỚC 1: IMPORT CÁC FILE ẢNH VÀO CÁC BIẾN
 import aboutImage1 from '/images/abtUS/abtUSimg1.png';
 import aboutImage2 from '/images/abtUS/abtUSimg2.png';
+import SectionTitle from '../components/SectionTitle'; 
 
 
 const AboutSection = () => {
   return (
     <div className="about-us-container">
       <section className="about-section text-center-layout">
-        <h4 className="about-pre-title">Our Story</h4>
+        <SectionTitle title="About Us" subtitle="Our Story" />
         <h2 className="about-main-title">About Bakerz Bite</h2>
         <p className="about-paragraph">
           Bakerz Bite's mission is to create moments of happiness through meticulously handcrafted baked goods. We understand that excellence comes from the smallest details, which is why we are committed to using only the freshest and finest ingredients. This commitment ensures every bite you take is a perfect blend of premium quality and unforgettable flavor.

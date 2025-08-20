@@ -7,17 +7,17 @@
 .gallery-highlight-grid {
   display: grid;
   /* Mặc định: 3 cột trên màn hình lớn */
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .highlight-card {
-  position: relative; 
+  position: relative;
   display: block;
   border-radius: 1rem;
   overflow: hidden;
   /* Giữ tỷ lệ 3:4, làm cho thẻ cao và thanh lịch */
-  aspect-ratio: 3 / 4; 
+  aspect-ratio: 3 / 4;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
@@ -30,12 +30,12 @@
 .highlight-card__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
 .highlight-card:hover .highlight-card__image {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .highlight-card__overlay {
@@ -54,7 +54,7 @@
 }
 
 .highlight-card:hover .highlight-card__overlay {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .highlight-card__title {
@@ -69,7 +69,6 @@
 .highlight-card:hover .highlight-card__title {
   transform: translateY(0);
 }
-
 
 /* ==============================================
    === RESPONSIVE DESIGN BREAKPOINTS ===
@@ -101,6 +100,6 @@
 
   .highlight-card__title {
     /* Giảm cỡ chữ tiêu đề trên mobile cho cân đối */
-    font-size: var(--h3-font-size); 
+    font-size: var(--h3-font-size);
   }
 }

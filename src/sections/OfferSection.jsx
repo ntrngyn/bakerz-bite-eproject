@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './OfferSection.css';
 import offersData from '../data/offers.json';
 import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
+import SectionTitle from '../components/SectionTitle'; 
 
 const OfferSection = () => {
   // BƯỚC 2: TẠO STATE MỚI ĐỂ LƯU DỮ LIỆU ĐÃ XỬ LÝ
@@ -80,7 +81,7 @@ const OfferSection = () => {
   return (
     <>
       <div className="offers-section">
-        <h2 className="section__title">Special Offers</h2>
+        <SectionTitle subtitle="Curated For You" title="Today's Special Offers" />
         
         <div className="offer-slider">
           <div className="slider-arrow left-arrow" onClick={goToPrevious}>

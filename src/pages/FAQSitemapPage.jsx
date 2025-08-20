@@ -32,7 +32,7 @@ const FaqSitemapPage = () => {
     return (
         <main className="main">
             <section className="faq-sitemap-page section">
-                <SectionTitle title="Help Center" />
+                <SectionTitle subtitle="WE'RE HERE TO HELP" title="Help Center" />
                 
                 <div className="container faq-sitemap-container">
                     <TabNav activeTab={activeTab} onTabClick={setActiveTab} />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './GallerySection.css';
 import galleryData from '../data/gallery.json';
 import { fixImagePath } from '../utils/pathUtils'; // <-- BƯỚC 1: IMPORT HÀM HELPER
+import SectionTitle from '../components/SectionTitle'; 
 
 const GallerySection = () => {
   // BƯỚC 2: XỬ LÝ DỮ LIỆU NGAY TỪ ĐẦU
@@ -81,8 +82,7 @@ const GallerySection = () => {
     <div className="gallery-section-wrapper">
       <div className="Pastries-gallery-container">
         <div className="section-title-container">
-          <span className="section-subtitle">A FEAST FOR THE EYES</span>
-          <h2 className="section-main-title">Our Gallery</h2>
+          <SectionTitle title="Our Gallery" subtitle="A Glimpse Into Our World" />
         </div>
         <div className="filter-controls">
           {filterCategories.map(category => (
