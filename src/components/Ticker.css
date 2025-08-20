@@ -30,12 +30,11 @@
   color: #fff;
 }
 
-
 .ticker__item::after {
-  content: "•"; 
+  content: "•";
   position: absolute;
-  right: -0.5rem; 
-  color: var(--primary-color); 
+  right: -0.5rem;
+  color: var(--primary-color);
 }
 
 .ticker__item:last-child::after {

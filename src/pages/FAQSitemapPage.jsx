@@ -30,7 +30,7 @@ const FaqSitemapPage = () => {
     const [activeTab, setActiveTab] = useState('faq'); 
 
     return (
-        <main className="main">
+        <main className="page-container container">
             <section className="faq-sitemap-page section">
                 <SectionTitle subtitle="WE'RE HERE TO HELP" title="Help Center" />
                 

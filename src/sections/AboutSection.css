@@ -1,7 +1,7 @@
 .about-us-container {
-  max-width: 1120px; /* Giới hạn độ rộng nội dung */
+  max-width: 1200px; /* Giới hạn độ rộng nội dung */
   margin: 0 auto; /* Căn giữa trang */
-  padding: 4.5rem 1.5rem;
+  padding: 4.5rem 0 2.5rem;
   color: var(--text-color);
   font-family: var(--body-font);
 }

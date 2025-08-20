@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins&display=swap");
 
 /* --- STYLES CƠ BẢN (DESKTOP FIRST) --- */
 .gallery-section-wrapper {
   background-color: #fdfaf6;
-  padding: 3rem 0;
+  padding: 4.5rem 0 2.5rem;
   font-family: "Poppins", sans-serif;
 }
 
@@ -17,7 +17,7 @@
 
 .section-title-container {
   text-align: center;
-  margin-bottom: 3rem; 
+  margin-bottom: 3rem;
 }
 
 .section-subtitle {
@@ -37,12 +37,12 @@
   font-size: 2.5rem;
   color: #2c2c2c;
   margin: 0;
-  padding-bottom: 1rem; 
+  padding-bottom: 1rem;
   font-weight: 700;
 }
 
 .section-main-title::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -69,15 +69,15 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  outline:none;
+  outline: none;
   border: 1px solid #ddd;
 }
 
 .filter-btn:hover {
-  outline:none;
+  outline: none;
   background-color: #b99a6b;
-  border-color:#b99a6b;
-  color: #fff
+  border-color: #b99a6b;
+  color: #fff;
 }
 
 .filter-btn.active {
@@ -89,7 +89,7 @@
 
 .Pastries-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -98,7 +98,7 @@
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +107,7 @@
 
 .Pastries-gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .pastries-gallery-image-wrapper {
@@ -135,7 +135,7 @@
 }
 
 .pastries-gallery-item-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   color: #2c2c2c;
   font-size: 1.5rem;
   font-weight: 700;
@@ -147,7 +147,7 @@
 .view-details-btn {
   background-color: #c8a97e;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.8rem 2rem;
@@ -161,7 +161,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
 }
 
-.view-details-btn:focus{
+.view-details-btn:focus {
   outline: none;
 }
 
@@ -188,7 +188,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.9); 
+  background-color: rgba(30, 30, 30, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,16 +207,20 @@
 }
 
 .popup-overlay {
-  background-color: rgba(30, 30, 30, 0.9); 
+  background-color: rgba(30, 30, 30, 0.9);
 }
 
 /* Hiệu ứng fadeIn cho ảnh */
 .popup-image-container {
-  animation:fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out;
 }
 @keyframes fadeIn {
-  from{ opacity: 25%; } 
-  to { opacity: 100%; }
+  from {
+    opacity: 25%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .popup-content {
@@ -234,7 +238,11 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   transition: background-image 0.5s ease-in-out;
-  background-image: linear-gradient(to right, rgba(247, 234, 218, 0.95), rgba(255, 255, 255, 0.9));
+  background-image: linear-gradient(
+    to right,
+    rgba(247, 234, 218, 0.95),
+    rgba(255, 255, 255, 0.9)
+  );
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -277,10 +285,11 @@
 }
 
 @keyframes contentFadeIn {
-  from{
+  from {
     opacity: 0;
     transform: translateY(10px);
-  } to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -313,14 +322,25 @@
   z-index: 1001;
   transition: opacity 0.2s ease;
   padding: 0 1rem;
-  outline:none;
+  outline: none;
 }
 
-.popup-nav-button:hover {opacity: 1;  outline:none; color: #b99a6b ;}
-.popup-nav-button.active {outline:none;}
-.popup-nav-button.prev { left: 0;  outline:none;}
-.popup-nav-button.next { right: 0;  outline:none; }
-
+.popup-nav-button:hover {
+  opacity: 1;
+  outline: none;
+  color: #b99a6b;
+}
+.popup-nav-button.active {
+  outline: none;
+}
+.popup-nav-button.prev {
+  left: 0;
+  outline: none;
+}
+.popup-nav-button.next {
+  right: 0;
+  outline: none;
+}
 
 /* --- RESPONSIVE DESIGN --- */
 
@@ -355,7 +375,7 @@
   .filter-btn {
     padding: 0.8rem 1.5rem;
   }
-  
+
   .popup-content {
     flex-direction: column;
     height: 85vh;
@@ -387,7 +407,7 @@
   }
 
   .Pastries-gallery-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -395,12 +415,12 @@
   .section-main-title {
     font-size: 2rem;
   }
-  
+
   .popup-nav-button {
     font-size: 3rem;
   }
 
   .Pastries-gallery-grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
