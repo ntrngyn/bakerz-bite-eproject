@@ -34,10 +34,10 @@
 
   /* --- Đơn giản hóa --- */
   background-color: var(--container-color); /* 1. Nền màu trắng/kem đồng nhất */
-  color: var(--text-color);               /* 2. Màu icon là màu chữ thông thường */
-  border: 1px solid var(--border-color);  /* 3. Viền mảnh, rõ ràng */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* 4. Đổ bóng nhẹ để nổi bật */
-  backdrop-filter: none;                  /* 5. Bỏ hiệu ứng kính mờ */
+  color: var(--text-color); /* 2. Màu icon là màu chữ thông thường */
+  border: 1px solid var(--border-color); /* 3. Viền mảnh, rõ ràng */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 4. Đổ bóng nhẹ để nổi bật */
+  backdrop-filter: none; /* 5. Bỏ hiệu ứng kính mờ */
 
   cursor: pointer;
   display: flex;
@@ -197,7 +197,11 @@
   font-weight: var(--font-semi-bold);
   color: var(--container-color);
   /* Thêm hiệu ứng gradient cho nút */
-  background-image: linear-gradient(45deg, var(--primary-color-alt), var(--primary-color));
+  background-image: linear-gradient(
+    45deg,
+    var(--primary-color-alt),
+    var(--primary-color)
+  );
   box-shadow: 0 4px 15px rgba(185, 154, 107, 0.4); /* Đổ bóng với màu của nút */
   transition: all 0.3s ease;
 }
@@ -235,5 +239,14 @@
   }
   .modal-price {
     font-size: var(--h3-font-size);
+  }
+  /* CSS cho merchandise modal */
+  .modal-content.merchandise .modal-background-image {
+    width: 100%;
+  }
+
+  /* CSS cho merchandise modal */
+  .modal-content.merchandise .modal-foreground-content {
+    width: 100%;
   }
 }

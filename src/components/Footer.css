@@ -34,7 +34,7 @@
 }
 
 .footer-section p {
-  line-height: 1.6;
+  line-height: 2;
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   font-family: var(--body-font);
@@ -69,6 +69,7 @@
 }
 
 .social-links a {
+  margin-top: 0.5rem;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -91,8 +92,13 @@
   text-align: center;
   padding: 15px;
   /* Thay đổi màu viền và nền của phần bottom */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); 
-  background-color: rgba(0, 0, 0, 0.2); /* Nền tối hơn một chút để tạo sự phân tách */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Nền tối hơn một chút để tạo sự phân tách */
   margin-top: 20px;
 }
 
