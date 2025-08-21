@@ -82,3 +82,10 @@
   font-size: var(--normal-font-size);
   margin-top: var(--mb-1);
 }
+
+/* Thêm class này để style cho tiêu đề của nhóm sao */
+.form-label {
+  margin-bottom: var(--mb-0-5);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}

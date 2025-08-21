@@ -86,6 +86,8 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }) =
                 <li key={`ellipsis-input-${index}`} className="page-item">
                   <input
                     type="number"
+                    id="jump-to-page" 
+                    name="jump-to-page"
                     className="page-link page-link-input"
                     placeholder="..."
                     value={jumpToPageInput}

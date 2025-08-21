@@ -6,21 +6,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 0.75rem;
   list-style: none;
   padding: 0;
 }
 
 .page-link {
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
   min-width: 44px;
   height: 44px;
   padding: 0 0.5rem;
   border: 1px solid var(--border-color);
-  border-radius: 0.5rem; 
+  border-radius: 0.5rem;
   color: var(--text-color);
   background-color: var(--container-color);
   font-family: var(--body-font);
@@ -33,10 +33,10 @@
 }
 
 .page-link:hover {
-  border-color: var(--primary-color); 
-  color: var(--primary-color); 
-  transform: translateY(-3px); 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .page-link.active {
@@ -45,7 +45,7 @@
   color: #fff;
   font-weight: var(--font-semi-bold);
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(200, 169, 126, 0.4); 
+  box-shadow: 0 6px 12px rgba(200, 169, 126, 0.4);
 }
 
 .page-link.active:hover {
@@ -78,7 +78,6 @@
   font-weight: var(--font-semi-bold);
 }
 
-
 /* === CSS MỚI CHO Ô INPUT === */
 
 .page-link-input {
@@ -100,8 +99,8 @@
 /* Hiệu ứng khi focus vào ô input, giống như hover vào nút khác */
 .page-link-input:focus {
   outline: none;
-  border-color: var(--primary-color); 
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 /* Loại bỏ các mũi tên tăng/giảm mặc định của trình duyệt cho input type="number" */
@@ -113,4 +112,20 @@
 
 .page-link-input {
   -moz-appearance: textfield;
+}
+
+/* 
+  Class để ẩn một phần tử khỏi màn hình nhưng vẫn
+  để trình đọc màn hình đọc được nó (tốt cho accessibility).
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

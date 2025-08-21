@@ -94,6 +94,7 @@ const FeedbackForm = () => {
           id="name"
           name="name"
           placeholder='John Smith'
+          autoComplete="name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -106,13 +107,14 @@ const FeedbackForm = () => {
           id="email"
           name="email"
           placeholder='abc@gmail.com'
+          autoComplete="email"
           value={formData.email}
           onChange={handleChange}
           required
         />
       </div>
       <div className="form-group">
-        <label>Your Rating</label>
+        <div className="form-label">Your Rating</div>
         <StarRating rating={rating} onRating={handleRating} />
       </div>
       <div className="form-group">

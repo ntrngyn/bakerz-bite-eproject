@@ -1,15 +1,19 @@
 // vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import basicSsl from "@vitejs/plugin-basic-ssl"; // <-- 1. Import plugin
+import basicSsl from "@vitejs/plugin-basic-ssl";
 
 export default defineConfig({
   base: "/bakerz-bite-eproject/",
-  plugins: [
-    react(),
-    basicSsl(), // <-- 2. Thêm plugin vào mảng plugins
-  ],
+  plugins: [react(), basicSsl()],
   server: {
-    https: true, // <-- 3. Bật chế độ HTTPS
+    https: true,
+    proxy: {
+      "/api/nominatim": {
+        target: "https://nominatim.openstreetmap.org",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/nominatim/, ""),
+      },
+    },
   },
 });
