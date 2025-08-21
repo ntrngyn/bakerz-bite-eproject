@@ -24,13 +24,7 @@ const useGeolocation = () => {
 
         const geoApiUrl = `/api/nominatim/reverse?format=json&lat=${latitude}&lon=${longitude}`;
 
-        // THÊM LẠI HEADER VÀO YÊU CẦU FETCH ĐẾN PROXY
-        const response = await fetch(geoApiUrl, {
-          method: "GET",
-          headers: {
-            "User-Agent": "BakerzBiteEProject/1.0 (YourAppContact@example.com)",
-          },
-        });
+        const response = await fetch(geoApiUrl);
 
         if (!response.ok) {
           throw new Error(`Proxied API failed with status: ${response.status}`);
