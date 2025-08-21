@@ -1,84 +1,93 @@
 .faq-item {
-    border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: var(--h3-font-size);
+  font-family: var(--body-font);
+  color: var(--title-color);
+  cursor: pointer;
+  padding: var(--mb-1-5) 0;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding-bottom: var(--mb-1-5);
+  padding-left: var(--mb-0-5);
+  color: var(--text-color);
+  line-height: 1.7;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
   }
-  
-  .faq-item:last-child {
-    border-bottom: none;
+  to {
+    opacity: 1;
+    max-height: 200px;
   }
-  
-  .faq-question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    background: none;
-    border: none;
-    font-size: var(--h3-font-size);
-    font-family: var(--title-font);
-    color: var(--title-color);
-    cursor: pointer;
-    padding: var(--mb-1-5) 0;
-  }
-  
-  .faq-arrow {
-    transition: transform 0.3s ease;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-  }
-  
-  .faq-arrow.open {
-    transform: rotate(180deg);
-  }
-  
-  .faq-answer {
-    padding-bottom: var(--mb-1-5); 
-    padding-left: var(--mb-0-5);
-    color: var(--text-color);
-    line-height: 1.7;
-    animation: slideDown 0.5s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from { opacity: 0; max-height: 0; }
-    to { opacity: 1; max-height: 200px; }
-  }
+}
 
 /* === 1. MÁY TÍNH BẢNG (Tablet) === */
 /* Áp dụng cho màn hình từ 1024px trở xuống */
 @media screen and (max-width: 1024px) {
-    
-    /* Giảm kích thước font của câu hỏi để dễ đọc hơn */
-    .faq-question {
-        font-size: 1.15rem; /* Giảm từ h3-font-size xuống một chút */
-    }
+  /* Giảm kích thước font của câu hỏi để dễ đọc hơn */
+  .faq-question {
+    font-size: 1.15rem; /* Giảm từ h3-font-size xuống một chút */
+  }
 
-    /* Giảm kích thước mũi tên một chút */
-    .faq-arrow {
-        font-size: 1.25rem;
-    }
+  /* Giảm kích thước mũi tên một chút */
+  .faq-arrow {
+    font-size: 1.25rem;
+  }
 }
-
 
 /* === 2. THIẾT BỊ DI ĐỘNG (Mobile) === */
 /* Áp dụng cho màn hình từ 768px trở xuống */
 @media screen and (max-width: 768px) {
-    
-    /* Điều chỉnh lại khoảng cách của các mục cho gọn gàng hơn */
-    .faq-question {
-        padding: var(--mb-1) 0; /* Giảm padding dọc */
-        font-size: var(--normal-font-size); /* Giảm font về kích thước chuẩn */
-    }
+  /* Điều chỉnh lại khoảng cách của các mục cho gọn gàng hơn */
+  .faq-question {
+    padding: var(--mb-1) 0; /* Giảm padding dọc */
+    font-size: var(--normal-font-size); /* Giảm font về kích thước chuẩn */
+  }
 
-    .faq-answer {
-        padding-bottom: var(--mb-1);
-        padding-left: 0; /* Bỏ padding trái để nội dung thẳng hàng */
-        line-height: 1.6; /* Giảm chiều cao dòng một chút */
-    }
+  .faq-answer {
+    padding-bottom: var(--mb-1);
+    padding-left: 0; /* Bỏ padding trái để nội dung thẳng hàng */
+    line-height: 1.6; /* Giảm chiều cao dòng một chút */
+  }
 
-    /* Tăng max-height của animation để đảm bảo nội dung dài không bị cắt */
-    @keyframes slideDown {
-        from { opacity: 0; max-height: 0; }
-        to { opacity: 1; max-height: 400px; } /* Tăng giá trị để an toàn hơn */
+  /* Tăng max-height của animation để đảm bảo nội dung dài không bị cắt */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      max-height: 0;
     }
+    to {
+      opacity: 1;
+      max-height: 400px;
+    } /* Tăng giá trị để an toàn hơn */
+  }
 }

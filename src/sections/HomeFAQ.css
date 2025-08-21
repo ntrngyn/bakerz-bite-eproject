@@ -1,161 +1,159 @@
 /* /src/sections/HomepageFaq.css */
 
 .home-faq__container {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .home-faq__list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 2.5rem; /* Khoảng cách với nút "View More" */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem; /* Khoảng cách với nút "View More" */
 }
 
 .home-faq__item {
-    background-color: var(--container-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 0 var(--mb-1-5);
-    transition: all 0.3s ease;
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0 var(--mb-1-5);
+  transition: all 0.3s ease;
 }
 
 .home-faq__item.is-open {
-    background-color: #fff;
-    box-shadow: 0 8px 24px rgba(44, 44, 44, 0.08);
-    border-color: transparent;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(44, 44, 44, 0.08);
+  border-color: transparent;
 }
 
 .home-faq__question {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    background: none;
-    border: none;
-    font-size: 1.15rem; /* Kích thước phù hợp cho trang chủ */
-    font-family: var(--title-font);
-    font-weight: var(--font-semi-bold);
-    color: var(--title-color);
-    cursor: pointer;
-    padding: var(--mb-1-5) 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.15rem; /* Kích thước phù hợp cho trang chủ */
+  font-family: var(--body-font);
+  font-weight: var(--body-font);
+  color: var(--title-color);
+  cursor: pointer;
+  padding: var(--mb-1-5) 0;
 }
 
 /* ---- Icon + / - ---- */
 .home-faq__icon {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    margin-left: 1rem;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 .home-faq__icon::before,
 .home-faq__icon::after {
-    content: '';
-    position: absolute;
-    background-color: var(--primary-color);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  content: "";
+  position: absolute;
+  background-color: var(--primary-color);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Dấu gạch ngang */
 .home-faq__icon::before {
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
 }
 /* Dấu gạch dọc */
 .home-faq__icon::after {
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    transform: translateX(-50%);
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 /* Khi mở, dấu dọc sẽ biến mất (scale về 0) */
 .home-faq__item.is-open .home-faq__icon::after {
-    transform: translateX(-50%) scaleY(0);
+  transform: translateX(-50%) scaleY(0);
 }
-
 
 /* ---- Hiệu ứng trượt cho câu trả lời ---- */
 .home-faq__answer-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .home-faq__item.is-open .home-faq__answer-wrapper {
-    max-height: 500px;
+  max-height: 500px;
 }
 
 .home-faq__answer-content {
-    padding-bottom: var(--mb-1-5);
+  padding-bottom: var(--mb-1-5);
 }
 
 .home-faq__answer-content p {
-    margin: 0;
-    padding-right: 2rem;
-    color: var(--text-color);
-    line-height: 1.7;
+  margin: 0;
+  padding-right: 2rem;
+  color: var(--text-color);
+  line-height: 1.7;
 }
 
 /* ---- Nút "View More" ---- */
 .home-faq__view-more {
-    text-align: center;
-    border-top: 1px dashed var(--border-color);
-    padding-top: 2rem;
+  text-align: center;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 2rem;
 }
 
 .home-faq__view-more p {
-    color: var(--text-color-light);
-    margin-bottom: var(--mb-1);
+  color: var(--text-color-light);
+  margin-bottom: var(--mb-1);
 }
 
 /* ---- Responsive ---- */
 /* === 1. MÁY TÍNH BẢNG (Tablet) === */
 /* Áp dụng cho màn hình từ 1024px trở xuống */
 @media screen and (max-width: 1024px) {
-    .home-faq__question {
-        /* Giảm nhẹ cỡ chữ của câu hỏi */
-        font-size: 1.1rem; 
-    }
-    
-    .home-faq__answer-content p {
-        /* Giảm một chút padding để văn bản không quá xa icon */
-        padding-right: 1.5rem;
-    }
-}
+  .home-faq__question {
+    /* Giảm nhẹ cỡ chữ của câu hỏi */
+    font-size: 1.1rem;
+  }
 
+  .home-faq__answer-content p {
+    /* Giảm một chút padding để văn bản không quá xa icon */
+    padding-right: 1.5rem;
+  }
+}
 
 /* === 2. THIẾT BỊ DI ĐỘNG (Mobile) === */
 /* Áp dụng cho màn hình từ 768px trở xuống */
 @media screen and (max-width: 768px) {
-    /* Giảm padding ngang của mỗi mục để có thêm không gian */
-    .home-faq__item {
-        padding: 0 var(--mb-1);
-    }
-    
-    .home-faq__question {
-        /* Đưa font về kích thước chuẩn, giảm padding dọc */
-        font-size: var(--normal-font-size);
-        padding: var(--mb-1) 0;
-    }
-    
-    .home-faq__icon {
-        /* Giảm khoảng cách bên trái icon */
-        margin-left: 0.75rem;
-    }
+  /* Giảm padding ngang của mỗi mục để có thêm không gian */
+  .home-faq__item {
+    padding: 0 var(--mb-1);
+  }
 
-    .home-faq__answer-content {
-        padding-bottom: var(--mb-1);
-    }
+  .home-faq__question {
+    /* Đưa font về kích thước chuẩn, giảm padding dọc */
+    font-size: var(--normal-font-size);
+    padding: var(--mb-1) 0;
+  }
 
-    .home-faq__answer-content p {
-        /* Giảm padding phải để tối ưu không gian */
-        padding-right: 1rem;
-        line-height: 1.6; /* Làm cho dòng chữ gọn hơn */
-    }
+  .home-faq__icon {
+    /* Giảm khoảng cách bên trái icon */
+    margin-left: 0.75rem;
+  }
+
+  .home-faq__answer-content {
+    padding-bottom: var(--mb-1);
+  }
+
+  .home-faq__answer-content p {
+    /* Giảm padding phải để tối ưu không gian */
+    padding-right: 1rem;
+    line-height: 1.6; /* Làm cho dòng chữ gọn hơn */
+  }
 }

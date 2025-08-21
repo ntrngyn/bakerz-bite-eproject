@@ -27,7 +27,7 @@
   width: 50px; /* Chiều rộng của ô số */
   text-align: center;
   font-size: var(--normal-font-size);
-  font-weight: normal;
+  font-weight: var(--body-font);
   border: none;
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
