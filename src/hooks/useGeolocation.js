@@ -22,12 +22,18 @@ const useGeolocation = () => {
       try {
         const { latitude, longitude } = position.coords;
 
-        const geoApiUrl = `/api/geolocation?format=json&lat=${latitude}&lon=${longitude}`;
+        // Gọi trực tiếp đến URL đầy đủ của Nominatim
+        const geoApiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
 
-        const response = await fetch(geoApiUrl);
+        // Gửi kèm header User-Agent để cố gắng tránh lỗi 403
+        const response = await fetch(geoApiUrl, {
+          headers: { "User-Agent": "BakerzBiteEProject/1.0" },
+        });
 
         if (!response.ok) {
-          throw new Error(`Proxied API failed with status: ${response.status}`);
+          throw new Error(
+            `Nominatim API failed with status: ${response.status}`
+          );
         }
 
         const geoData = await response.json();
@@ -43,7 +49,7 @@ const useGeolocation = () => {
             },
           });
         } else {
-          throw new Error("Invalid data format from proxied API.");
+          throw new Error("Invalid data from Nominatim API.");
         }
       } catch (apiError) {
         console.error("Geocoding API error:", apiError);
@@ -59,12 +65,8 @@ const useGeolocation = () => {
     if (!navigator.geolocation) {
       onError({ message: "Geolocation is not supported by your browser." });
     } else {
-      // THÊM TÙY CHỌN TIMEOUT VÀO ĐÂY
-      navigator.geolocation.getCurrentPosition(onSuccess, onError, {
-        enableHighAccuracy: true, // Cố gắng lấy vị trí chính xác hơn
-        timeout: 10000, // Hết thời gian chờ sau 10 giây
-        maximumAge: 0,
-      });
+      // Gọi Geolocation API một cách đơn giản
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
     return () => {

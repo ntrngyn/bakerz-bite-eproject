@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/geolocation",
-      "destination": "https://nominatim.openstreetmap.org/reverse"
-    }
-  ]
-}
