@@ -22,8 +22,7 @@ const useGeolocation = () => {
       try {
         const { latitude, longitude } = position.coords;
 
-        // Gọi trực tiếp đến URL đầy đủ của Nominatim
-        const geoApiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+        const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
 
         // Gửi kèm header User-Agent để cố gắng tránh lỗi 403
         const response = await fetch(geoApiUrl, {
@@ -38,18 +37,17 @@ const useGeolocation = () => {
 
         const geoData = await response.json();
 
-        if (geoData && geoData.address) {
+        if (geoData && (geoData.city || geoData.principalSubdivision)) {
           setSafeState({
             loading: false,
             error: null,
             data: {
-              city:
-                geoData.address.city || geoData.address.state || "Unknown Area",
-              country: geoData.address.country_code?.toUpperCase() || "N/A",
+              city: geoData.city || geoData.principalSubdivision,
+              country: geoData.countryCode,
             },
           });
         } else {
-          throw new Error("Invalid data from Nominatim API.");
+          throw new Error("Invalid data from API.");
         }
       } catch (apiError) {
         console.error("Geocoding API error:", apiError);
