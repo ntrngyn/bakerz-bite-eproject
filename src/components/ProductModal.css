@@ -1,4 +1,4 @@
-/* /src/components/ProductModal.css - PHIÊN BẢN REDESIGN HOÀN CHỈNH */
+/* /src/components/ProductModal.css - PHIÊN BẢN HOÀN THIỆN */
 
 /* ---- Lớp phủ và Hiệu ứng ---- */
 .modal-overlay {
@@ -7,8 +7,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(253, 250, 246, 0.85); /* Nền sáng màu body, sang hơn */
-  backdrop-filter: blur(10px); /* Tăng độ mờ để tập trung vào modal */
+  background-color: rgba(253, 250, 246, 0.85); /* Nền sáng màu body */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +23,7 @@
   visibility: visible;
 }
 
-/* Nút đóng được thiết kế lại theo phong cách rõ ràng, trực quan */
+/* Nút đóng */
 .modal-close-button {
   position: fixed;
   top: 2rem;
@@ -31,14 +32,10 @@
   height: 44px;
   border-radius: 50%;
   font-size: 1.5rem;
-
-  /* --- Đơn giản hóa --- */
-  background-color: var(--container-color); /* 1. Nền màu trắng/kem đồng nhất */
-  color: var(--text-color); /* 2. Màu icon là màu chữ thông thường */
-  border: 1px solid var(--border-color); /* 3. Viền mảnh, rõ ràng */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 4. Đổ bóng nhẹ để nổi bật */
-  backdrop-filter: none; /* 5. Bỏ hiệu ứng kính mờ */
-
+  background-color: var(--container-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -46,13 +43,11 @@
   z-index: calc(var(--z-modal) + 1);
   transition: all 0.3s ease;
 }
-
 .modal-close-button:hover {
-  /* 6. Hiệu ứng hover chỉ đổi màu */
   background-color: var(--primary-color);
-  color: #fff; /* Màu icon chuyển thành trắng để tương phản */
+  color: #fff;
   border-color: var(--primary-color);
-  transform: translateY(-2px); /* Hiệu ứng nhấc lên nhẹ */
+  transform: translateY(-2px);
 }
 
 /* ---- Layout Chính của Modal ---- */
@@ -62,107 +57,76 @@
   width: 90%;
   max-width: 900px;
   height: 85vh;
-  max-height: 600px; /* Tăng chiều cao tối đa */
+  max-height: 600px;
   background-color: transparent;
-  border-radius: 16px; /* Bo góc mềm mại hơn */
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(44, 44, 44, 0.25); /* Đổ bóng sâu và mềm hơn */
+  box-shadow: 0 25px 50px -12px rgba(44, 44, 44, 0.25);
   transform: scale(0.95) translateY(10px);
-  /* Hiệu ứng nảy lên khi xuất hiện, rất mượt mà */
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .modal-overlay.active .modal-content {
   transform: scale(1) translateY(0);
 }
 
-/* ---- Hình ảnh nền ---- */
+/* ---- CỘT 1: Hình ảnh ---- */
 .modal-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative; /* Đổi thành relative để dễ quản lý */
   width: 55%;
   height: 100%;
   background-size: cover;
   background-position: center;
 }
 
-/* ---- Nội dung nằm bên trên ---- */
+/* ---- CỘT 2: Nội dung ---- */
 .modal-foreground-content {
-  position: relative;
-  width: 60%;
+  width: 45%; /* Sửa lại cho đủ 100% */
   height: 100%;
-  margin-left: auto;
   background-color: var(--container-color);
-  padding: 3.5rem; /* Tăng padding để thoáng hơn */
+  padding: 2.5rem; /* Giảm padding một chút */
   display: flex;
   flex-direction: column;
-  /* Thêm đường viền tinh tế bên trái để tách biệt với ảnh */
-  border-left: 1px solid var(--border-color);
 }
 
-/* ---- Vùng có thể cuộn ---- */
-.modal-scrollable-content {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding-right: 1.5rem; /* Tạo khoảng trống cho thanh cuộn */
-  margin: 2rem -1.5rem 2rem 0; /* Margin âm để thanh cuộn nằm sát cạnh */
-}
-
-/* CSS cho merchandise modal */
-.modal-content.merchandise .modal-background-image {
-  width: 60%; /* Tăng chiều rộng ảnh nền */
-}
-
-/* CSS cho merchandise modal */
-.modal-content.merchandise .modal-foreground-content {
-  width: 40%; /* Giảm chiều rộng phần nội dung */
-}
-
-/* Style cho thanh cuộn (chỉ hoạt động trên trình duyệt Webkit) */
-.modal-scrollable-content::-webkit-scrollbar {
-  width: 6px;
-}
-.modal-scrollable-content::-webkit-scrollbar-track {
-  background: var(--body-color);
-}
-.modal-scrollable-content::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color-alt);
-  border-radius: 6px;
-}
-
-/* ---- Typography được thiết kế lại ---- */
+/* Typography */
 .modal-title {
-  font-size: 2.5rem; /* Tăng kích thước để làm nổi bật */
+  font-size: 2.25rem;
   font-family: var(--title-font);
   line-height: 1.2;
   color: var(--title-color);
 }
-
 .modal-price {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-medium); /* Giảm độ đậm để hài hòa hơn */
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
   color: var(--primary-color);
   margin-top: var(--mb-0-75);
 }
 
+/* Vùng có thể cuộn */
+.modal-scrollable-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 1rem;
+  margin-right: -1.5rem; /* Căn lề cho thanh cuộn */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .modal-description {
   font-size: var(--normal-font-size);
   color: var(--text-color);
-  line-height: 1.8;
-  margin-top: 1.5rem;
+  line-height: 1.7;
 }
 
-/* ---- Thành phần (thiết kế dạng tag) ---- */
+/* Thành phần */
 .modal-ingredients {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 .modal-ingredients h4 {
   font-size: 1rem;
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
   margin-bottom: var(--mb-1);
-  text-transform: uppercase; /* VIẾT HOA để tạo điểm nhấn */
+  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 .modal-ingredients-list {
@@ -177,37 +141,54 @@
   padding: 0.4rem 0.9rem;
   border-radius: 6px;
   font-size: var(--small-font-size);
-  transition: all 0.2s ease;
-}
-.ingredient-tag:hover {
-  border-color: var(--primary-color);
-  color: var(--title-color);
-  background-color: #fff;
 }
 
-/* ---- Nút CTA được thiết kế lại hoàn toàn ---- */
-.modal-cta-container {
+/* Khu vực hành động (CTA) */
+.modal-actions {
   padding-top: 1.5rem;
-  margin-top: auto; /* Luôn đẩy nút xuống đáy */
+  margin-top: auto; /* Luôn đẩy xuống đáy */
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 .modal-cta-button {
-  width: 100%;
-  padding: 1.25rem;
-  font-size: 1.1rem;
+  flex-grow: 1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
   font-weight: var(--font-semi-bold);
   color: var(--container-color);
-  /* Thêm hiệu ứng gradient cho nút */
   background-image: linear-gradient(
     45deg,
     var(--primary-color-alt),
     var(--primary-color)
   );
-  box-shadow: 0 4px 15px rgba(185, 154, 107, 0.4); /* Đổ bóng với màu của nút */
+  box-shadow: 0 4px 15px rgba(185, 154, 107, 0.4);
   transition: all 0.3s ease;
 }
 .modal-cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 7px 20px rgba(185, 154, 107, 0.6);
+}
+.modal-cta-button.added {
+  background-image: none;
+  background-color: #28a745;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+  cursor: not-allowed;
+}
+
+/* Style cho thanh cuộn */
+.modal-scrollable-content::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-scrollable-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-scrollable-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-alt);
+  border-radius: 6px;
 }
 
 /* ---- Responsive cho màn hình nhỏ ---- */
@@ -217,36 +198,25 @@
     right: 1rem;
   }
   .modal-content {
-    display: flex;
     flex-direction: column;
     height: 90vh;
-    max-height: 90vh;
+    max-height: none;
   }
   .modal-background-image {
-    position: relative;
     width: 100%;
-    height: 250px; /* Ảnh sẽ hiển thị ở trên cùng */
+    height: 250px;
+    flex-shrink: 0;
   }
   .modal-foreground-content {
     width: 100%;
     height: auto;
-    flex-grow: 1; /* Cho phép phần nội dung co giãn */
-    padding: 2rem 1.5rem;
-    border-left: none;
+    flex-grow: 1;
+    padding: 1.5rem;
   }
   .modal-title {
     font-size: var(--h2-font-size);
   }
   .modal-price {
     font-size: var(--h3-font-size);
-  }
-  /* CSS cho merchandise modal */
-  .modal-content.merchandise .modal-background-image {
-    width: 100%;
-  }
-
-  /* CSS cho merchandise modal */
-  .modal-content.merchandise .modal-foreground-content {
-    width: 100%;
   }
 }

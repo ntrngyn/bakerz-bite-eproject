@@ -22,7 +22,7 @@ const useGeolocation = () => {
       try {
         const { latitude, longitude } = position.coords;
 
-        const geoApiUrl = `/api/nominatim/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+        const geoApiUrl = `/api/geolocation?format=json&lat=${latitude}&lon=${longitude}`;
 
         const response = await fetch(geoApiUrl);
 
@@ -56,11 +56,15 @@ const useGeolocation = () => {
       setSafeState({ loading: false, error, data: null });
     };
 
-    // ... (phần còn lại của hook giữ nguyên) ...
     if (!navigator.geolocation) {
       onError({ message: "Geolocation is not supported by your browser." });
     } else {
-      navigator.geolocation.getCurrentPosition(onSuccess, onError);
+      // THÊM TÙY CHỌN TIMEOUT VÀO ĐÂY
+      navigator.geolocation.getCurrentPosition(onSuccess, onError, {
+        enableHighAccuracy: true, // Cố gắng lấy vị trí chính xác hơn
+        timeout: 10000, // Hết thời gian chờ sau 10 giây
+        maximumAge: 0,
+      });
     }
 
     return () => {

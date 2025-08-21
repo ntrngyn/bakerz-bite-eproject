@@ -4,15 +4,15 @@ import react from "@vitejs/plugin-react-swc";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 
 export default defineConfig({
-  base: "/bakerz-bite-eproject/",
   plugins: [react(), basicSsl()],
   server: {
     https: true,
     proxy: {
-      "/api/nominatim": {
+      "/api/geolocation": {
         target: "https://nominatim.openstreetmap.org",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/nominatim/, ""),
+        // Rewrite rule bây giờ sẽ trỏ đến /reverse
+        rewrite: (path) => path.replace(/^\/api\/geolocation/, "/reverse"),
       },
     },
   },
