@@ -13,7 +13,7 @@ const QuantitySelector = ({ quantity, setQuantity }) => {
 
   const handleIncrement = () => {
     // Có thể giới hạn số lượng tối đa nếu muốn, ví dụ: 99
-    if (quantity < 99) {
+    if (quantity < 50) {
       setQuantity(quantity + 1);
     }
   };
